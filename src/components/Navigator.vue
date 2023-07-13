@@ -42,8 +42,8 @@
 
     button {
         border-style: none;
-        padding-right: 12px;
-        padding-left: 12px;
+        padding-right: 10px;
+        padding-left: 10px;
         cursor: pointer;
         transition: .3s ease color;
         height: 100%;
