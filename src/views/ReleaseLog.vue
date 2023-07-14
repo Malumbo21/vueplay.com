@@ -1,7 +1,7 @@
 <template>
-    <Meta description="Vue Play release log" title="Release Log">
-    </Meta>
     <div class="bg-slate-100">
+        <Meta description="Vue Play release log" title="Release Log">
+        </Meta>
         <VueNavigator class="z-10" />
         <header>
             <h1 class="text-6xl mt-12 mb-6">

@@ -1,7 +1,7 @@
 <template>
-    <Meta description="Try out the playground or use the full playground without any limitations." title="Pricing">
-    </Meta>
     <div class="space-y-0 bg-slate-100 flex flex-col h-screen">
+        <Meta description="Try out the playground or use the full playground without any limitations." title="Pricing">
+        </Meta>
         <VueNavigator class="z-10" />
         <header>
             <h1 class="text-6xl mt-12 mb-6">

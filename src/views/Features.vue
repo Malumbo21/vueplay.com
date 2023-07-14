@@ -1,7 +1,7 @@
 <template v-for="i in 8">
-    <Meta title="Features" description="Vue Play is a full drag & drop designer for building vue components, websites and web applications.">
-    </Meta>
     <div class="bg-slate-100">
+        <Meta title="Features" description="Vue Play is a full drag & drop designer for building vue components, websites and web applications.">
+        </Meta>
         <VueNavigator class="z-10" />
         <header>
             <h1 class="text-6xl mt-12 mb-6">

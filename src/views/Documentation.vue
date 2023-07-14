@@ -1,7 +1,7 @@
 <template v-for="i in 8">
-    <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation">
-    </Meta>
     <div class="bg-slate-100 flex flex-col h-screen">
+        <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation">
+        </Meta>
         <VueNavigator class="absolute flex z-50" />
         <main style="width:100%" class="relative overflow-auto flex-1 h-full">
             <div class="relative h-full w-full flex">
