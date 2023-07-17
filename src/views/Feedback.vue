@@ -26,7 +26,7 @@
                     </h3><input class="inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" placeholder="Short, descriptive title" />
                     <h3 class="text-slate-500 mt-4 font-medium mb-4 whitespace-nowrap">
                         Description
-                    </h3><textarea v-model="" rows="" cols="" class="resize-none h-24 inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" placeholder="Give helpful details. Add screenshots where relevant." /><button class="aspect-square h-10 border-slate-300 border overflow-hidden border-solid rounded mt-6 bg-slate-400" style="background-size:cover" :style="'background-image: url(' + (screenshot || background) + ')'">
+                    </h3><textarea v-model="" rows="" cols="" class="resize-none h-24 inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" placeholder="Give helpful details. Add screenshots where relevant." /><button class="aspect-square h-10 border-slate-300 border overflow-hidden border-solid rounded mt-6 bg-slate-400" style="background-size:cover" :style="'background-image: url(' + (screenshot || background) + ')'" @click="selectImage">
 
                     </button><button class="hover:bg-slate-800 text-xs px-3 bg-slate-700 text-slate-50 float-right h-10 border-slate-300 border overflow-hidden border-solid rounded mt-6">
                         POST FEEDBACK
