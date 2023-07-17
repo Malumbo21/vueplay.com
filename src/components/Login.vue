@@ -15,9 +15,13 @@
         }),
         methods: {
             login() {
-                this.authenticate = true; // this.autologin('github')
-                // this.autologin('google')
-                // this.autologin('facebook')
+                console.log('origin', location.origin)
+                this.authenticate = true;
+                return new Promise(resolve => {
+                    this.$watch('authenticate', authenticated => {
+                        if (authenticated) resolve()
+                    })
+                })
             },
             autologin(provider) {
                 let w = 500;
