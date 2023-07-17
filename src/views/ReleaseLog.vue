@@ -18,7 +18,7 @@
                         Feature - Create Single File Components
                     </li>
                     <li class="" style="height:29px">
-                        Feature - Make Single File Components Public
+                        Feature - Publishment of Single File Components
                     </li>
                     <li class="" style="height:29px">
                         Feature - Add keyframe on animation timeline
@@ -28,6 +28,12 @@
                     </li>
                     <li class="" style="height:29px">
                         Feature - Delete keyframe on animation timeline
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Line height style controller
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Router highlight overlay
                     </li>
                     <li class="" style="height:29px">
                         Enhancement - Correct position of drag and drop ghost
