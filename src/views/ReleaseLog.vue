@@ -11,6 +11,31 @@
         <main class="p-6 m-auto max-w-xl container">
             <section class="shadow border mb-6 rounded-lg bg-white p-6">
                 <h3>
+                    17.07.2023 - Release 1.0.4
+                </h3>
+                <ul class="indent-3 ml-5 list-disc">
+                    <li class="" style="height:29px">
+                        Feature - Create Single File Components
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Make Single File Components Public
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Add keyframe on animation timeline
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Duplicate keyframe on animation timeline
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Delete keyframe on animation timeline
+                    </li>
+                    <li class="" style="height:29px">
+                        Enhancement - Correct position of drag and drop ghost
+                    </li>
+                </ul>
+            </section>
+            <section class="shadow border mb-6 rounded-lg bg-white p-6">
+                <h3>
                     07.07.2023 - Release 1.0.3
                 </h3>
                 <ul class="indent-3 ml-5 list-disc">
