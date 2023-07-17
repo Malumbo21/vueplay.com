@@ -1,18 +1,19 @@
 import '@/index.css'
 import {
-    createApp
+    createApp,
+    ref,
+    computed
 } from 'vue'
 import App from '@/App.vue'
 import router from '@/logic/router'
 import feathers from '@feathersjs/client'
 import sio from 'socket.io-client'
 
+const user = ref()
 const app = createApp(App)
-
 const socket = sio('https://api.vueplay.io', {
     transports: ['websocket', 'polling']
 })
-
 const io = feathers()
 io.configure(feathers.socketio(socket))
 io.configure(feathers.authentication())
@@ -20,19 +21,20 @@ io.configure(feathers.authentication())
 let boot = async () => {
 
     try {
-        await io.reAuthenticate()
+        user.value = (await io.reAuthenticate())?.user
     } catch (e) { }
 
     router.beforeEach(async () => {
         try {
-            let user = await io.reAuthenticate()
-            localStorage.setItem('user', JSON.stringify(user))
+            user.value = (await io.reAuthenticate())?.user
         } catch (e) {
-            localStorage.setItem('user', null)
+            user.value = null
         }
     })
 
     app.provide('io', io)
+    app.provide('user', computed(() => user?.value))
+    app.provide('userUpdate', val => user.value = val)
     app.use(router)
     app.mount('#app')
 
