@@ -51,13 +51,13 @@
     import Meta from "@/components/Meta.vue";
     import Login from "@/components/Login.vue";
     export default {
-        inject: ["io", "user"],
         components: {
             VueNavigator,
             Footer,
             Meta,
             Login
         },
+        inject: ["io", "user"],
         data: () => ({
             menu: false,
             screenshot: "",
