@@ -57,6 +57,56 @@
         methods: {
             open(url) {
                 location.href = url
+            },
+            selectImage() {
+                let input = document.createElement("input");
+                input.type = "file";
+                input.multiple = false;
+                input.accept = "image/*";
+                input.onchange = async () => {
+                    let files = Array.from(input.files);
+                    let file = files[0];
+                    let reader = new FileReader;
+                    reader.readAsDataURL(file);
+                    reader.onload = async e => {
+                        this.screenshot = await this.resizeImage(e.target.result)
+                    };
+                    reader.onerror = e => {
+                        alert("Could not load file");
+                        console.log(e)
+                    }
+                };
+                input.click()
+            },
+            resizeImage(src) {
+                return new Promise((resolve, reject) => {
+                    let MAX_WIDTH = 1000;
+                    let MAX_HEIGHT = 1000;
+                    let canvas = document.createElement("canvas");
+                    let ctx = canvas.getContext("2d");
+                    let image = new Image;
+                    image.onload = () => {
+                        let width = image.width;
+                        let height = image.height;
+                        if (width > height) {
+                            if (width > MAX_WIDTH) {
+                                height *= MAX_WIDTH / width;
+                                width = MAX_WIDTH
+                            }
+                        } else {
+                            if (height > MAX_HEIGHT) {
+                                width *= MAX_HEIGHT / height;
+                                height = MAX_HEIGHT
+                            }
+                        }
+                        canvas.width = width;
+                        canvas.height = height;
+                        ctx.drawImage(image, 0, 0, width, height);
+                        let dataurl = canvas.toDataURL("image/png", 0.7);
+                        resolve(dataurl)
+                    };
+                    image.src = src
+                })
             }
         }
     };
