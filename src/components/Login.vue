@@ -8,14 +8,15 @@
 </template>
 <script>
     export default {
+        emits: ['user', 'cancel'],
         expose: ["login"],
         inject: ["io", "userUpdate"],
         data: () => ({
-            authenticate: false
+            authenticate: false,
+            origin: location.origin.startsWith('http') ? location.origin : 'https://studio.vueplay.com'
         }),
         methods: {
             login() {
-                console.log('origin', location.origin)
                 this.authenticate = true;
                 return new Promise(resolve => {
                     this.$watch('authenticate', authenticated => {
@@ -28,7 +29,7 @@
                 let h = 600;
                 let y = window.top.outerHeight / 2 + window.top.screenY - h / 1.5;
                 let x = window.top.outerWidth / 2 + window.top.screenX - w / 2;
-                let ref = window.open("https://api.vueplay.io/oauth/" + provider + "?origin=" + location.origin + "/auth", "_blank", `popup=true, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=${w}, height=${h}, top=${y}, left=${x}`);
+                let ref = window.open("https://api.vueplay.io/oauth/" + provider + "?origin=" + this.origin + "/auth", "_blank", `popup=true, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=${w}, height=${h}, top=${y}, left=${x}`);
                 this.validateLogin(ref)
             },
             async validateLogin(ref, tries = 0) {
@@ -48,12 +49,18 @@
                         await this.io.reAuthenticate(true);
                         this.userUpdate();
                         this.authenticate = false
+                        console.log('emitting user', this.user)
+                        this.$emit('user', this.user)
                     } else if (error) {
                         alert("Error " + error);
                         this.authenticate = false
+                        console.log('emitting cancel')
+                        this.$emit('cancel')
                     } else if (tries >= 1000000000000) {
                         alert("Login timed out");
                         this.authenticate = false
+                        console.log('emitting cancel')
+                        this.$emit('cancel')
                     }
                 })
             },
