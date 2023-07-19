@@ -10,7 +10,7 @@
                 <label class="fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
-                <div class="md:w-96 md:p-7 md:shadow-md shadow-lg pt-24 border-r border-slate-200 bg-slate-100 peer-checked:px-7 peer-checked:pt-24 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
+                <div class="pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 bg-slate-100 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
                     </h3><span>
@@ -32,7 +32,7 @@
                         </span>
                     </div>
                 </div>
-                <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7"></Topics>
+                <Topic class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7"></Topic>
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
@@ -44,14 +44,14 @@
     import Footer from "@/components/Footer.vue";
     import Meta from "@/components/Meta.vue";
     import Login from "@/components/Login.vue";
-    import Topics from "@/feedback/Topics.vue";
+    import Topic from "@/feedback/Topic.vue";
     export default {
         components: {
             VueNavigator,
             Footer,
             Meta,
             Login,
-            Topics
+            Topic
         },
         inject: ["io", "user"],
         data: () => ({
