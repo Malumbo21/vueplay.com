@@ -7,7 +7,7 @@
         <VueNavigator class="absolute flex z-50" />
         <main style="width:100%" class="relative overflow-auto flex-1 h-full">
             <div class="relative h-full w-full flex">
-                <label class="from-slate-600 bg-slate-500 shadow-md bg-gradient-to-tl fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-6 text-sm text-white rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <label class="fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
                 <div class="md:w-96 md:p-7 md:shadow-md shadow-lg pt-24 border-r border-slate-200 bg-slate-100 peer-checked:px-7 peer-checked:pt-24 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
@@ -246,6 +246,7 @@
         color: #000000ff;
         background: #ffffff00;
         box-shadow: 0px 0;
+        transform: rotateZ(45deg);
     }
 
     .border-l-4 {

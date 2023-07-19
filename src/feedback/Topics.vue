@@ -8,13 +8,13 @@
             <div class="font-light">
                 <span>
                     Showing
-                </span><select name="" class="bg-transparent underline-offset-4 underline mx-1">
+                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline mx-1">
                     <option>
                         Latest
                     </option>
                 </select><span>
                     posts in
-                </span><select name="" class="bg-transparent underline-offset-4 underline ml-1">
+                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1">
                     <option>
                         All Categories
                     </option>
