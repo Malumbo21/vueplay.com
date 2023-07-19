@@ -4,15 +4,31 @@
         </Meta>
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
-        <article v-for="post in posts" class="max-w-2xl mx-auto mb-6 mt-4 shadow border rounded-lg bg-white px-12 py-14 overflow-auto">
-            <button @click="remove(post._id)">Delete</button>
-            <h1 class="mb-12 text-4xl">
-                {{ post.title }} {{ post.votes?.length }}
-            </h1>
-            <div class="bg-slate-50 border mb-6 rounded-lg p-8">
-                <p class="text-lg">
+        <article v-for="post in posts" class="max-w-2xl mx-auto mb-6 mt-4 flex">
+            <div class="w-16 inline-flex">
+                <div class="bg-slate-50 border w-10 h-12 rounded-lg">
+                    <div class="h-1/2 w-full">
+                    </div>
+                    <div class="text-center h-1/2 w-full">
+                        45
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col inline-flex grow">
+                <button @click="remove(post._id)">Delete</button>
+                <h1 class="font-semibold">
+                    {{ post.title }} {{ post.votes?.length }}
+                </h1>
+                <p class="">
                     {{ post.description }} {{ post.comments?.length }}
                 </p>
+            </div>
+            <div class="w-16 inline-flex">
+                <div class="w-1/2">
+                </div>
+                <div class="w-1/2 text-right">
+                    45
+                </div>
             </div>
         </article>
     </section>
@@ -25,7 +41,7 @@
             Meta,
             Login
         },
-        inject: ['io', 'user'],
+        inject: ["io", "user"],
         data: () => ({
             posts: []
         }),
@@ -44,7 +60,7 @@
             },
             async getPosts() {
                 this.posts = await this.io.service("types/feedback").find({ // query: {}
-                });
+                })
             },
             async vote(id) {
                 if (this.user.value) {
@@ -61,8 +77,8 @@
             async remove(id) {
                 await this.io.service("types/feedback").remove(id);
                 await this.getPosts();
-                alert('Removed!')
-            },
+                alert("Removed!")
+            }
         }
     };
 </script>
