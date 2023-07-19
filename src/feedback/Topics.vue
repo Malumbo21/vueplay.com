@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col inline-flex grow">
+            <div class="flex-col inline-flex grow mr-4">
                 <h1 class="font-semibold">
                     {{ post.title }} {{ post.votes?.length }}
                 </h1>
