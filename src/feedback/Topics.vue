@@ -112,7 +112,8 @@
                 if (this.category) query.category_id = this.category;
                 this.posts = await this.io.service("types/feedback").find({
                     query
-                })
+                });
+                console.log(this.posts)
             },
             async getCategories() {
                 const categories = await this.io.service("types/feedback-categories").find({

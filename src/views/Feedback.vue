@@ -42,7 +42,8 @@
                 </div>
                 <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7">
                 </Topics>
-                <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
+                <div class="absolute h-full w-full" v-if="menu" @click="menu = false">
+                </div>
             </div>
         </main>
         <Footer />
@@ -106,11 +107,14 @@
             },
             async post() {
                 if (this.user.value) {
-                    await this.io.service("types/feedback").create({
+                    console.log("posting");
+                    const rs = await this.io.service("types/feedback").create({
+                        category: this.category,
                         title: this.title,
                         description: this.description,
                         screenshot: this.screenshot
                     });
+                    console.log("rs", rs);
                     await this.posts();
                     alert("Created")
                 } else {

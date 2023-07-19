@@ -5,7 +5,7 @@
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
         <article>
-            <div v-for="post in posts" class="max-w-2xl mx-auto mt-4 flex">
+            <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="border w-11 h-12 rounded-lg">
                         <div class="h-1/2 w-full">
@@ -14,17 +14,17 @@
                             </svg>
                         </div>
                         <div class="text-center h-1/2 w-full -mt-1">
-                            {{ post.votes?.length }}
+                            {{ post?.votes?.length }}
                         </div>
                     </div>
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow">
                     <h1 class="pt-2.5 text-xl font-semibold">
-                        {{ post.title }} {{ post.votes?.length }}
+                        {{ post?.title }} {{ post?.votes?.length }}
                     </h1>
                 </div>
             </div>
-            <div v-for="post in posts" class="max-w-2xl mx-auto mt-4 flex">
+            <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
                         <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto">
@@ -33,11 +33,11 @@
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
                     <h1 class="font-semibold mt-0.5">
-                        {{ post.user[0].email }}
+                        {{ post?.user?.[0]?.email }}
                     </h1>
                 </div>
             </div>
-            <div v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-2 flex">
+            <div class="max-w-2xl mx-auto mb-8 mt-2 flex" v-if="post">
                 <div class="w-16 inline-flex">
                     <div class="w-11"> </div>
                 </div>
@@ -74,8 +74,8 @@
                 </div>
             </div>
         </article>
-        <article v-for="i in 5">
-            <div v-for="post in posts" class="max-w-2xl mx-auto mt-4 flex">
+        <article v-for="comment in post?.comments">
+            <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
                         <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto">
@@ -84,24 +84,24 @@
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
                     <h1 class="font-semibold mt-0.5">
-                        {{ post.user[0].email }}
+                        {{ comment.user?.[0]?.email }}
                     </h1>
                 </div>
             </div>
-            <div v-for="post in posts" class="max-w-2xl  mx-auto mb-8 mt-2 flex">
+            <div class="max-w-2xl  mx-auto mb-8 mt-2 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11"> </div>
                 </div>
                 <div class="grow">
                     <p class="text-gray-700 mb-3">
-                        {{ post.description }}
-                    </p><textarea v-model="post.description" rows="" cols="" class="w-full h-16 mb-3 border">
+                        {{ comment.comment }}
+                    </p><textarea v-model="comment.description" rows="" cols="" class="w-full h-16 mb-3 border">
 </textarea>
                     <div class="flex text-gray-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1 cursor-pointer">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg> <span class="text-xs">
-                            {{1 &gt; 0 ? '1 likes' : ''}} · {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
+                            {{1 &gt; 0 ? '1 likes' : ''}} · {{ moment(comment.createdAt).format('MMMM DD, YYYY') }}
                         </span> <span class="text-xs ml-1">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-1">
@@ -127,12 +127,18 @@
             Login
         },
         inject: ["io", "user"],
+        props: {
+            id: {
+                type: String,
+                default: "64b581fe691f1cd6f7ae2a2e"
+            }
+        },
         data: () => ({
-            posts: [],
+            post: null,
             moment
         }),
         created() {
-            this.getPosts()
+            this.getPost()
         },
         methods: {
             authenticated(user) {
@@ -144,9 +150,10 @@
                 alert("Cancelled authentication!");
                 console.log("global user", this.user)
             },
-            async getPosts() {
-                this.posts = await this.io.service("types/feedback").find({ // query: {}
-                })
+            async getPost() {
+                this.post = await this.io.service("types/feedback").get(this.id);
+                console.log("post", this.post);
+                console.log("usr", this.post.user)
             },
             async vote(id) {
                 if (this.user.value) {

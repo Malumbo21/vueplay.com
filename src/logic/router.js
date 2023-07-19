@@ -57,8 +57,9 @@ const routes = [{
     component: () => import('@/views/Feedback.vue')
 },
 {
-    path: '/feedback/topic',
-    component: () => import('@/views/Post.vue')
+    path: '/feedback/:id',
+    component: () => import('@/views/Post.vue'),
+    props: true
 },
 {
     path: '/support',
