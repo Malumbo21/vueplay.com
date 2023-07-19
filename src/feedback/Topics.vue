@@ -14,9 +14,12 @@
                     </option>
                 </select><span>
                     posts in
-                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1">
-                    <option>
+                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1" v-model="category">
+                    <option value="">
                         All Categories
+                    </option>
+                    <option v-for="category in categories" :value="category._id">
+                        {{category.title}}
                     </option>
                 </select>
             </div>
@@ -74,10 +77,13 @@
         },
         inject: ["io", "user"],
         data: () => ({
-            posts: []
+            categories: [],
+            posts: [],
+            category: ""
         }),
         created() {
-            this.getPosts()
+            this.getPosts();
+            this.getCategories()
         },
         methods: {
             authenticated(user) {
@@ -92,6 +98,16 @@
             async getPosts() {
                 this.posts = await this.io.service("types/feedback").find({ // query: {}
                 })
+            },
+            async getCategories() {
+                const categories = await this.io.service("types/feedback-categories").find({
+                    query: {
+                        $sort: {
+                            order: 1
+                        }
+                    }
+                });
+                this.categories = categories?.data || []
             },
             async vote(id) {
                 if (this.user.value) {

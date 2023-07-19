@@ -40,7 +40,8 @@
                             POST FEEDBACK
                         </button> </div>
                 </div>
-                <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7"></Topics>
+                <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7">
+                </Topics>
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
