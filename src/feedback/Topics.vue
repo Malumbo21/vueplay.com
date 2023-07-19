@@ -4,7 +4,7 @@
         </Meta>
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
-        <div class="flex-col max-w-2xl mx-auto lg:mb-8 flex text-lg lg:flex-row">
+        <div class="flex-col max-w-2xl mx-auto h-9 lg:mb-8 flex text-lg lg:flex-row">
             <div class="font-light">
                 <span>
                     Showing
