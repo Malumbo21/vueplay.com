@@ -1,10 +1,10 @@
 <template>
-    <section class="p-6 pt-20 md:pt-6 pb-40">
+    <section class="p-6 md:pt-6 pb-24">
         <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker.">
         </Meta>
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
-        <div class="max-w-2xl mx-auto mb-8 mt-4 flex text-lg">
+        <div class="max-w-2xl mx-auto mb-8 flex text-lg">
             <div class="font-light">
                 <span>
                     Showing
