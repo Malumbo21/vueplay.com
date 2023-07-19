@@ -6,7 +6,7 @@
         </Login>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-6 mt-4 flex">
             <div class="w-16 inline-flex">
-                <div class="bg-slate-50 border w-11 h-12 rounded-lg">
+                <div class="border w-11 h-12 rounded-lg">
                     <div class="h-1/2 w-full">
                         <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 fill-gray-400 mx-auto">
                             <polygon points="10,0 20,10 0,10" />
