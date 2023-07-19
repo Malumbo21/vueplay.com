@@ -109,7 +109,7 @@
                 if (this.user.value) {
                     console.log("posting");
                     const rs = await this.io.service("types/feedback").create({
-                        category: this.category,
+                        category_id: this.category,
                         title: this.title,
                         description: this.description,
                         screenshot: this.screenshot
