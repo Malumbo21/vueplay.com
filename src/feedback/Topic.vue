@@ -33,7 +33,7 @@
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
                     <h1 class="font-semibold mt-0.5">
-                        {{ post?.user?.[0]?.email }}
+                        {{ post?.user?.email }}
                     </h1>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <p class="text-gray-700 mb-3">
                         {{ post.description }}
                     </p><textarea v-model="post.description" rows="" cols="" class="w-full h-32 mb-3 border">
-</textarea><img src="" class="w-full mb-4" :src="post.screenshot" v-if="post.screenshot" />
+</textarea><img class="w-full mb-4" :src="post.screenshot" v-if="post.screenshot" />
                     <div class="flex text-gray-500">
                         <span class="text-xs">
                             {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </article>
-        <article v-for="comment in post?.comments">
+        <article v-for="comment in post?.comments?.data">
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
