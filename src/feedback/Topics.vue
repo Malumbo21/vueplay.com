@@ -4,30 +4,30 @@
         </Meta>
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
-        <div class="max-w-2xl mx-auto mb-8 flex text-lg">
+        <div class="flex-col max-w-2xl mx-auto lg:mb-8 flex text-lg lg:flex-row">
             <div class="font-light">
                 <span>
                     Showing
-                </span><select name="" class="underline-offset-4 underline mx-1">
+                </span><select name="" class="bg-transparent underline-offset-4 underline mx-1">
                     <option>
                         Latest
                     </option>
                 </select><span>
                     posts in
-                </span><select name="" class="underline-offset-4 underline ml-1">
+                </span><select name="" class="bg-transparent underline-offset-4 underline ml-1">
                     <option>
                         All Categories
                     </option>
                 </select>
             </div>
-            <div class="grow">
-                <form class="float-right">
+            <div class="lg:grow">
+                <form class="lg:float-right mt-4 lg:mt-0">
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
-                        </div> <input type="search" id="default-search" class="w-52 h-full block max-w-full pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required="" />
+                        </div> <input type="search" id="default-search" class="w-full h-10 lg:w-52 lg:h-full block max-w-full pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required="" />
                     </div>
                 </form>
             </div>
