@@ -4,19 +4,19 @@
         </Meta>
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
-        <div class="max-w-2xl mx-auto mb-8 mt-4 flex">
-            <div class="font-light text-lg">
+        <div class="max-w-2xl mx-auto mb-8 mt-4 flex text-lg">
+            <div class="font-light">
                 <span>
                     Showing
                 </span><select name="" class="underline-offset-4 underline mx-1">
-                    <option v-for="i in 3">
-                        Latest {{i}}
+                    <option>
+                        Latest
                     </option>
                 </select><span>
                     posts in
                 </span><select name="" class="underline-offset-4 underline ml-1">
-                    <option v-for="i in 3">
-                        All Categories {{i}}
+                    <option>
+                        All Categories
                     </option>
                 </select>
             </div>
@@ -27,7 +27,7 @@
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
-                        </div> <input type="search" id="default-search" class="h-full block max-w-full w-64 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required="" />
+                        </div> <input type="search" id="default-search" class="w-52 h-full block max-w-full pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required="" />
                     </div>
                 </form>
             </div>
