@@ -14,7 +14,7 @@
                             </svg>
                         </div>
                         <div class="text-center h-1/2 w-full -mt-1">
-                            {{ post?.votes?.length }}
+                            {{ post?.votes?.data?.length }}
                         </div>
                     </div>
                 </div>
