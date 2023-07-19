@@ -42,7 +42,7 @@
                     <div class="w-11"> </div>
                 </div>
                 <div class="grow">
-                    <p class="text-gray-800 mb-3">
+                    <p class="text-gray-700 mb-3">
                         {{ post.description }}
                     </p> <span class="text-gray-500 text-xs">
                         {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
@@ -81,11 +81,43 @@
                     <div class="w-11"> </div>
                 </div>
                 <div class="grow">
-                    <p class="text-gray-800 mb-3">
+                    <p class="text-gray-700 mb-3">
                         {{ post.description }}
                     </p>
                     <div class="flex text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg><span class="text-xs">
+                            · {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div v-for="post in posts" class="max-w-2xl mx-auto mt-4 flex">
+                <div class="w-16 inline-flex">
+                    <div class="w-11">
+                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
+                    <h1 class="font-semibold mt-0.5">
+                        {{ post.user[0].email }}
+                    </h1>
+                </div>
+            </div>
+            <div v-for="post in posts" class="mx-auto mb-8 mt-2 flex">
+                <div class="w-16 inline-flex">
+                    <div class="w-11"> </div>
+                </div>
+                <div class="grow">
+                    <p class="text-gray-700 mb-3">
+                        {{ post.description }}
+                    </p>
+                    <div class="flex text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1 cursor-pointer">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg><span class="text-xs">
                             · {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
