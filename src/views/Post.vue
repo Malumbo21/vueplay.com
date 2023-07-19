@@ -16,9 +16,21 @@
                     </h3><span>
                         Controllers
                     </span>
-                    <h3 class="text-slate-500 mt-4 font-medium mb-1 whitespace-nowrap">
+                    <h3 class="text-slate-500 mt-4 font-medium mb-2 whitespace-nowrap">
                         Voters
                     </h3>
+                    <div class="flex mb-1.5" v-for="i in 10">
+                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500">
+                        </div><span class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow">
+                            Name
+                        </span>
+                    </div>
+                    <div class="flex mb-1.5">
+                        <div class="h-7 w-7">
+                        </div><span class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow">
+                            and 35 more...
+                        </span>
+                    </div>
                 </div>
                 <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7"></Topics>
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
