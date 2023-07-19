@@ -20,17 +20,6 @@
                     </option>
                 </select>
             </div>
-            <div class="lg:grow">
-                <form class="lg:float-right mt-4 lg:mt-0">
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                            </svg>
-                        </div> <input type="search" id="default-search" class="w-full h-10 lg:w-52 lg:h-full block max-w-full pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required="" />
-                    </div>
-                </form>
-            </div>
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mt-4 flex">
             <div class="w-16 inline-flex">
@@ -58,23 +47,35 @@
                     </div>
                 </div>
             </div>
-            <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow mr-4">
+            <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
                 <h1 class="font-semibold mt-0.5">
                     {{ post.user[0].email }}
                 </h1>
             </div>
         </article>
-        <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
+        <article v-for="post in posts" class="mx-auto mb-8 mt-2 flex">
             <div class="w-16 inline-flex">
                 <div class="w-11"> </div>
             </div>
-            <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow mr-4">
-                <p class="mb-3">
+            <div class="grow">
+                <p class="text-gray-800 mb-3">
                     {{ post.description }}
                 </p>
-                <p class="text-gray-500 text-sm">
-                    {{ post.createdAt }}
+                <p class="text-gray-500 text-xs">
+                    {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
                 </p>
+                <div class="mt-8">
+                    <form class="lg:float-right mt-4 lg:mt-0">
+                        <div class="relative">
+                            <input type="search" id="default-search" class="w-full h-10 lg:w-52 lg:h-full block max-w-full pl-4 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" required="" />
+                        </div>
+                    </form>
+                </div>
+                <div class=" mt-10">
+                    <p class="text-gray-500">
+                        Activity Feed
+                    </p>
+                </div>
             </div>
         </article>
     </section>
@@ -82,6 +83,7 @@
 <script>
     import Meta from "@/components/Meta.vue";
     import Login from "@/components/Login.vue";
+    import moment from "moment";
     export default {
         components: {
             Meta,
@@ -89,7 +91,8 @@
         },
         inject: ["io", "user"],
         data: () => ({
-            posts: []
+            posts: [],
+            moment
         }),
         created() {
             this.getPosts()
