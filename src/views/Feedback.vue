@@ -37,8 +37,8 @@
                             </svg> </button><button class="hover:bg-slate-800 text-xs px-3 bg-slate-700 text-slate-50 float-right h-10 border-slate-300 border overflow-hidden border-solid rounded mt-6" @click="post">
                             POST FEEDBACK
                         </button> </div>
-                </div><router-view class="m-auto container grow h-full overflow-auto">
-                </router-view>
+                </div>
+                <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7"></Topics>
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
@@ -50,12 +50,14 @@
     import Footer from "@/components/Footer.vue";
     import Meta from "@/components/Meta.vue";
     import Login from "@/components/Login.vue";
+    import Topics from "@/feedback/Topics.vue";
     export default {
         components: {
             VueNavigator,
             Footer,
             Meta,
-            Login
+            Login,
+            Topics
         },
         inject: ["io", "user"],
         data: () => ({
