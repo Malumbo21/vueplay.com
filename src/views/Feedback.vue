@@ -20,8 +20,10 @@
                     </p>
                     <h3 class="text-slate-500 mt-4 font-medium mb-4 whitespace-nowrap">
                         Category
-                    </h3><select name="" class="inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded">
-                        <option v-for="i in 3">Option {{ i }}</option>
+                    </h3><select name="" class="inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" v-model="category">
+                        <option v-for="category in categories" :value="category._id">
+                            {{ category.title }}
+                        </option>
                     </select>
                     <h3 class="text-slate-500 mt-4 font-medium mb-4 whitespace-nowrap">
                         Title
@@ -62,6 +64,8 @@
         inject: ["io", "user"],
         data: () => ({
             menu: false,
+            categories: [],
+            category: "",
             title: "",
             description: "",
             screenshot: "",
@@ -71,7 +75,8 @@
             console.log("Logged in?", this.user)
         },
         mounted() {
-            this.posts()
+            this.posts();
+            this.getCategories()
         },
         methods: {
             authenticated(user) {
@@ -84,9 +89,19 @@
                 console.log("global user", this.user)
             },
             async posts() {
-                const posts = await this.io.service("types/feedback").find({ // query: {}
-                });
+                const posts = await this.io.service("types/feedback").find();
                 console.log("posts", posts)
+            },
+            async getCategories() {
+                const categories = await this.io.service("types/feedback-categories").find({
+                    query: {
+                        $sort: {
+                            order: 1
+                        }
+                    }
+                });
+                this.categories = categories?.data || [];
+                if (!this.category) this.category = this.categories?.[0]?._id || ""
             },
             async post() {
                 if (this.user.value) {
