@@ -55,10 +55,16 @@ const routes = [{
 {
     path: '/feedback',
     component: () => import('@/views/Feedback.vue'),
-    children: [{
-        path: '',
-        component: () => import('@/feedback/Topics.vue')
-    }]
+    children: [
+        {
+            path: '',
+            component: () => import('@/feedback/Topics.vue')
+        },
+        {
+            path: 'topic',
+            component: () => import('@/feedback/Topic.vue')
+        }
+    ]
 },
 {
     path: '/support',
