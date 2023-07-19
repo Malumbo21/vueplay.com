@@ -24,7 +24,7 @@
                 </select>
             </div>
             <div class="lg:grow">
-                <form class="lg:float-right mt-4 lg:mt-0 lg:h-full">
+                <div class="lg:float-right mt-4 lg:mt-0 lg:h-full">
                     <div class="relative lg:h-full">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -32,7 +32,7 @@
                             </svg>
                         </div> <input type="search" id="default-search" class="w-full h-10 lg:w-52 lg:h-full max-w-full pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required="" v-model="term" @keypress.enter="getPosts()" />
                     </div>
-                </form>
+                </div>
             </div>
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
@@ -102,7 +102,16 @@
                 console.log("global user", this.user)
             },
             async getPosts() {
-                this.posts = await this.io.service("types/feedback").find({ // query: {}
+                let query = {};
+                if (this.term) {
+                    query.title = {
+                        $regex: this.term,
+                        $options: "i"
+                    }
+                }
+                if (this.category) query.category_id = this.category;
+                this.posts = await this.io.service("types/feedback").find({
+                    query
                 })
             },
             async getCategories() {
