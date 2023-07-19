@@ -23,7 +23,7 @@
                 </h1>
                 <p class="text-gray-500">
                     {{ post.description }}
-                </p><button @click="remove(post._id)">Delete</button>
+                </p>
             </div>
             <div class="w-12 inline-flex">
                 <div class="w-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-400 w-5 h-5 mt-1">
