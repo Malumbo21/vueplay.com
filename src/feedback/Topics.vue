@@ -64,7 +64,7 @@
                 <h1 class="font-semibold">
                     {{ post.title }}
                 </h1>
-                <p class="text-gray-500">
+                <p class="text-gray-500 overflow-hidden text-ellipsis">
                     {{ post.description }}
                 </p>
             </div>
