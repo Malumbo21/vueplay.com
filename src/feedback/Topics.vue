@@ -34,9 +34,10 @@
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
             <div class="w-16 inline-flex">
-                <div class="hover:bg-slate-100 cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{'bg-slate-50': post.votes.some(v => v.user_id === user._id)}">
+                <div class="hover:bg-slate-100 cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{ 'bg-emerald-50': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id),
+'border-emerald-400': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id), 'hover:bg-emeral-100': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id) }">
                     <div class="h-1/2 w-full">
-                        <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 fill-gray-400 mx-auto">
+                        <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 fill-gray-400 mx-auto" :class="{ 'fill-emerald-400': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id)}">
                             <polygon points="10,0 20,10 0,10" />
                         </svg>
                     </div>
@@ -99,7 +100,8 @@
                 if (this.category) query.category_id = this.category;
                 this.posts = await this.io.service("types/feedback").find({
                     query
-                })
+                });
+                console.log(this.posts)
             },
             async getCategories() {
                 const categories = await this.io.service("types/feedback-categories").find({
@@ -112,16 +114,24 @@
                 this.categories = categories?.data || []
             },
             async myVote(post) {
-                return (await this.io.service("types/feedback-votes").find({
+                console.log("query", {
+                    feedback_id: post._id,
+                    user_id: this.user.value._id
+                });
+                const votes = await this.io.service("types/feedback-votes").find({
                     query: {
                         feedback_id: post._id,
                         user_id: this.user.value._id
                     }
-                })?.[0]) || false
+                });
+                console.log("votes", votes);
+                return votes?.[0] || false
             },
             async vote(post) {
                 if (await this.login()) {
-                    const myVote = await this.myVote();
+                    console.log(post, this.user.value);
+                    const myVote = await this.myVote(post);
+                    console.log("my vote", myVote);
                     if (myVote) {
                         await this.io.service("types/feedback-votes").remove(myVote._id)
                     } else {
@@ -139,7 +149,8 @@
                     query: {
                         feedback_id: post._id
                     }
-                })
+                });
+                console.log(post)
             },
             async remove(id) {
                 await this.io.service("types/feedback").remove(id);

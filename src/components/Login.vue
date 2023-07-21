@@ -65,10 +65,7 @@ export default {
     methods: {
         login() {
             this.authorizing = true;
-            console.log('authing...')
             return new Promise(resolve => {
-                console.log('has user?...', this.user)
-                console.log('has user val?...', this.user.val)
                 if (this.user?.value) {
                     this.authorizing = false;
                     resolve(this.user.value)
