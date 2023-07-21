@@ -48,7 +48,7 @@
             </div>
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
-            <div class="w-16 inline-flex">
+            <div class="w-24 inline-flex">
                 <div class="cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{ 'bg-emerald-50': post.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post.votes.find(v => v.user_id === user?._id), 'hover:bg-emerald-100': post.votes.find(v => v.user_id === user?._id), 'hover:bg-slate-100': !post.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post.votes.find(v => v.user_id === user?._id) }">
                     <div class="h-1/2 w-full">
                         <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{ 'fill-emerald-400': post.votes.find(v => v.user_id === user?._id), 'fill-gray-400': !post.votes.find(v => v.user_id === user?._id) }">
