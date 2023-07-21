@@ -1,20 +1,17 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
-        <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker.">
-        </Meta>
-        <Login ref="auth" @user="authenticated" @cancel="cancelled">
-        </Login>
+        <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker." />
         <article>
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
-                    <div class="border w-11 h-12 rounded-lg">
+                    <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes.find(v => v.user_id === user.value._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user.value._id),'hover:bg-emerald-100': post?.votes.find(v => v.user_id === user.value._id),'hover:bg-slate-100': !post?.votes.find(v => v.user_id === user.value._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user.value._id)}">
                         <div class="h-1/2 w-full">
-                            <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 fill-gray-400 mx-auto">
+                            <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes.find(v => v.user_id === user.value._id),'fill-gray-400': !post?.votes.find(v => v.user_id === user.value._id)}">
                                 <polygon points="10,0 20,10 0,10" />
                             </svg>
                         </div>
                         <div class="text-center h-1/2 w-full -mt-1">
-                            {{ post?.votes?.data?.length }}
+                            {{ post?.votes?.length }}
                         </div>
                     </div>
                 </div>
@@ -119,14 +116,12 @@
 </template>
 <script>
     import Meta from "@/components/Meta.vue";
-    import Login from "@/components/Login.vue";
     import moment from "moment";
     export default {
         components: {
-            Meta,
-            Login
+            Meta
         },
-        inject: ["io", "user"],
+        inject: ["io", "user", "login"],
         props: {
             id: {
                 type: String,
@@ -163,7 +158,7 @@
                     await this.getPosts();
                     alert("Voted!")
                 } else {
-                    await this.$refs.auth.login();
+                    await this.login();
                     console.log("Logged in?", this.user)
                 }
             },

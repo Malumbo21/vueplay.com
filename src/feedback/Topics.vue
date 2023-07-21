@@ -34,10 +34,9 @@
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
             <div class="w-16 inline-flex">
-                <div class="hover:bg-slate-100 cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{ 'bg-emerald-50': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id),
-'border-emerald-400': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id), 'hover:bg-emeral-100': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id) }">
+                <div class="cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{'bg-emerald-50': post.votes.find(v => v.user_id === user.value._id), 'border-emerald-400': post.votes.find(v => v.user_id === user.value._id),'hover:bg-emerald-100': post.votes.find(v => v.user_id === user.value._id),'hover:bg-slate-100': !post.votes.find(v => v.user_id === user.value._id), 'border-emerald-400': post.votes.find(v => v.user_id === user.value._id)}">
                     <div class="h-1/2 w-full">
-                        <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 fill-gray-400 mx-auto" :class="{ 'fill-emerald-400': post?.votes?.some(v => v.user_id === user._id || v.user_id === user.value._id)}">
+                        <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post.votes.find(v => v.user_id === user.value._id),'fill-gray-400': !post.votes.find(v => v.user_id === user.value._id)}">
                             <polygon points="10,0 20,10 0,10" />
                         </svg>
                     </div>
