@@ -1,6 +1,19 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
         <Meta :title="post?.title" :description="post?.description" />
+        <div class="h-16 p-2 bg-slate-50 rounded">
+            <div class="h-12 w-12 bg-cover rounded-full bg-slate-500 mx-auto float-right" :style="'background-image: url(' + (user?.picture || user?.value?.picture) + ')'" v-if="user?.email || user?.value?.email">
+            </div>
+            <div class="float-right mt-3 mr-4" v-if="user?.email || user?.value?.email">
+                {{ user?.name || user?.value?.name }}
+            </div>
+            <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="logout" v-if="user?.email || user?.value?.email">
+                Logout
+            </div>
+            <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="login" v-else="">
+                Login
+            </div>
+        </div>
         <article>
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
@@ -130,7 +143,7 @@
         components: {
             Meta
         },
-        inject: ["io", "user", "login"],
+        inject: ["io", "user", "login", "logout"],
         emit: ["post"],
         props: {
             id: {

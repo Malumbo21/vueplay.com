@@ -45,6 +45,11 @@ let boot = async () => {
         } catch (e) { }
         return user.value // fallback
     })
+    app.provide('logout', async () => {
+        await io.logout()
+        user.value = null
+        return user.value
+    })
     app.use(router)
     app.mount('#app')
 

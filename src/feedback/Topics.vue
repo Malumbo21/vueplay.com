@@ -1,5 +1,18 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
+        <div class="h-16 p-2 bg-slate-50 rounded">
+            <div class="h-12 w-12 bg-cover rounded-full bg-slate-500 mx-auto float-right" :style="'background-image: url(' + (user?.picture || user?.value?.picture) + ')'" v-if="user?.email || user?.value?.email">
+            </div>
+            <div class="float-right mt-3 mr-4" v-if="user?.email || user?.value?.email">
+                {{ user?.name || user?.value?.name }}
+            </div>
+            <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="logout" v-if="user?.email || user?.value?.email">
+                Logout
+            </div>
+            <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="login" v-else="">
+                Login
+            </div>
+        </div>
         <div class="h-24 flex-col max-w-2xl mx-auto lg:h-9 lg:mb-8 flex text-lg lg:flex-row">
             <div class="font-light">
                 <span>
@@ -47,9 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" :class="{
-'text-emerald-600': post.over
-}">
+            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" post.over="">
                 <h1 class="font-semibold">
                     {{ post.title }}
                 </h1>
@@ -70,7 +81,7 @@
 </template>
 <script>
     export default {
-        inject: ["io", "user", "login"],
+        inject: ["io", "user", "login", "logout"],
         expose: ["refresh"],
         data: () => ({
             term: "",
