@@ -18,7 +18,7 @@
                     <div class="flex mb-1.5" v-for="vote in votes">
                         <div class="h-7 w-7 bg-cover rounded-full bg-slate-500" :style="'background-image: url(' + vote?.user?.[0]?.picture + ')'">
                         </div><span class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow">
-                            {{vote.user?.[0].email}}
+                            {{ vote.user?.[0].email }}
                         </span>
                     </div>
                     <div class="flex mb-1.5">
@@ -28,7 +28,7 @@
                         </span>
                     </div>
                 </div>
-                <Topic class="m-auto grow h-full overflow-auto pt-16 lg:pt-7" @post="post=$event" />
+                <Topic class="m-auto grow h-full overflow-auto pt-16 lg:pt-7" @post="post = $event" :id="id" />
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
@@ -40,6 +40,7 @@
     import Footer from "@/components/Footer.vue";
     import Topic from "@/feedback/Topic.vue";
     export default {
+        props: ['id'],
         components: {
             VueNavigator,
             Footer,
