@@ -106,7 +106,7 @@
                 if (!this.category) this.category = this.categories?.[0]?._id || ""
             },
             async post() {
-                if (this.user.value) {
+                if (this.user?.value) {
                     console.log("posting");
                     const rs = await this.io.service("types/feedback").create({
                         category_id: this.category,
