@@ -205,8 +205,11 @@
                 return votes?.[0] || false
             },
             async vote(post) {
+                console.log("do vote");
                 if (await this.login()) {
+                    console.log("login success", this.user);
                     const myVote = await this.myVote(post);
+                    console.log("got vote", myVote);
                     if (myVote) {
                         await this.io.service("types/feedback-votes").remove(myVote._id)
                     } else {

@@ -39,6 +39,12 @@ let boot = async () => {
             user.value = (await io.reAuthenticate())?.user
         } catch (e) { }
     })
+    app.provide('login', async () => {
+        try {
+            user.value = (await io.reAuthenticate())?.user
+        } catch (e) { }
+        return user.value // fallback
+    })
     app.use(router)
     app.mount('#app')
 

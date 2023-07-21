@@ -64,13 +64,18 @@ export default {
     }),
     methods: {
         login() {
+            console.log('login called inside component')
             this.authorizing = true;
             return new Promise(resolve => {
+                console.log('checking for user', this.user)
                 if (this.user?.value) {
                     this.authorizing = false;
                     resolve(this.user.value)
                 } else {
+                    console.log('watching', this.authorizing)
                     this.$watch("authorizing", authorizing => {
+                        console.log('updated', this.authorizing)
+                        console.log('updated', this.user?.value)
                         if (!authorizing) resolve(this.user?.value)
                     })
                 }
