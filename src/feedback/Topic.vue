@@ -161,7 +161,7 @@
                 }
             },
             async saveComment(comment) {
-                await this.io.service("types/feedback-comments").patch(this.comment._id, {
+                await this.io.service("types/feedback-comments").patch(comment._id, {
                     comment: comment.comment
                 });
                 comment.edit = false;
