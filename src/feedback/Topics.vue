@@ -1,9 +1,7 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
-        <Meta
-            title="Frequently Asked Questions"
-            description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker."
-        />
+        <Meta title="Frequently Asked Questions"
+            description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker." />
         <div class="h-24 flex-col max-w-2xl mx-auto lg:h-9 lg:mb-8 flex text-lg lg:flex-row">
             <div class="font-light">
                 <span>
@@ -41,7 +39,7 @@
             </div>
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
-            <div class="w-16 inline-flex">
+            <div class="w-16 inline-flex" @click="vote(post)">
                 <div class="border w-11 h-12 rounded-lg">
                     <div class="h-1/2 w-full">
                         <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 fill-gray-400 mx-auto">
@@ -122,10 +120,10 @@ export default {
             });
             this.categories = categories?.data || []
         },
-        async vote(id) {
+        async vote(post) {
             if (await this.login()) {
-                await this.io.service("types/feedback").patch(id, {
-                    vote: true
+                await this.io.service("types/feedback-votes").create({
+                    feedback_id: post._id
                 });
                 await this.refresh();
             } else {
