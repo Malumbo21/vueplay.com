@@ -24,7 +24,9 @@
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
-                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto">
+                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="{
+backgroundImage: 'url(' + (post.user?.picture || '') + ')'
+}">
                         </div>
                     </div>
                 </div>
@@ -81,7 +83,9 @@
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
-                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto">
+                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="{
+backgroundImage: 'url(' + (comment.user?.[0]?.picture || '') + ')'
+}">
                         </div>
                     </div>
                 </div>
