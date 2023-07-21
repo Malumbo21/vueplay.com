@@ -90,7 +90,8 @@
             this.getCategories()
         },
         methods: {
-            async refresh() {
+            async refresh(sort = this.sort) {
+                this.sort = sort
                 let query = {};
                 if (this.term) {
                     query.title = {
@@ -98,9 +99,7 @@
                         $options: "i"
                     }
                 }
-                if (this.sort === "top") {
-                    /** order by top voted */
-                }
+                if (this.sort === "top") query.top = true
                 if (this.category) query.category_id = this.category;
                 this.posts = await this.io.service("types/feedback").find({
                     query

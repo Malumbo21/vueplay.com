@@ -98,7 +98,7 @@
                     });
                     this.reset();
                     alert("Thank you for posting feedback!");
-                    this.$refs.topics.refresh()
+                    this.$refs.topics.refresh('latest')
                 } else {
                     alert("Could not log in")
                 }
