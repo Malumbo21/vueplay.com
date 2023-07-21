@@ -6,7 +6,7 @@
 </template>
 <script>
     import Login from "@/components/Login.vue";
-    let scope = null
+    let scope = null;
     export default {
         components: {
             Login
@@ -22,11 +22,11 @@
         provide: () => ({
             async login() {
                 /*
-                    Notice: 'this' returns child component, perhaps it is a bug?
-                    Should return (this) component.
-                    Could try to upgrade vue to newer version, perhaps it has been fixed.
-                    Workaround: create a local scope variable and attach this
-                */
+                                    Notice: 'this' returns child component, perhaps it is a bug?
+                                    Should return (this) component.
+                                    Could try to upgrade vue to newer version, perhaps it has been fixed.
+                                    Workaround: create a local scope variable and attach this
+                                */
                 return scope.login()
             }
         })

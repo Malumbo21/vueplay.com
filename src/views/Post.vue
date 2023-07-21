@@ -1,5 +1,5 @@
 <template v-for="i in 8">
-    <div class="bg-slate-100 flex flex-col h-screen">
+    <div class="bg-white flex flex-col h-screen">
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
         <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation">
@@ -10,7 +10,7 @@
                 <label class="fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
-                <div class="pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 bg-slate-100 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
+                <div class="bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
                     </h3><span>

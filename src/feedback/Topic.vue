@@ -18,7 +18,7 @@
                 <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow">
                     <h1 class="pt-2.5 text-xl font-semibold" v-if="!edit">
                         {{ post?.title }}
-                    </h1><input class="pt-2.5 text-xl font-semibold" v-model="post.title" v-else="" />
+                    </h1><input class="pt-2.5 text-xl font-semibold" v-model="post.title" v-else-if="post" />
                 </div>
             </div>
             <div class="max-w-2xl mx-auto mt-4 flex">
@@ -40,10 +40,9 @@
                 </div>
                 <div class="grow">
                     <p class="text-gray-700 mb-3" v-if="!edit">
-                        {{ post.description }}
+                        {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="">
-</textarea><img class="rounded w-full mb-4" :src="post.screenshot" v-if="post.screenshot" />
-                    <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
+</textarea><img class="rounded w-full mb-4" :src="post.screenshot" v-if="post?.screenshot" /> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
                         Select screenshot
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
                         Remove screenshot
@@ -66,7 +65,7 @@
                     <div class="mt-8">
                         <form class="mt-4">
                             <div class="relative">
-                                <input type="search" id="default-search" class="w-full h-10 block max-w-full pl-4 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" required="" />
+                                <input type="search" id="default-search" class="w-full h-10 block max-w-full pl-4 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" required="" v-model="comment" @keypress.enter.prevent="postComment()" />
                             </div>
                         </form>
                     </div>
@@ -136,6 +135,7 @@
             }
         },
         data: () => ({
+            comment: "",
             edit: false,
             post: null,
             moment
@@ -144,16 +144,34 @@
             this.refresh()
         },
         methods: {
-            async savePost() {
-                if (this.login()) {
-                    await this.io.service("types/feedback").patch(this.post._id, {
-                        title: this.post.title,
-                        description: this.post.description,
-                        screenshot: this.post.screenshot
+            async postComment() {
+                if (await this.login()) {
+                    await this.io.service("types/feedback-comments").create({
+                        feedback_id: this.post._id,
+                        comment: this.comment
                     });
                     await this.refresh();
-                    this.edit = false;
-                    alert("Saved")
+                    this.comment = "";
+                    alert("Posted!")
+                } else {
+                    alert("You need to be logged in to post a comment")
+                }
+            },
+            async savePost() {
+                await this.io.service("types/feedback").patch(this.post._id, {
+                    title: this.post.title,
+                    description: this.post.description,
+                    screenshot: this.post.screenshot
+                });
+                await this.refresh();
+                this.edit = false;
+                alert("Saved")
+            },
+            async remove(post) {
+                if (confirm("Delete post?")) {
+                    await this.io.service("types/feedback").remove(post._id);
+                    alert("Removed!");
+                    this.$router.push("/feedback")
                 }
             },
             async refresh() {
@@ -189,13 +207,6 @@
                         feedback_id: post._id
                     }
                 })
-            },
-            async remove(post) {
-                if (confirm('Delete post?')) {
-                    await this.io.service("types/feedback").remove(post._id);
-                    alert("Removed!")
-                    this.$router.push('/feedback')
-                }
             },
             selectImage() {
                 let input = document.createElement("input");
