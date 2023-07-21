@@ -4,9 +4,9 @@
         <article>
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
-                    <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes.find(v => v.user_id === user._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user._id),'hover:bg-emerald-100': post?.votes.find(v => v.user_id === user._id),'hover:bg-slate-100': !post?.votes.find(v => v.user_id === user._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user._id)}" @click="vote(post)">
+                    <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id),'hover:bg-emerald-100': post?.votes.find(v => v.user_id === user?._id),'hover:bg-slate-100': !post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id)}" @click="vote(post)">
                         <div class="h-1/2 w-full">
-                            <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes.find(v => v.user_id === user._id),'fill-gray-400': !post?.votes.find(v => v.user_id === user._id)}">
+                            <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes.find(v => v.user_id === user?._id),'fill-gray-400': !post?.votes.find(v => v.user_id === user?._id)}">
                                 <polygon points="10,0 20,10 0,10" />
                             </svg>
                         </div>
@@ -52,11 +52,11 @@
                     <div class="mt-2 flex text-gray-500">
                         <span class="text-xs">
                             {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
-                        </span> <span class="text-xs ml-1" v-if="post?.user._id === user._id" @click="remove(post)">
+                        </span> <span class="text-xs ml-1" v-if="post?.user?._id === user?._id" @click="remove(post)">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                            </svg> </span> <span class="text-xs ml-1" v-if="!edit && post?.user._id === user._id">
+                            </svg> </span> <span class="text-xs ml-1" v-if="!edit && post?.user?._id === user?._id">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-0.5" @click="edit = true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -108,11 +108,11 @@
                         </svg> <span class="text-xs">
                             {{comment.likes?.length &gt; 1 ? comment.likes?.length + ' likes' : ''}}
                             {{comment.likes?.length === 1 ? comment.likes?.length + ' like' : ''}} · {{ moment(comment.createdAt).format('MMMM DD, YYYY') }}
-                        </span> <span class="text-xs ml-1" v-if="comment?.user?.[0]?._id === user._id">
+                        </span> <span class="text-xs ml-1" v-if="comment?.user?.[0]?._id === user?._id">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-1" @click="removeComment(comment)">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                            </svg> </span> <span class="text-xs ml-1" v-if="comment?.user?.[0]?._id === user._id && !comment.edit" @click="comment.edit = true">
+                            </svg> </span> <span class="text-xs ml-1" v-if="comment?.user?.[0]?._id === user?._id && !comment.edit" @click="comment.edit = true">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-0.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -199,19 +199,14 @@
                 const votes = await this.io.service("types/feedback-votes").find({
                     query: {
                         feedback_id: post._id,
-                        user_id: this.user._id
+                        user_id: this.user?._id
                     }
                 });
                 return votes?.[0] || false
             },
             async vote(post) {
-                console.log("do vote");
-                let login = await this.login();
-                console.log("login finished");
-                if (login) {
-                    console.log("login success", this.user);
+                if (await this.login()) {
                     const myVote = await this.myVote(post);
-                    console.log("got vote", myVote);
                     if (myVote) {
                         await this.io.service("types/feedback-votes").remove(myVote._id)
                     } else {
@@ -235,7 +230,7 @@
                 const likes = await this.io.service("types/feedback-likes").find({
                     query: {
                         comment_id: comment._id,
-                        user_id: this.user._id
+                        user_id: this.user?._id
                     }
                 });
                 return likes?.[0] || false
