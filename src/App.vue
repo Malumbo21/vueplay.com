@@ -1,17 +1,34 @@
 <template>
-    <router-view /> </template>
+    <div>
+        <router-view />
+        <Login ref="auth" />
+    </div>
+</template>
 <script>
-    export default {
-        data: () => ({})
-    };
+import Login from "@/components/Login.vue";
+let scope = null
+export default {
+    components: {
+        Login
+    },
+    created() {
+        scope = this
+    },
+    methods: {
+        async login() {
+            return this.$refs?.auth?.login()
+        }
+    },
+    provide: () => ({
+        async login() {
+            /*
+                Notice: 'this' returns child component, perhaps it is a bug?
+                Should return (this) component.
+                Could try to upgrade vue to newer version, perhaps it has been fixed.
+                Workaround: create a local scope variable and attach this
+            */
+            return scope.login()
+        }
+    })
+};
 </script>
-<style>
-    body,
-    html,
-    #app {
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        margin-right: 0px;
-    }
-</style>
