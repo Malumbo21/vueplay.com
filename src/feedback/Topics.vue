@@ -1,6 +1,5 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
-        <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker." />
         <div class="h-24 flex-col max-w-2xl mx-auto lg:h-9 lg:mb-8 flex text-lg lg:flex-row">
             <div class="font-light">
                 <span>
@@ -68,11 +67,7 @@
     </section>
 </template>
 <script>
-    import Meta from "@/components/Meta.vue";
     export default {
-        components: {
-            Meta
-        },
         inject: ["io", "user", "login"],
         expose: ["refresh"],
         data: () => ({
@@ -104,8 +99,7 @@
                     }
                 }
                 if (this.sort === "top") {
-                    /** order by top voted */
-                }
+                    /** order by top voted */ }
                 if (this.category) query.category_id = this.category;
                 this.posts = await this.io.service("types/feedback").find({
                     query

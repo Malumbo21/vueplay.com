@@ -206,8 +206,8 @@
             },
             async vote(post) {
                 console.log("do vote");
-                let login = await this.login()
-                console.log('login finished')
+                let login = await this.login();
+                console.log("login finished");
                 if (login) {
                     console.log("login success", this.user);
                     const myVote = await this.myVote(post);

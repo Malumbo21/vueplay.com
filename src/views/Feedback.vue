@@ -1,6 +1,6 @@
 <template v-for="i in 8">
     <div class="bg-white flex flex-col h-screen">
-        <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation" />
+        <Meta description="Give feedback about the playground, UX and UI of Vue Play Studio. Explain how the exp" title="Feedback" />
         <VueNavigator class="absolute flex z-50" />
         <main style="width:100%" class="relative overflow-auto flex-1 h-full">
             <div class="relative h-full w-full flex">
