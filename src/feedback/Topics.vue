@@ -5,9 +5,12 @@
             <div class="font-light">
                 <span>
                     Showing
-                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline mx-1">
-                    <option>
+                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline mx-1" v-model="sort">
+                    <option value="latest">
                         Latest
+                    </option>
+                    <option value="top">
+                        Top
                     </option>
                 </select><span>
                     posts in
@@ -76,10 +79,14 @@
             term: "",
             categories: [],
             posts: [],
-            category: ""
+            category: "",
+            sort: "latest"
         }),
         watch: {
             category() {
+                this.refresh()
+            },
+            sort() {
                 this.refresh()
             }
         },
@@ -96,6 +103,8 @@
                         $options: "i"
                     }
                 }
+                if (this.sort === "top") {
+                    /** order by top voted */ }
                 if (this.category) query.category_id = this.category;
                 this.posts = await this.io.service("types/feedback").find({
                     query
