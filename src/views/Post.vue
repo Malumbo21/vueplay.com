@@ -31,7 +31,7 @@
                         </span>
                     </div>
                 </div>
-                <Topic class="m-auto grow h-full overflow-auto pt-16 lg:pt-7" @post="post = $event" :id="id" />
+                <Topic class="m-auto grow h-full overflow-auto pt-16 lg:pt-7 relat" @post="post = $event" :id="id" />
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
