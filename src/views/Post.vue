@@ -18,7 +18,7 @@
                     <div class="flex mb-1.5" v-for="vote in votes">
                         <div class="h-7 w-7 bg-cover rounded-full bg-slate-500" :style="'background-image: url(' + vote?.user?.[0]?.picture + ')'">
                         </div><span class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow">
-                            {{ vote.user?.[0].email }}
+                            {{ vote.user?.[0]?.name }}
                         </span>
                     </div>
                     <div class="flex mb-1.5">
@@ -40,7 +40,7 @@
     import Footer from "@/components/Footer.vue";
     import Topic from "@/feedback/Topic.vue";
     export default {
-        props: ['id'],
+        props: ["id"],
         components: {
             VueNavigator,
             Footer,

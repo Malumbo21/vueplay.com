@@ -30,7 +30,7 @@
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
                     <h1 class="font-semibold mt-0.5">
-                        {{ post?.user?.email }}
+                        {{ post?.user?.name}}
                     </h1>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
                     <h1 class="font-semibold mt-0.5">
-                        {{ comment.user?.[0]?.email }}
+                        {{ comment.user?.[0]?.name }}
                     </h1>
                 </div>
             </div>
