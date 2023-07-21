@@ -11,11 +11,20 @@ export default {
         }
     }),
     watch: {
-        defaults: {
-            handler() {
-                this.init()
-            },
-            deep: true
+        'defaults.title'() {
+            document.title = this.title ? (this.title + ' - Vue Play') : this.defaults.title
+        },
+        'defaults.description'() {
+            this.ensureMeta('description')
+            document.head.children.description.content = this.description || this.defaults.description
+        },
+        'defaults.keywords'() {
+            this.ensureMeta('keywords')
+            document.head.children.keywords.content = this.keywords || this.defaults.keywords
+        },
+        'defaults.author'() {
+            this.ensureMeta('author')
+            document.head.children.author.content = this.author || this.defaults.author
         }
     },
     created() {
