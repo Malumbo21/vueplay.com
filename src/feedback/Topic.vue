@@ -24,9 +24,7 @@
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
-                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="{
-backgroundImage: 'url(' + (post.user?.picture || '') + ')'
-}">
+                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="'background-image: url(' + post?.user?.picture + ')'">
                         </div>
                     </div>
                 </div>
@@ -83,9 +81,7 @@ backgroundImage: 'url(' + (post.user?.picture || '') + ')'
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
                     <div class="w-11">
-                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="{
-backgroundImage: 'url(' + (comment.user?.[0]?.picture || '') + ')'
-}">
+                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="'background-image: url(' + comment?.user?.[0]?.picture + ')'">
                         </div>
                     </div>
                 </div>
@@ -103,14 +99,14 @@ backgroundImage: 'url(' + (comment.user?.[0]?.picture || '') + ')'
                     <p class="text-gray-700 mb-3" v-if="!comment.edit">
                         {{ comment.comment }}
                     </p><textarea v-model="comment.comment" rows="" cols="" class="w-full h-16 mb-3 border" v-else="">
-</textarea><button class="bg-emerald-400 text-white  hover:bg-emerald-500 shadow rounded px-2 mb-2 py-2" v-if="comment.edit">
+</textarea><button class="bg-emerald-400 text-white  hover:bg-emerald-500 shadow rounded px-2 mb-2 py-2" v-if="comment.edit" @click="saveComment(comment)">
                         Save
                     </button>
                     <div class="flex text-gray-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1 cursor-pointer" @click="like(comment)" :class="{'fill-red-400': comment.likes.length}">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg> <span class="text-xs">
-                            {{comment.likes?.length &gt; 1 ? comment.likes?.length + ' likes' : ''}}
+                            {{comment.likes?.length > 1 ? comment.likes?.length + ' likes' : ''}}
                             {{comment.likes?.length === 1 ? comment.likes?.length + ' like' : ''}} · {{ moment(comment.createdAt).format('MMMM DD, YYYY') }}
                         </span> <span class="text-xs ml-1" v-if="comment?.user?.[0]?._id === user.value._id">
                             ·
@@ -163,6 +159,13 @@ backgroundImage: 'url(' + (comment.user?.[0]?.picture || '') + ')'
                 } else {
                     alert("You need to be logged in to post a comment")
                 }
+            },
+            async saveComment(comment) {
+                await this.io.service("types/feedback-comments").patch(this.comment._id, {
+                    comment: comment.comment
+                });
+                comment.edit = false;
+                alert("Saved")
             },
             async savePost() {
                 await this.io.service("types/feedback").patch(this.post._id, {
