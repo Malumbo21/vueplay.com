@@ -37,7 +37,7 @@
                             POST FEEDBACK
                         </button> </div>
                 </div>
-                <Topics class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7" ref="topics" />
+                <Topics class="m-auto grow h-full overflow-auto pt-16 lg:pt-7" ref="topics" />
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false" />
             </div>
         </main>

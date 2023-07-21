@@ -32,7 +32,7 @@
                         </span>
                     </div>
                 </div>
-                <Topic class="m-auto container grow h-full overflow-auto pt-16 lg:pt-7"></Topic>
+                <Topic class="m-auto grow h-full overflow-auto pt-16 lg:pt-7"></Topic>
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
