@@ -48,7 +48,7 @@
             </div>
         </div>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
-            <div class="w-24 inline-flex">
+            <div class="pr-4 inline-flex">
                 <div class="cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{ 'bg-emerald-50': post.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post.votes.find(v => v.user_id === user?._id), 'hover:bg-emerald-100': post.votes.find(v => v.user_id === user?._id), 'hover:bg-slate-100': !post.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post.votes.find(v => v.user_id === user?._id) }">
                     <div class="h-1/2 w-full">
                         <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{ 'fill-emerald-400': post.votes.find(v => v.user_id === user?._id), 'fill-gray-400': !post.votes.find(v => v.user_id === user?._id) }">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" post.over="">
+            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis inline-flex max-h-20 flex-col grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" post.over="">
                 <h1 class="font-semibold">
                     {{ post.title }}
                 </h1>
@@ -68,11 +68,11 @@
                     {{ post.description }}
                 </p>
             </div>
-            <div class="w-12 inline-flex cursor-pointer" @click="$router.push('/feedback/' + post._id)" @mouseenter="post.over = true" @mouseleave="post.over = false">
-                <div class="w-1/2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-400 w-5 h-5 mt-1">
+            <div class="pl-4 inline-flex cursor-pointer" @click="$router.push('/feedback/' + post._id)" @mouseenter="post.over = true" @mouseleave="post.over = false">
+                <div class="w-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-400 w-5 h-5 mt-1 mr-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                     </svg> </div>
-                <div class="w-1/2 text-right">
+                <div class="w-10 text-right">
                     {{ post.comments?.length }}
                 </div>
             </div>
