@@ -1,7 +1,7 @@
 <template>
-    <Transport to="body" v-show="authenticate">
+    <Transport to="body" v-show="authorizing">
         <div class="w-screen h-screen absolute left-0 top-0" style="z-index:100000;background-color:#cacfd970"
-            @click="authenticate = false">
+            @click="authorizing = false">
             <div class="shadow-xl rounded -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 fixed block m-auto max-w-sm w-screen bg-slate-100 border-box text-center py-12"
                 @click.stop=""><button
                     class="w-64 mb-2 inline-flex items-center bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
@@ -47,7 +47,7 @@
                         Continue with Facebook
                     </span> </button><button
                     class="w-64 inline-flex items-center bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-                    @click="authenticate = false">
+                    @click="authorizing = false">
                     <span>
                         Cancel
                     </span> </button> </div>
@@ -104,11 +104,11 @@ export default {
                 if (token) {
                     await this.io.authentication.setAccessToken(token);
                     await this.reAuthenticate();
-                    this.authenticate = false;
+                    this.authorizing = false;
                 } else if (error) {
-                    this.authenticate = false;
+                    this.authorizing = false;
                 } else if (tries >= 1000000000000) {
-                    this.authenticate = false;
+                    this.authorizing = false;
                 }
             })
         },
