@@ -7,6 +7,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
                 <div class="bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
+                    <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-4 py-2 " @click="$router.push('/feedb')">
+                        Go back
+                    </button>
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
                     </h3><span>
