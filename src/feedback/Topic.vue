@@ -42,7 +42,7 @@
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="">
-</textarea><img class="rounded w-full mb-4" :src="post.screenshot" v-if="post?.screenshot" /> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
+</textarea><img class="rounded w-full mb-4" :src="post.screenshot" v-if="post?.screenshot" /> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
                         Select screenshot
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
                         Remove screenshot
