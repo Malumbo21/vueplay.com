@@ -21,13 +21,14 @@
         },
         provide: () => ({
             async login() {
+                return this.$refs?.auth?.login()
                 /*
-                                    Notice: 'this' returns child component, perhaps it is a bug?
-                                    Should return (this) component.
-                                    Could try to upgrade vue to newer version, perhaps it has been fixed.
-                                    Workaround: create a local scope variable and attach this
-                                */
-                return scope.login()
+                    Notice: 'this' returns child component, perhaps it is a bug?
+                    Should return (this) component.
+                    Could try to upgrade vue to newer version, perhaps it has been fixed.
+                    Workaround: create a local scope variable and attach this
+                */
+                // return scope.login()
             }
         })
     };
