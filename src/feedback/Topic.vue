@@ -101,10 +101,10 @@
                     </p><textarea v-model="comment.description" rows="" cols="" class="w-full h-16 mb-3 border">
 </textarea>
                     <div class="flex text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1 cursor-pointer" @click="like(comment)">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                         </svg> <span class="text-xs">
-                            {{1 &gt; 0 ? '1 likes' : ''}} · {{ moment(comment.createdAt).format('MMMM DD, YYYY') }}
+                            {{comment.likes?.length &gt; 1 ? comment.likes?.length + ' likes' : ''}}{{comment.likes?.length === 1 ? comment.likes?.length + ' like' : ''}} · {{ moment(comment.createdAt).format('MMMM DD, YYYY') }}
                         </span> <span class="text-xs ml-1">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-1">
@@ -205,6 +205,37 @@
                 post.votes = await this.io.service("types/feedback-votes").find({
                     query: {
                         feedback_id: post._id
+                    }
+                })
+            },
+            async myLike(comment) {
+                const likes = await this.io.service("types/feedback-likes").find({
+                    query: {
+                        comment_id: comment._id,
+                        user_id: this.user.value._id
+                    }
+                });
+                return likes?.[0] || false
+            },
+            async like(comment) {
+                if (await this.login()) {
+                    const myLike = await this.myLike(comment);
+                    if (myLike) {
+                        await this.io.service("types/feedback-likes").remove(myLike._id)
+                    } else {
+                        await this.io.service("types/feedback-likes").create({
+                            comment_id: comment._id
+                        })
+                    }
+                    await this.refreshLikes(comment)
+                } else {
+                    alert("You have to be logged in to like")
+                }
+            },
+            async refreshLikes(comment) {
+                comment.likes = await this.io.service("types/feedback-likes").find({
+                    query: {
+                        comment_id: comment._id
                     }
                 })
             },
