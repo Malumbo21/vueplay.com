@@ -17,7 +17,7 @@
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow">
                     <h1 class="pt-2.5 text-xl font-semibold">
-                        {{ post?.title }} {{ post?.votes?.length }}
+                        {{ post?.title }}
                     </h1>
                 </div>
             </div>
