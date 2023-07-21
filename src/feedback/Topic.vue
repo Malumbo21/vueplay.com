@@ -131,6 +131,7 @@
             Meta
         },
         inject: ["io", "user", "login"],
+        emit: ["post"],
         props: {
             id: {
                 type: String,
@@ -193,7 +194,7 @@
             },
             async refresh() {
                 this.post = await this.io.service("types/feedback").get(this.id);
-                console.log("post", this.post)
+                this.$emit("post", this.post)
             },
             async myVote(post) {
                 const votes = await this.io.service("types/feedback-votes").find({
