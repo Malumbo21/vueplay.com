@@ -49,7 +49,7 @@
             </div>
             <div class="max-w-2xl mx-auto mb-8 mt-2 flex" v-if="post">
                 <div class="w-16 inline-flex">
-                    <div class="w-11"> </div>
+                    <div class="w-16"> </div>
                 </div>
                 <div class="grow">
                     <p class="text-gray-700 mb-3" v-if="!edit">
@@ -148,7 +148,7 @@
         props: {
             id: {
                 type: String,
-                default: "64b581fe691f1cd6f7ae2a2e"
+                default: "64bae1b0ca444b8b5e20cd5d"
             }
         },
         data: () => ({
