@@ -10,7 +10,7 @@
             <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="logout" v-if="user?.email || user?.value?.email">
                 Logout
             </div>
-            <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="login" v-else="">
+            <div class="float-left mt-3 ml-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="login" v-else="">
                 Login
             </div>
         </div>

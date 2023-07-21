@@ -3,7 +3,7 @@
         <VueNavigator class="absolute flex z-50" />
         <main style="width:100%" class="relative overflow-auto flex-1 h-full">
             <div class="relative h-full w-full flex">
-                <label class="fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <label class="fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-16 lg:mt-4 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
                 <div class="bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
@@ -148,6 +148,7 @@
         color: #000000ff;
         background: #ffffff00;
         box-shadow: 0px 0;
+        margin-top: 12px;
     }
 
     .border-l-4 {

@@ -9,12 +9,12 @@
             <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="logout" v-if="user?.email || user?.value?.email">
                 Logout
             </div>
-            <div class="float-left mt-3 mr-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="login" v-else="">
+            <div class="float-left mt-3 ml-4 cursor-pointer text-slate-700 hover:text-slate-900 font-bold" @click="login" v-else="">
                 Login
             </div>
         </div>
         <div class="h-24 flex-col max-w-2xl mx-auto lg:h-9 lg:mb-8 flex text-lg lg:flex-row mt-16">
-            <div class="font-light">
+            <div class="text-sm mb:text-base font-light">
                 <span>
                     Showing
                 </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline mx-1" v-model="sort">
@@ -60,9 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" :class="{
-'text-emerald-600': post.over
-}">
+            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" post.over="">
                 <h1 class="font-semibold">
                     {{ post.title }}
                 </h1>
