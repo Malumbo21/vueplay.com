@@ -16,9 +16,9 @@
                     </div>
                 </div>
                 <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow">
-                    <h1 class="pt-2.5 text-xl font-semibold">
+                    <h1 class="pt-2.5 text-xl font-semibold" v-if="!edit">
                         {{ post?.title }}
-                    </h1>
+                    </h1><input class="pt-2.5 text-xl font-semibold" v-model="post.title" v-else="" />
                 </div>
             </div>
             <div class="max-w-2xl mx-auto mt-4 flex">
@@ -39,22 +39,27 @@
                     <div class="w-11"> </div>
                 </div>
                 <div class="grow">
-                    <p class="text-gray-700 mb-3" v-if="!editDescription">
+                    <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post.description }}
-                    </p> <textarea v-model="post.description" rows="" cols="" class="w-full h-32 mb-3 border" v-else="">
-</textarea><button class="bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="saveDescription()" v-if="editDescription">
+                    </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="">
+</textarea><img class="rounded w-full mb-4" :src="post.screenshot" v-if="post.screenshot" />
+                    <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
+                        Select screenshot
+                    </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
+                        Remove screenshot
+                    </button><button class="bg-emerald-400 text-white  hover:bg-emerald-500 shadow rounded px-2 mb-2 py-2" @click="savePost()" v-if="edit">
                         Save
-                    </button><img class="w-full mb-4" :src="post.screenshot" v-if="post.screenshot" />
-                    <div class="flex text-gray-500">
+                    </button>
+                    <div class="mt-2 flex text-gray-500">
                         <span class="text-xs">
                             {{ moment(post.createdAt).format('MMMM DD, YYYY') }}
-                        </span> <span class="text-xs ml-1">
+                        </span> <span class="text-xs ml-1" v-if="post?.user._id === user.value._id" @click="remove(post)">
                             ·
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                            </svg> </span> <span class="text-xs ml-1" v-if="!editDescription && post?.user._id === user.value._id">
+                            </svg> </span> <span class="text-xs ml-1" v-if="!edit && post?.user._id === user.value._id">
                             ·
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-0.5" @click="editDescription = true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 cursor-pointer inline-flex -mt-0.5" @click="edit = true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                             </svg> </span>
                     </div>
@@ -131,7 +136,7 @@
             }
         },
         data: () => ({
-            editDescription: false,
+            edit: false,
             post: null,
             moment
         }),
@@ -139,33 +144,15 @@
             this.refresh()
         },
         methods: {
-            async saveTitle() {
+            async savePost() {
                 if (this.login()) {
                     await this.io.service("types/feedback").patch(this.post._id, {
-                        title: this.post.title
-                    });
-                    await this.refresh();
-                    this.editTitle = false;
-                    alert("Saved")
-                }
-            },
-            async saveDescription() {
-                if (this.login()) {
-                    await this.io.service("types/feedback").patch(this.post._id, {
-                        description: this.post.description
-                    });
-                    await this.refresh();
-                    this.editDescription = false;
-                    alert("Saved")
-                }
-            },
-            async saveScreenshot() {
-                if (this.login()) {
-                    await this.io.service("types/feedback").patch(this.post._id, {
+                        title: this.post.title,
+                        description: this.post.description,
                         screenshot: this.post.screenshot
                     });
                     await this.refresh();
-                    this.editScreenshot = false;
+                    this.edit = false;
                     alert("Saved")
                 }
             },
@@ -203,10 +190,62 @@
                     }
                 })
             },
-            async remove(id) {
-                await this.io.service("types/feedback").remove(id);
-                await this.refresh();
-                alert("Removed!")
+            async remove(post) {
+                if (confirm('Delete post?')) {
+                    await this.io.service("types/feedback").remove(post._id);
+                    alert("Removed!")
+                    this.$router.push('/feedback')
+                }
+            },
+            selectImage() {
+                let input = document.createElement("input");
+                input.type = "file";
+                input.multiple = false;
+                input.accept = "image/*";
+                input.onchange = async () => {
+                    let files = Array.from(input.files);
+                    let file = files[0];
+                    let reader = new FileReader;
+                    reader.readAsDataURL(file);
+                    reader.onload = async e => {
+                        this.post.screenshot = await this.resizeImage(e.target.result)
+                    };
+                    reader.onerror = e => {
+                        alert("Could not load file");
+                        console.log(e)
+                    }
+                };
+                input.click()
+            },
+            resizeImage(src) {
+                return new Promise((resolve, reject) => {
+                    let MAX_WIDTH = 1000;
+                    let MAX_HEIGHT = 1000;
+                    let canvas = document.createElement("canvas");
+                    let ctx = canvas.getContext("2d");
+                    let image = new Image;
+                    image.onload = () => {
+                        let width = image.width;
+                        let height = image.height;
+                        if (width > height) {
+                            if (width > MAX_WIDTH) {
+                                height *= MAX_WIDTH / width;
+                                width = MAX_WIDTH
+                            }
+                        } else {
+                            if (height > MAX_HEIGHT) {
+                                width *= MAX_HEIGHT / height;
+                                height = MAX_HEIGHT
+                            }
+                        }
+                        canvas.width = width;
+                        canvas.height = height;
+                        ctx.drawImage(image, 0, 0, width, height);
+                        let dataurl = canvas.toDataURL("image/png", 0.7);
+                        resolve(dataurl)
+                    };
+                    image.src = src
+                })
             }
         }
     };
