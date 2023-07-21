@@ -81,22 +81,23 @@ export default {
     },
     inject: ["io", "user", 'login', 'test', 'yam'],
     data: () => ({
-        menu: false,
-        categories: [],
         category: "",
         title: "",
         description: "",
         screenshot: "",
-        background: defaultBase64Image
+        background: defaultBase64Image,
+        menu: false,
+        categories: []
     }),
     mounted() {
-        this.posts();
         this.getCategories()
     },
     methods: {
-        async posts() {
-            const posts = await this.io.service("types/feedback").find();
-            console.log("posts", posts)
+        reset() {
+            this.category = this.categories?.[0]?._id || ""
+            this.title = ""
+            this.description = ""
+            this.screenshot = ""
         },
         async getCategories() {
             const categories = await this.io.service("types/feedback-categories").find({
@@ -111,13 +112,13 @@ export default {
         },
         async post() {
             if (await this.login()) {
-                const rs = await this.io.service("types/feedback").create({
+                await this.io.service("types/feedback").create({
                     category_id: this.category,
                     title: this.title,
                     description: this.description,
                     screenshot: this.screenshot
                 });
-                await this.posts();
+                this.reset()
                 alert("Thank you for posting feedback!")
                 this.$refs.topics.refresh()
             } else {
