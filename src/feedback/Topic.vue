@@ -78,7 +78,7 @@
                     <div class="mt-8">
                         <form class="mt-4">
                             <div class="relative">
-                                <input type="search" id="default-search" class="w-full h-10 block max-w-full pl-4 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" required="" v-model="comment" @keypress.enter.prevent="postComment()" />
+                                <input type="search" id="default-search" class="w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment" required="" v-model="comment" @keypress.enter.prevent="postComment()" />
                             </div>
                         </form>
                     </div>
