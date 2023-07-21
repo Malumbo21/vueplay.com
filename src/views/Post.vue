@@ -2,8 +2,6 @@
     <div class="bg-white flex flex-col h-screen">
         <Login ref="auth" @user="authenticated" @cancel="cancelled">
         </Login>
-        <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation">
-        </Meta>
         <VueNavigator class="absolute flex z-50" />
         <main style="width:100%" class="relative overflow-auto flex-1 h-full">
             <div class="relative h-full w-full flex">
@@ -42,14 +40,12 @@
 <script>
     import VueNavigator from "@/components/Navigator.vue";
     import Footer from "@/components/Footer.vue";
-    import Meta from "@/components/Meta.vue";
     import Login from "@/components/Login.vue";
     import Topic from "@/feedback/Topic.vue";
     export default {
         components: {
             VueNavigator,
             Footer,
-            Meta,
             Login,
             Topic
         },

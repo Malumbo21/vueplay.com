@@ -1,6 +1,6 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
-        <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker." />
+        <Meta :title="post?.title" :description="post?.description" />
         <article>
             <div class="max-w-2xl mx-auto mt-4 flex">
                 <div class="w-16 inline-flex">
