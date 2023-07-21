@@ -30,7 +30,7 @@
                     </h3><input class="inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" placeholder="Short, descriptive title" v-model="title" />
                     <h3 class="text-slate-500 mt-4 font-medium mb-4 whitespace-nowrap">
                         Description
-                    </h3><textarea v-model="description" rows="" cols="" class="resize-none h-24 inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" placeholder="Give helpful details. Add screenshots where relevant." />
+                    </h3><textarea v-model="description" rows="" cols="" class="resize-none h-24 inline-block pl-2 py-2 w-full border-slate-300 border overflow-hidden border-solid rounded" placeholder="Give helpful details. Add screenshot if relevant." />
                     <div class="h-16"><button class="w-10 h-10 border-slate-300 border overflow-hidden border-solid rounded mt-6 bg-slate-400 float-left" style="background-size:cover" :style="'background-image: url(' + (screenshot || background) + ')'" @click="selectImage">
 
                         </button><button class="ml-1 w-10 h-10 border-slate-300 border overflow-hidden border-solid rounded mt-6 bg-slate-100 p-0 float-left" style="background-size:cover" @click="screenshot = ''" v-if="screenshot">
