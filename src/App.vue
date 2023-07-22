@@ -23,11 +23,11 @@
         provide: () => ({
             async login() {
                 /*
-                                                                Notice: 'this' returns child component, perhaps it is a bug?
-                                                                Should return (this) component.
-                                                                Could try to upgrade vue to newer version, perhaps it has been fixed.
-                                                                Workaround: create a local scope variable and attach this
-                                                            */
+                                                                                Notice: 'this' returns child component, perhaps it is a bug?
+                                                                                Should return (this) component.
+                                                                                Could try to upgrade vue to newer version, perhaps it has been fixed.
+                                                                                Workaround: create a local scope variable and attach this
+                                                                            */
                 console.log("Logging in");
                 return scope.login()
             }
