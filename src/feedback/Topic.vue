@@ -106,7 +106,7 @@
             </div>
             <div class="max-w-2xl  mx-auto mb-8 mt-2 flex">
                 <div class="w-16 inline-flex">
-                    <div class="w-11"> </div>
+                    <div class="w-16"> </div>
                 </div>
                 <div class="grow">
                     <p class="text-gray-700 mb-3" v-if="!comment.edit">
