@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis inline-flex max-h-20 flex-col grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" post.over="">
+            <div class="hover:text-emerald-600 overflow-hidden text-ellipsis inline-flex flex-col grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" post.over="" style="max-height:75px;height:1806.03px">
                 <h1 class="font-semibold">
                     {{ post.title }}
                 </h1>
