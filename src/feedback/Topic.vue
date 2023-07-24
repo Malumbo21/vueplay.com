@@ -1,6 +1,6 @@
 <template>
     <section class="p-6 md:pt-6 pb-24">
-        <Meta :title="post?.title" :description="post?.description" />
+        <Meta :title="post?.title" :description="post?.description" :author="post?.user?.name" />
         <div class="absolute left-0 right-0 top-0 h-16 p-2 bg-slate-50">
             <div class="h-12 w-12 bg-cover rounded-full bg-slate-500 mx-auto float-right" :style="'background-image: url(' + (user?.picture || user?.value?.picture) + ')'" v-if="user?.email || user?.value?.email">
             </div>
