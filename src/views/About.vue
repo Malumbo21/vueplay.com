@@ -14,7 +14,7 @@
                 </div>
             </div>
             <h1 style="width:calc(100% - 40px);margin:auto;margin-top:40px;margin-bottom:40px" class="text-xl">
-                Create Vue Applications using a Visual Designer
+                Create Vue Applications using a Visual Designer.
             </h1>
         </header>
         <main style="width:100%" class="grow">
