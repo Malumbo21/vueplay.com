@@ -8,7 +8,7 @@
         </button><button @click="$router.push('/pricing')" :class="{active: route === '/pricing'}" class="hover:text-green-700 text-slate-700 px-2">
             Pricing
         </button> <button @click="submenu=true" :class="{active: subRoute}" class="relative hover:text-green-700 text-slate-700 pr-2" @mouseenter="submenu=true" @mouseleave="submenu=false">
-            <span class="" @click="submenu=false, $router.push('/feedback')">
+            <span class="">
                 More...
             </span>
             <div class="bg-slate-50 border-y-slate-100 border-t border-b-2 right-0 top-full absolute shadow pb-2" v-if="submenu">
