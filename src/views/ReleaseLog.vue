@@ -1,6 +1,6 @@
 <template>
     <div class="bg-slate-100">
-        <Meta description="Vue Play release log" title="Release Log">
+        <Meta description="24.07.2023 - Release 1.0.5 | Drag and drop Tailwind Hero Icons into the Playground with Vue Play" title="Drag and drop Tailwind Hero Icons into the Playground">
         </Meta>
         <VueNavigator class="z-10" />
         <header>
