@@ -11,6 +11,16 @@
         <main class="p-6 m-auto max-w-xl container">
             <section class="shadow border mb-6 rounded-lg bg-white p-6">
                 <h3>
+                    24.07.2023 - Release 1.0.5
+                </h3>
+                <ul class="indent-3 ml-5 list-disc">
+                    <li class="" style="height:29px">
+                        Feature - Drag and drop Tailwind Hero Icons into the Playground
+                    </li>
+                </ul>
+            </section>
+            <section class="shadow border mb-6 rounded-lg bg-white p-6">
+                <h3>
                     17.07.2023 - Release 1.0.4
                 </h3>
                 <ul class="indent-3 ml-5 list-disc">
