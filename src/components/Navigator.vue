@@ -1,5 +1,5 @@
 <template>
-    <nav style="background-image:linear-gradient(204deg, #f0dfe20d 54%, #e1ebe8ff 59%, #f0f5faff 74%);background-color:#edf7f4ff;min-height:50px" class="shadow border-slate-300 border-b">
+    <nav style="min-height:50px" class="shadow bg-slate-50">
         <div style="width:216px;background-size:contain;background-repeat:no-repeat;margin-left:10px;cursor:pointer;float:left;height:35px;margin-top:7px;margin-bottom:7px" @click="$router.push('/')" class="sm:inline hidden logo">
         </div><button @click="$router.push('/')" :class="{active: route === '/'}" class="hover:text-green-700 text-slate-700 pr-2 sm:hidden">
             Home
@@ -11,7 +11,7 @@
             <span>
                 More...
             </span>
-            <div class="border-y-emerald-100 border-t border-b-2 right-0 top-full absolute bg-emerald-50 shadow pb-2" v-if="submenu">
+            <div class="bg-slate-50 border-y-slate-100 border-t border-b-2 right-0 top-full absolute shadow pb-2" v-if="submenu">
                 <button @click="submenu=false, $router.push('/feedback')" :class="{active: route.includes('/feedback')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right">
                     Feedback
                 </button> <button @click="submenu=false, $router.push('/documentation')" :class="{active: route.includes('/documentation')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right">
@@ -53,7 +53,6 @@
         text-align: right;
         width: 100%;
         height: 50px;
-        background-color: #ffffffff;
         position: sticky;
         top: 0px;
     }
