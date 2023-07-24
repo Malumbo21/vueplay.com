@@ -1,9 +1,9 @@
 <template v-for="i in 8">
-    <div class="bg-slate-100 flex flex-col h-screen">
+    <div class="">
         <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation">
         </Meta>
         <VueNavigator class="absolute flex z-50" />
-        <main style="width:100%" class="bg-white relative overflow-auto flex-1 h-full">
+        <main style="width:100%" class="h-full bg-white relative overflow-auto flex-1">
             <div class="relative h-full w-full flex">
                 <label class="from-slate-600 bg-slate-500 shadow-md bg-gradient-to-tl fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-6 text-sm text-white rounded-lg" for="toggle">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
