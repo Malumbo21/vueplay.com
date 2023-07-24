@@ -2,7 +2,7 @@
     <section class="p-6 pt-20 md:pt-6 pb-40">
         <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker.">
         </Meta>
-        <article class="max-w-2xl mx-auto mb-6 mt-4 shadow border rounded-lg bg-white px-12 py-14 overflow-auto">
+        <article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
             <h1 class="mb-12 text-4xl">
                 Frequently Asked Questions
             </h1>
