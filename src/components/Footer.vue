@@ -1,5 +1,5 @@
 <template>
-    <footer style="width:100%;text-align:center;box-sizing:border-box;display:inline-block" class="text-sky-100 bg-sky-950 py-12 border-slate-300 border-t text-xs md:text-md sm:text-sm px-6">
+    <footer style="width:100%;text-align:center;box-sizing:border-box;display:inline-block" class="text-sky-100 bg-sky-950 py-12 text-xs md:text-md sm:text-sm px-6">
 
         <p class="pb-3">
             © All rights reserved - Siglar Development AS {{
