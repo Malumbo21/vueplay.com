@@ -10,7 +10,7 @@
                         <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
                         </path>
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
-                <div class="top-0 sticky bottom-0 bg-white md:p-7 md:w-80 xl:w-80 md:shadow-md shadow-lg pt-24 border-r border-slate-200 peer-checked:px-7 peer-checked:pt-24 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 md:relative">
+                <div class="overflow-auto top-0 sticky bottom-0 bg-white md:p-7 md:w-80 xl:w-80 md:shadow-md shadow-lg pt-24 border-r border-slate-200 peer-checked:px-7 peer-checked:pt-24 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 md:relative">
                     <h3 class="whitespace-nowrap font-bold text-slate-800 ml-2">
                         Getting Started
                     </h3>
