@@ -2,7 +2,7 @@
     <div class="">
         <Meta description="Give feedback about the playground, UX and UI of Vue Play Studio. Explain how the exp" title="Feedback" />
         <VueNavigator class="absolute flex z-50" />
-        <main style="width:100%" class="bg-white relative overflow-auto h-full">
+        <main style="width:100%" class="flex bg-white relative overflow-auto h-full">
             <div class="relative h-full w-full flex">
                 <label class="bg-white fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-20 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
