@@ -1,7 +1,7 @@
 <template v-for="i in 8">
-    <div class="">
+    <div class="bg-white flex flex-col h-screen">
         <VueNavigator class="absolute flex z-50" />
-        <main style="width:100%" class="flex bg-white relative overflow-auto h-full">
+        <main style="width:100%;min-height:calc(100vh - 50px)" class="flex-1 relative overflow-auto">
             <div class="relative h-full w-full flex">
                 <label class="bg-white fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-16 lg:mt-4 ml-3 text-sm text-slate-900 rounded-lg" for="toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
