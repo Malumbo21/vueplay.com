@@ -73,6 +73,6 @@
     }
 
     .logo {
-        background-image: url(@/assets/vueplay-logo-long.png);
+        background-image: url(@/assets/vueplay-logo-long.webp);
     }
 </style>
