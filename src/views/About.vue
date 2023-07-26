@@ -115,7 +115,7 @@
     }
 
     .screenshot {
-        background-image: url(@/assets/screenshot.png);
+        background-image: url(@/assets/screenshot.webp);
     }
 
     @media only screen and (max-width: 600px) {
