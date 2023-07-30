@@ -62,6 +62,15 @@ const routes = [{
     props: true
 },
 {
+    path: '/search',
+    component: () => import('@/views/Search.vue')
+},
+{
+    path: '/search/:id',
+    component: () => import('@/views/Component.vue'),
+    props: true
+},
+{
     path: '/support',
     component: () => import('@/views/Support.vue')
 },

@@ -7,13 +7,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
                 <div class="bottom-0 bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 absolute md:relative top-0 overflow-auto">
-                    <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-4 py-2 " @click="$router.push('/feedback')">
+                    <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-4 py-2 " @click="$router.push('/search')">
                         Go back
                     </button>
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
                     </h3><span>
-                        {{ post?.category?.title || 'Not set' }}
+                        {{post?.category?.title || 'Not set'}}
                     </span>
                     <h3 class="text-slate-500 mt-4 font-medium mb-2 whitespace-nowrap">
                         Voters
@@ -31,7 +31,7 @@
                         </span>
                     </div>
                 </div>
-                <Topic class="m-auto grow h-full overflow-auto pt-16 lg:pt-7 relative" @post="post = $event" :id="id" />
+                <Component class="m-auto grow h-full overflow-auto pt-16 lg:pt-7 relative" @post="post = $event" :id="id" />
                 <div class="absolute h-full w-full" v-if="menu" @click="menu = false"></div>
             </div>
         </main>
@@ -41,13 +41,13 @@
 <script>
     import VueNavigator from "@/components/Navigator.vue";
     import Footer from "@/components/Footer.vue";
-    import Topic from "@/feedback/Topic.vue";
+    import Component from "@/search/Component.vue";
     export default {
         props: ["id"],
         components: {
             VueNavigator,
             Footer,
-            Topic
+            Component
         },
         data: () => ({
             menu: false,
