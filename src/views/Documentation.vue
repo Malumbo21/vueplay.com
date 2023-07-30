@@ -2,7 +2,7 @@
     <div class="bg-white flex flex-col h-screen">
         <Meta description="Read the Vue Play documentation for better insights to the software." title="Documentation">
         </Meta>
-        <VueNavigator class="absolute flex z-50" />
+        <VueNavigator class="absolute z-50" />
         <main style="width:100%;min-height:calc(100vh - 50px)" class="relative overflow-auto flex-1">
             <div class="h-full overflow-hidden flex relative w-full">
                 <label class="from-slate-600 bg-slate-500 shadow-md bg-gradient-to-tl fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-6 text-sm text-white rounded-lg" for="toggle">

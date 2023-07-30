@@ -1,5 +1,5 @@
 <template>
-    <nav style="min-height:50px" class="shadow bg-slate-50">
+    <nav style="min-height:50px" class="sticky text-right shadow bg-slate-50 w-full top-0 block">
         <div style="width:216px;background-size:contain;background-repeat:no-repeat;margin-left:10px;cursor:pointer;float:left;height:35px;margin-top:7px;margin-bottom:7px" @click="$router.push('/')" class="sm:inline hidden logo">
         </div><button @click="$router.push('/')" :class="{active: route === '/'}" class="hover:text-green-700 text-slate-700 pr-2 sm:hidden">
             Home
@@ -49,12 +49,7 @@
 </script>
 <style scoped>
     nav {
-        display: block;
-        text-align: right;
-        width: 100%;
         height: 50px;
-        position: sticky;
-        top: 0px;
     }
 
     button {
