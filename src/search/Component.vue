@@ -210,6 +210,8 @@
                 this.$emit("post", this.post)
             },
             async myVote(post) {
+                console.log("get vote stat post", post);
+                console.log("get vote stat usr", this.user);
                 const votes = await this.io.service("types/votes").find({
                     query: {
                         application_id: post._id,
@@ -221,6 +223,7 @@
             async vote(post) {
                 if (await this.login()) {
                     const myVote = await this.myVote(post);
+                    console.log('my vote', myVote)
                     if (myVote) {
                         await this.io.service("types/votes").remove(myVote._id)
                     } else {

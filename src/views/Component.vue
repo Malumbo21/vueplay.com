@@ -13,7 +13,7 @@
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
                     </h3><span>
-                        {{post?.category?.title || 'Not set'}}
+                        {{ post?.category?.title || 'Not set' }}
                     </span>
                     <h3 class="text-slate-500 mt-4 font-medium mb-2 whitespace-nowrap">
                         Voters
