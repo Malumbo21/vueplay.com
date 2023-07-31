@@ -84,6 +84,8 @@
                             HTML
                         </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-wc'" title="Hyper Text Markup Language Web Component">
                             HTML WC
+                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-base64'" title="Hyper Text Markup Language Base64 Encoded">
+                            HTML Base64
                         </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=iframe'" title="Hyper Text Markup Language Web Component">
                             Iframe
                         </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=esm'" title="Ecmascript Module">
@@ -103,12 +105,10 @@
                             Get source code including tailwind by CDN
                         </h2><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview-tw'" title="Preview Component Including Tailwind">
                             Preview Tailwind
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview-wc-tw'" title="Preview Web Component Including Tailwind">
-                            Preview WC Tailwind
                         </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-tw'" title="Hyper Text Markup Language Including Tailwind">
                             HTML Tailwind
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-wc-tw'" title="Hyper Text Markup Language Including Tailwind">
-                            HTML WC Tailwind
+                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-base64-tw'" title="Hyper Text Markup Language Base64 Encoded Including Tailwind">
+                            HTML Base64 Tailwind
                         </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=iframe-tw'" title="Hyper Text Markup Language Web Component">
                             Iframe Tailwind
                         </a>
