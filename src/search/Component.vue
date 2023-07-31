@@ -102,7 +102,7 @@
                     </div>
                     <div class="mb-4 w-full block">
                         <h2 class="font-medium my-3">
-                            Get source code including tailwind by CDN
+                            Get source code including tailwind using CDN
                         </h2><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview-tw'" title="Preview Component Including Tailwind">
                             Preview Tailwind
                         </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-tw'" title="Hyper Text Markup Language Including Tailwind">
