@@ -7,7 +7,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg> </label><input class="peer hidden" type="checkbox" id="toggle" v-model="menu" />
                 <div class="bottom-0 bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 absolute md:relative top-0 overflow-auto">
-                    <button class="border mr-2 bg-slate-50 hover:bg-slate-100 rounded-2xl px-2 mb-4 py-2" @click="$router.push('/feedback')">
+                    <button class="border mr-2 bg-slate-50 hover:bg-slate-100 rounded-2xl pl-3 pr-4 mb-4 py-2" @click="$router.push('/feedback')">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -mt-1 mr-1 inline">
                             <path fill-rule="evenodd" d="M11.03 3.97a.75.75 0 010 1.06l-6.22 6.22H21a.75.75 0 010 1.5H4.81l6.22 6.22a.75.75 0 11-1.06 1.06l-7.5-7.5a.75.75 0 010-1.06l7.5-7.5a.75.75 0 011.06 0z" clip-rule="evenodd" />
                         </svg>
@@ -15,8 +15,7 @@
                     </button>
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
-                    </h3>
-                    <span>
+                    </h3> <span>
                         {{ post?.category?.title || 'Not set' }}
                     </span>
                     <h3 class="text-slate-500 mt-4 font-medium mb-2 whitespace-nowrap">
