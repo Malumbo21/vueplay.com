@@ -60,7 +60,7 @@
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="">
-</textarea><iframe src="" title="" class="aspect-square w-full mb-4"></iframe> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
+</textarea><iframe title="" class="aspect-square w-full mb-4" :src="'https://api.vueplay.io/types/sfc/6453ff2a24403740d9f03919?ref=HEAD&type=iframe-src'"></iframe> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
                         Select icon
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.icon = ''" v-if="edit">
                         Remove icon
