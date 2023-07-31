@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="inline-flex w-32"><img class="rounded w-full" :src="post.icon" v-if="post?.icon" /></div>
+                <div class="inline-flex w-32"><img class="rounded w-full" :src="post.icon || background" v-if="post?.icon" /></div>
             </div>
             <div class="max-w-2xl mx-auto mb-8 mt-2 flex" v-if="post">
                 <div class="w-16 inline-flex">
@@ -196,6 +196,7 @@
 <script>
     import Meta from "@/components/Meta.vue";
     import moment from "moment";
+    import defaultBase64Image from "@/logic/defaultBase64Image.js";
     export default {
         components: {
             Meta
@@ -213,6 +214,7 @@
             comment: "",
             edit: false,
             post: null,
+            background: defaultBase64Image,
             moment
         }),
         created() {
