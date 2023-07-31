@@ -16,36 +16,41 @@
         </div>
         <article class="mt-16">
             <div class="max-w-2xl mx-auto mt-4 flex">
-                <div class="w-16 inline-flex">
-                    <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id),'hover:bg-emerald-100': post?.votes.find(v => v.user_id === user?._id),'hover:bg-slate-100': !post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id)}" @click="vote(post)">
-                        <div class="h-1/2 w-full">
-                            <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes.find(v => v.user_id === user?._id),'fill-gray-400': !post?.votes.find(v => v.user_id === user?._id)}">
-                                <polygon points="10,0 20,10 0,10" />
-                            </svg>
+                <div class="mt-4 grow">
+                    <div class="flex">
+                        <div class="w-16 inline-flex">
+                            <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id),'hover:bg-emerald-100': post?.votes.find(v => v.user_id === user?._id),'hover:bg-slate-100': !post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id)}" @click="vote(post)">
+                                <div class="h-1/2 w-full">
+                                    <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes.find(v => v.user_id === user?._id),'fill-gray-400': !post?.votes.find(v => v.user_id === user?._id)}">
+                                        <polygon points="10,0 20,10 0,10" />
+                                    </svg>
+                                </div>
+                                <div class="text-center h-1/2 w-full -mt-1">
+                                    {{ post?.votes?.length }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center h-1/2 w-full -mt-1">
-                            {{ post?.votes?.length }}
+                        <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow">
+                            <h1 class="pt-2.5 text-xl font-semibold" v-if="!edit">
+                                {{ post?.title }}
+                            </h1><input class="pt-2.5 text-xl font-semibold" v-model="post.title" v-else-if="post" />
+                        </div>
+                    </div>
+                    <div class="mt-4 flex">
+                        <div class="w-16 inline-flex">
+                            <div class="w-11">
+                                <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="'background-image: url(' + post?.user?.picture + ')'">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
+                            <h1 class="font-semibold mt-0.5">
+                                {{ post?.user?.name}}
+                            </h1>
                         </div>
                     </div>
                 </div>
-                <div class="overflow-hidden text-ellipsis max-h-20 flex-col inline-flex grow">
-                    <h1 class="pt-2.5 text-xl font-semibold" v-if="!edit">
-                        {{ post?.title }}
-                    </h1><input class="pt-2.5 text-xl font-semibold" v-model="post.title" v-else-if="post" />
-                </div>
-            </div>
-            <div class="max-w-2xl mx-auto mt-4 flex">
-                <div class="w-16 inline-flex">
-                    <div class="w-11">
-                        <div class="h-7 w-7 bg-cover rounded-full bg-slate-500 mx-auto" :style="'background-image: url(' + post?.user?.picture + ')'">
-                        </div>
-                    </div>
-                </div>
-                <div class="overflow-hidden text-ellipsis max-h-8 flex-col inline-flex grow">
-                    <h1 class="font-semibold mt-0.5">
-                        {{ post?.user?.name}}
-                    </h1>
-                </div>
+                <div class="inline-flex w-32"><img class="rounded w-full mb-4" :src="post.icon" v-if="post?.icon" /></div>
             </div>
             <div class="max-w-2xl mx-auto mb-8 mt-2 flex" v-if="post">
                 <div class="w-16 inline-flex">
@@ -55,7 +60,7 @@
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="">
-</textarea><img class="rounded w-full mb-4" :src="post.icon" v-if="post?.icon" /> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
+</textarea> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
                         Select icon
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.icon = ''" v-if="edit">
                         Remove icon
