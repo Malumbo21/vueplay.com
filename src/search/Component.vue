@@ -65,7 +65,7 @@
                     </button>
                     <h2 class="font-medium my-3">
                         Component Preview ({{ tailwind ? 'Including' : 'Excluding'}} Tailwind)
-                    </h2><iframe title="" class="shadow bg-slate-50 aspect-square w-full mb-4" :src="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview' + (tailwind ? '-tw' : '')">
+                    </h2><iframe title="" class="aspect-video shadow bg-slate-50 w-full mb-4" :src="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview' + (tailwind ? '-tw' : '')">
                     </iframe>
                     <div class="mb-4 w-full block">
                         <h2 class="font-medium my-3">
