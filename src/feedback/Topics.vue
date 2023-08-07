@@ -39,7 +39,7 @@
                     <option value="">
                         Any Status
                     </option>
-                    <option v-for="status in statuses" :value="category._id">
+                    <option v-for="status in statuses" :value="status._id">
                         {{ status.title }}
                     </option>
                 </select>
@@ -101,10 +101,14 @@
             statuses: [],
             posts: [],
             category: "",
+            status: "",
             sort: "latest"
         }),
         watch: {
             category() {
+                this.refresh()
+            },
+            status() {
                 this.refresh()
             },
             sort() {
