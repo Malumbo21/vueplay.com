@@ -14,6 +14,11 @@
                         Go back
                     </button>
                     <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
+                        Status
+                    </h3><button :style="statusStyle(post)" class="border rounded text-xs py-0.5 px-1 mb-2">
+                        {{ post?.status?.title || 'Not set' }}
+                    </button>
+                    <h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
                         Category
                     </h3> <span>
                         {{ post?.category?.title || 'Not set' }}
@@ -59,6 +64,15 @@
         computed: {
             votes() {
                 return this.post?.votes
+            }
+        },
+        methods: {
+            statusStyle(post) {
+                return {
+                    color: post?.status?.[0]?.foregroundColor || "#333",
+                    backgroundColor: post?.status?.[0]?.backgroundColor || "#F8FAFC",
+                    borderColor: post?.status?.[0]?.foregroundColor || "#E5E7EB"
+                }
             }
         }
     };
