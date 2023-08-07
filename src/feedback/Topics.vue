@@ -63,7 +63,7 @@
             <div class="hover:text-emerald-600 overflow-hidden text-ellipsis inline-flex flex-col grow pr-4 cursor-pointer" @click="$router.push('/feedback/' + post._id)" style="max-height:75px;height:1806.03px" :class="post.over ? 'text-emerald-600' : ''">
                 <h1 class="font-semibold">
                     {{ post.title }}
-                    <button class="border-2 rounded text-xs p-0.5" v-if="post?.status?.length" :style="{
+                    <button class="ml-2 border-2 rounded text-xs p-0.5" v-if="post?.status?.length" :style="{
 color: post?.status?.[0]?.foregroundColor,
 backgroundColor: post?.status?.[0]?.backgroundColor,
 borderColor: post?.status?.[0]?.foregroundColor
