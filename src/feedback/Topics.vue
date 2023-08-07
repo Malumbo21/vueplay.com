@@ -34,7 +34,7 @@
                         {{ category.title }}
                     </option>
                 </select><span>
-                    with status
+                    status
                 </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1" v-model="status">
                     <option value="">
                         Any
