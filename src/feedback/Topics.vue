@@ -135,6 +135,7 @@
                 }
                 if (this.sort === "top") query.top = true;
                 if (this.category) query.category_id = this.category;
+                if (this.status) query.status_id = this.status;
                 this.posts = await this.io.service("types/feedback").find({
                     query
                 })
