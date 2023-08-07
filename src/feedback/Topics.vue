@@ -26,12 +26,21 @@
                     </option>
                 </select><span>
                     posts in
-                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1" v-model="category">
+                </span> <select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1" v-model="category">
                     <option value="">
                         All Categories
                     </option>
                     <option v-for="category in categories" :value="category._id">
                         {{ category.title }}
+                    </option>
+                </select><span>
+                    with status
+                </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1" v-model="status">
+                    <option value="">
+                        Any
+                    </option>
+                    <option v-for="status in statuses" :value="category._id">
+                        {{ status.title }}
                     </option>
                 </select>
             </div>
@@ -89,6 +98,7 @@
         data: () => ({
             term: "",
             categories: [],
+            statuses: [],
             posts: [],
             category: "",
             sort: "latest"
@@ -103,7 +113,8 @@
         },
         created() {
             this.refresh();
-            this.getCategories()
+            this.getCategories();
+            this.getStatuses()
         },
         methods: {
             statusStyle(post) {
@@ -137,6 +148,16 @@
                     }
                 });
                 this.categories = categories?.data || []
+            },
+            async getStatuses() {
+                const statuses = await this.io.service("types/feedback-status").find({
+                    query: {
+                        $sort: {
+                            order: 1
+                        }
+                    }
+                });
+                this.statuses = statuses?.data || []
             },
             async myVote(post) {
                 const votes = await this.io.service("types/feedback-votes").find({
