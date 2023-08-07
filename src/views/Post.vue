@@ -69,9 +69,9 @@
         methods: {
             statusStyle(post) {
                 return {
-                    color: post?.status?.[0]?.foregroundColor || "#333",
-                    backgroundColor: post?.status?.[0]?.backgroundColor || "#F8FAFC",
-                    borderColor: post?.status?.[0]?.foregroundColor || "#E5E7EB"
+                    color: post?.status?.foregroundColor || "#333",
+                    backgroundColor: post?.status?.backgroundColor || "#F8FAFC",
+                    borderColor: post?.status?.foregroundColor || "#E5E7EB"
                 }
             }
         }
