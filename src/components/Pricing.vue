@@ -34,7 +34,7 @@
                 Use the full playground without any limitations.
             </p>
             <div class="price">
-                59.00 USD / Year
+                199.00 USD / Year
             </div>
             <div class="feature-list">
                 <div>Everything in Free</div>
