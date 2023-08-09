@@ -69,7 +69,7 @@
                 </p>
             </div>
             <div class="pl-4 inline-flex cursor-pointer" @click="$router.push('/search/' + post._id)" @mouseenter="post.over = true" @mouseleave="post.over = false">
-                <img class="rounded w-16 h-16" :src="post.icon || background" />
+                <img class="rounded w-16 h-16" :src="post.icon || background" style="min-width:4rem" />
             </div>
             <div class="pl-4 inline-flex cursor-pointer" @click="$router.push('/search/' + post._id)" @mouseenter="post.over = true" @mouseleave="post.over = false">
                 <div class="w-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-gray-400 w-5 h-5 mt-1 mr-6">
