@@ -1,7 +1,6 @@
 <template>
     <div class="space-y-0 bg-slate-100 flex flex-col h-screen">
-        <Meta description="Request deletion by sending us an email." title="Data Deletion">
-        </Meta>
+        <Meta description="Request deletion by sending us an email." title="Data Deletion" />
         <VueNavigator class="z-10" />
         <header>
             <h1 class="text-6xl mt-12 mb-6">
