@@ -147,7 +147,7 @@
                 if (this.status) query.status_id = this.status;
                 else {
                     query.status_id = {
-                        $nin: ["64d0cdd1cc7eda107dbe566c"]
+                        $nin: ["64d0cdd1cc7eda107dbe566c", "64d9d79db7d6ebd3b66f153a"]
                     }
                 }
                 this.posts = await this.io.service("types/feedback").find({
