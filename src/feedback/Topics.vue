@@ -56,6 +56,11 @@
                 </div>
             </div>
         </div>
+        <article class="max-w-2xl mx-auto mb-8 mt-4 flex" v-if="!posts.length">
+            <p class="text-gray-500 overflow-hidden text-ellipsis">
+                No open feedback, select category to browse closed feedback...
+            </p>
+        </article>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
             <div class="pr-6 inline-flex">
                 <div class="cursor-pointer border w-11 h-12 rounded-lg" @click="vote(post)" :class="{ 'bg-emerald-50': post.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post.votes.find(v => v.user_id === user?._id), 'hover:bg-emerald-100': post.votes.find(v => v.user_id === user?._id), 'hover:bg-slate-100': !post.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post.votes.find(v => v.user_id === user?._id) }">
@@ -147,7 +152,7 @@
                 }
                 this.posts = await this.io.service("types/feedback").find({
                     query
-                });
+                })
             },
             async getCategories() {
                 const categories = await this.io.service("types/feedback-categories").find({
