@@ -58,7 +58,7 @@
         </div>
         <article class="max-w-2xl mx-auto mb-8 mt-4 flex" v-if="!posts.length">
             <p class="text-gray-500 overflow-hidden text-ellipsis">
-                No feedback in selected category...
+                No feedback with selected status in selected category...
             </p>
         </article>
         <article v-for="post in posts" class="max-w-2xl mx-auto mb-8 mt-4 flex">
