@@ -11,6 +11,19 @@
         <main class="p-6 m-auto max-w-xl container">
             <section class="shadow border mb-6 rounded-lg bg-white p-6">
                 <h3>
+                    14.08.2023 - Release 1.0.6
+                </h3>
+                <ul class="indent-3 ml-5 list-disc">
+                    <li class="" style="height:29px">
+                        Feature - Support for Composition API
+                    </li>
+                    <li class="" style="height:29px">
+                        Feature - Support for v-bind in styles
+                    </li>
+                </ul>
+            </section>
+            <section class="shadow border mb-6 rounded-lg bg-white p-6">
+                <h3>
                     24.07.2023 - Release 1.0.5
                 </h3>
                 <ul class="indent-3 ml-5 list-disc">
