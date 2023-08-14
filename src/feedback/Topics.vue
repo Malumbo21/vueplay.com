@@ -37,7 +37,7 @@
                     status
                 </span><select name="" class="cursor-pointer bg-transparent underline-offset-4 underline ml-1" v-model="status">
                     <option value="">
-                        Any Status
+                        Open
                     </option>
                     <option v-for="status in statuses" :value="status._id">
                         {{ status.title }}
@@ -140,9 +140,14 @@
                 if (this.sort === "top") query.top = true;
                 if (this.category) query.category_id = this.category;
                 if (this.status) query.status_id = this.status;
+                else {
+                    query.status_id = {
+                        $nin: ["64d0cdd1cc7eda107dbe566c"]
+                    }
+                }
                 this.posts = await this.io.service("types/feedback").find({
                     query
-                })
+                });
             },
             async getCategories() {
                 const categories = await this.io.service("types/feedback-categories").find({
