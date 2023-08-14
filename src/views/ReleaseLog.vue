@@ -20,6 +20,9 @@
                     <li class="" style="height:29px">
                         Feature - Support for v-bind in styles
                     </li>
+                    <li class="" style="height:29px">
+                        Feature - Added &lt;suspense/&gt; element to support async / await on root level of setup
+                    </li>
                 </ul>
             </section>
             <section class="shadow border mb-6 rounded-lg bg-white p-6">
