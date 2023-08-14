@@ -60,7 +60,7 @@
                             {{status.title}}
                         </option>
                     </select><select v-model="post.category_id" class="mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-if="edit">
-                        <option v-for="category in categories" :value="status._id">
+                        <option v-for="category in categories" :value="category._id">
                             {{category.title}}
                         </option>
                     </select><img class="rounded w-full mb-4" :src="post.screenshot" v-if="post?.screenshot" /> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
