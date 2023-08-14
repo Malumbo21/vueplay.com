@@ -205,6 +205,7 @@
                     title: this.post.title,
                     description: this.post.description,
                     screenshot: this.post.screenshot,
+                    category_id: this.post.category_id,
                     status_id: this.post.status_id
                 });
                 await this.refresh();
