@@ -67,6 +67,8 @@
                         Select screenshot
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.screenshot = ''" v-if="edit">
                         Remove screenshot
+                    </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="edit = false" v-if="edit">
+                        Cancel
                     </button><button class="bg-emerald-400 text-white  hover:bg-emerald-500 shadow rounded px-2 mb-2 py-2" @click="savePost()" v-if="edit">
                         Save
                     </button>
