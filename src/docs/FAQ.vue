@@ -41,10 +41,10 @@
             </div>
             <div class="bg-slate-50 border mb-6 rounded-lg p-8">
                 <p class="pb-4 text-xl font-medium">
-                    There is a "Components" tab in Vue Play which is empty, what is it for?
+                    What are Components in Vue Play?
                 </p>
                 <p class="text-lg">
-                    In the future it will house pre-made components to make development faster and more fun. We have planned to build galleries, sliders and other cool components to fill your needs. We also have plans to add community built components, but this currently needs some more work.
+                    Vue Play is built up using Vue.js SFC's (Vue Single File Components) which are files ending with the .vue extension. This files houses specific functionalities + templates and works like modules in a webpage. This modules will be available as Components in Vue Play, to be dragged into any playground. It can be authored by developers from us or the community.
                 </p>
             </div>
             <div class="bg-slate-50 border mb-6 rounded-lg p-8">
