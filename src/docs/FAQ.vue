@@ -25,10 +25,10 @@
                     </a>
                 </p>
                 <p class="text-lg" style="margin-bottom:10px">
-                    The main difference is that it is built up the "Vue.js" way which opens allot of opportunities like building everything from ground up with components.
+                    The main difference is that it is built up the "Vue.js" way which opens up alot of opportunities, like building everything from ground up with components.
                 </p>
                 <p class="text-lg">
-                    It also opens up possibilities to connect Vue Play with frameworks like
+                    It also opens possibilities to connect Vue Play with frameworks like
                     <a href="https://www.electronjs.org/" target="_blank" class="hover:text-blue-700 text-blue-600">
                         Electron
                     </a>
