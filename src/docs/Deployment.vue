@@ -27,7 +27,7 @@
                 This way you can easily create different staging and development environments with full control over your deployment pipeline.
             </p>
             <p style="margin-top:15px" class="text-lg">
-                As Vue Play also provides export of a production-ready distribution folder, you can use your host and upload files to your server using FTP.
+                As Vue Play also provides export of a production-ready distribution folder, you can use your own host and upload files to your server using FTP.
             </p>
             <p style="margin-top:15px" class="text-lg">
                 This way you are not bound to any hosting provider and are free to host your site anywhere as you like.
