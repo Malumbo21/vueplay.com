@@ -35,20 +35,8 @@ const routes = [{
         component: () => import('@/docs/FAQ.vue')
     },
     {
-        path: 'limitations',
-        component: () => import('@/docs/Limitations.vue')
-    },
-    {
-        path: 'composition-api',
-        component: () => import('@/docs/CompositionAPI.vue')
-    },
-    {
         path: 'typescript',
         component: () => import('@/docs/Typescript.vue')
-    },
-    {
-        path: 'v-bind',
-        component: () => import('@/docs/VBind.vue')
     }
     ]
 },
