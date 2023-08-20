@@ -7,7 +7,7 @@
                 Launch your site Anywhere
             </h1>
             <p style="margin-top:15px" class="text-xl py-2 font-medium">
-                Vue Play can build a production-ready distribution folder off your application or publish directly to GitHub Pages using GitHub Actions.
+                Vue Play can build a production-ready distribution folder from your application or publish directly to GitHub Pages using GitHub Actions.
             </p>
             <p style="margin-top:15px" class="text-lg">
                 As your project can be connected to GitHub it is easy to create publish pipelines by connecting to third-party services like
