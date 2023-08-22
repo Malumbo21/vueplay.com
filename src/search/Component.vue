@@ -116,6 +116,10 @@
                         Select icon
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.icon = ''" v-if="edit">
                         Remove icon
+                    </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.public = !post.public" v-if="edit">
+                        {{post?.public ? 'Public' : 'Private' }}
+                    </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="edit = !edit" v-if="edit">
+                        Cancel
                     </button><button class="bg-emerald-400 text-white  hover:bg-emerald-500 shadow rounded px-2 mb-2 py-2" @click="savePost()" v-if="edit">
                         Save
                     </button>
@@ -198,17 +202,17 @@
     import moment from "moment";
     import defaultBase64Image from "@/logic/defaultBase64Image.js";
     export default {
-        components: {
-            Meta
-        },
         inject: ["io", "user", "login", "logout"],
-        emit: ["post"],
         props: {
             id: {
                 type: String,
-                default: "64b15007691f1cd6f7ad4608"
+                default: "64e3ac6fabfe0f9fbec81bd5"
             }
         },
+        components: {
+            Meta
+        },
+        emit: ["post"],
         data: () => ({
             tailwind: true,
             comment: "",
@@ -252,7 +256,8 @@
                 await this.io.service("types/applications").patch(this.post._id, {
                     title: this.post.title,
                     description: this.post.description,
-                    icon: this.post.icon
+                    icon: this.post.icon,
+                    public: this.post.public
                 });
                 await this.refresh();
                 this.edit = false;
