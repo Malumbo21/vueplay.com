@@ -66,7 +66,7 @@ export default {
         login() {
             this.authorizing = true;
             return new Promise(resolve => {
-                if (this.user) {
+                if (this.user && this.user.value !== null) {
                     this.authorizing = false;
                     resolve(this.user)
                 } else {

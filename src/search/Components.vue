@@ -62,7 +62,10 @@
             </div>
             <div class="hover:text-emerald-600 overflow-hidden text-ellipsis inline-flex flex-col grow pr-4 cursor-pointer" @click="$router.push('/search/' + post._id)" style="max-height:75px;height:1806.03px" :class="post.over ? 'text-emerald-600' : ''">
                 <h1 class="font-semibold">
-                    {{ post.title }} {{ post.public ? '' : '(PRIVATE)' }}
+                    {{ post.title }}
+                    <button class="ml-2 border rounded text-xs py-0.5 px-1" :style="statusStyle(post)">
+                        {{ post.public ? 'Public' : 'Private'}}
+                    </button>
                 </h1>
                 <p class="text-gray-500 overflow-hidden text-ellipsis">
                     {{ post.description }}
@@ -108,6 +111,17 @@
             this.getCategories()
         },
         methods: {
+            statusStyle(post) {
+                return post.public ? {
+                    color: "rgb(106, 208, 157)",
+                    backgroundColor: "rgb(239, 252, 245)",
+                    borderColor: "rgb(106, 208, 157)"
+                } : {
+                    color: "rgb(137, 46, 222)",
+                    backgroundColor: "rgb(247, 237, 255)",
+                    borderColor: "rgb(137, 46, 222)"
+                }
+            },
             async refresh(sort = this.sort) {
                 this.sort = sort;
                 let query = {

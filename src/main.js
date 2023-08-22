@@ -22,7 +22,7 @@ let boot = async () => {
 
     try {
         user.value = (await io.reAuthenticate())?.user
-    } catch (e) { }
+    } catch (e) {}
 
     router.beforeEach(async () => {
         try {
@@ -37,12 +37,12 @@ let boot = async () => {
     app.provide('reAuthenticate', async () => {
         try {
             user.value = (await io.reAuthenticate())?.user
-        } catch (e) { }
+        } catch (e) {}
     })
     app.provide('login', async () => {
         try {
             user.value = (await io.reAuthenticate())?.user
-        } catch (e) { }
+        } catch (e) {}
         return user.value // fallback
     })
     app.provide('logout', async () => {
