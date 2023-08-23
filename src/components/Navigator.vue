@@ -1,22 +1,22 @@
 <template>
     <nav style="min-height:50px" class="sticky text-right shadow bg-slate-50 w-full top-0 block">
         <div style="width:216px;background-size:contain;background-repeat:no-repeat;margin-left:10px;cursor:pointer;float:left;height:35px;margin-top:7px;margin-bottom:7px" @click="$router.push('/')" class="sm:inline hidden logo">
-        </div><button @click="$router.push('/')" :class="{active: route === '/'}" class="hover:text-green-700 text-slate-700 pr-2 sm:hidden focus:text-green-700 active:font-bold">
+        </div><button @click="$router.push('/')" :class="{active: route === '/'}" class="hover:text-green-700 text-slate-700 pr-2 sm:hidden focus:text-green-700 active:font-bold focus:font-bold">
             Home
-        </button><button @click="$router.push('/features')" :class="{active: route === '/features'}" class="hover:text-green-700 text-slate-700 px-2 focus:text-green-700 active:font-bold">
+        </button><button @click="$router.push('/features')" :class="{active: route === '/features'}" class="hover:text-green-700 text-slate-700 px-2 focus:text-green-700 active:font-bold focus:font-bold">
             Features
-        </button><button @click="$router.push('/pricing')" :class="{active: route === '/pricing'}" class="hover:text-green-700 text-slate-700 px-2 focus:text-green-700 active:font-bold">
+        </button><button @click="$router.push('/pricing')" :class="{active: route === '/pricing'}" class="hover:text-green-700 text-slate-700 px-2 focus:text-green-700 active:font-bold focus:font-bold">
             Pricing
         </button> <button @click="submenu=true" :class="{active: subRoute}" class="relative hover:text-green-700 text-slate-700 pr-2" @mouseenter="submenu=true" @mouseleave="submenu=false">
             <span class="">
                 More...
             </span>
             <div class="bg-slate-50 border-y-slate-100 border-t border-b-2 right-0 top-full absolute shadow pb-2" v-if="submenu">
-                <button @click="submenu=false, $router.push('/feedback')" :class="{active: route.includes('/feedback')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right focus:text-green-700 active:font-bold">
+                <button @click="submenu=false, $router.push('/feedback')" :class="{active: route.includes('/feedback')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right focus:text-green-700 active:font-bold focus:font-bold">
                     Feedback
-                </button> <button @click="submenu=false, $router.push('/search')" :class="{active: route.includes('/search')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right focus:text-green-700 active:font-bold">
+                </button> <button @click="submenu=false, $router.push('/search')" :class="{active: route.includes('/search')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right focus:text-green-700 active:font-bold focus:font-bold">
                     Components
-                </button><button @click="submenu=false, $router.push('/documentation')" :class="{active: route.includes('/documentation')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right focus:text-green-700 active:font-bold">
+                </button><button @click="submenu=false, $router.push('/documentation')" :class="{active: route.includes('/documentation')}" class="px-4 py-2 w-full hover:text-green-700 text-slate-700 text-right focus:text-green-700 active:font-bold focus:font-bold">
                     Documentation
                 </button>
             </div>
