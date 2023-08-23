@@ -60,7 +60,11 @@
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="" placeholder="Description">
-</textarea><button class="mt-2 cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 py-2 inline-block" title="Toggle Tailwind" @click="tailwind=!tailwind">
+</textarea><select v-model="post.category_id" class="mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-if="edit">
+                        <option v-for="category in categories" :value="category._id">
+                            {{category.title}}
+                        </option>
+                    </select><button class="mt-2 cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 py-2 inline-block" title="Toggle Tailwind" @click="tailwind=!tailwind">
                         Toggle Tailwind
                     </button>
                     <h2 class="font-medium my-3">
@@ -219,12 +223,17 @@
             edit: false,
             post: null,
             background: defaultBase64Image,
-            moment
+            moment,
+            categories: []
         }),
         created() {
             this.refresh()
         },
         methods: {
+            async getCategories() {
+                const categories = await this.io.service("types/categories").find();
+                this.categories = categories?.data || []
+            },
             async postComment() {
                 if (await this.login()) {
                     await this.io.service("types/comments").create({
@@ -257,7 +266,8 @@
                     title: this.post.title,
                     description: this.post.description,
                     icon: this.post.icon,
-                    public: this.post.public
+                    public: this.post.public,
+                    category_id: this.post.category_id
                 });
                 await this.refresh();
                 this.edit = false;
@@ -272,6 +282,7 @@
             },
             async refresh() {
                 this.post = await this.io.service("types/applications").get(this.id);
+                this.getCategories()
                 this.$emit("post", this.post)
             },
             async myVote(post) {
