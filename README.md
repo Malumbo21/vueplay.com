@@ -2,7 +2,7 @@
 
 ### The Ultimate Web App Designer with a Graphical User Interface
 
-[![Vue Play](https://www.vueplay.com/screenshot.png)](https://www.vueplay.com)
+[![Vue Play](https://vueplay.com/screenshot.png)](https://vueplay.com)
 
 
 ------------
@@ -12,10 +12,10 @@ Feel free to [Open an Issue](https://github.com/vueplayground/vueplay.com/issues
 
 ------------
 
-### Notice: This is only the repository for the public landingpage https://www.vueplay.com
+### Notice: This is only the repository for the public landingpage https://vueplay.com
 
 The actual Web Application is _not_ open source and can be visited at https://studio.vueplay.com
 
 ------------
 
-Visit http://www.vueplay.com for more information
+Visit http://vueplay.com for more information
