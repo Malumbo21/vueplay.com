@@ -18,4 +18,4 @@ The actual Web Application is _not_ open source and can be visited at https://st
 
 ------------
 
-Visit http://vueplay.com for more information
+Visit https://vueplay.com for more information
