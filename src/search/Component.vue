@@ -19,9 +19,9 @@
                 <div class="mt-4 grow">
                     <div class="flex">
                         <div class="w-16 inline-flex">
-                            <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id),'hover:bg-emerald-100': post?.votes.find(v => v.user_id === user?._id),'hover:bg-slate-100': !post?.votes.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes.find(v => v.user_id === user?._id)}" @click="vote(post)">
+                            <div class="border w-11 h-12 rounded-lg cursor-pointer" :class="{'bg-emerald-50': post?.votes?.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes?.find(v => v.user_id === user?._id),'hover:bg-emerald-100': post?.votes?.find(v => v.user_id === user?._id),'hover:bg-slate-100': !post?.votes?.find(v => v.user_id === user?._id), 'border-emerald-400': post?.votes?.find(v => v.user_id === user?._id)}" @click="vote(post)">
                                 <div class="h-1/2 w-full">
-                                    <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes.find(v => v.user_id === user?._id),'fill-gray-400': !post?.votes.find(v => v.user_id === user?._id)}">
+                                    <svg viewBox="0 0 20 10" class="pt-2 w-5 h-5 mx-auto" :class="{'fill-emerald-400': post?.votes?.find(v => v.user_id === user?._id),'fill-gray-400': !post?.votes?.find(v => v.user_id === user?._id)}">
                                         <polygon points="10,0 20,10 0,10" />
                                     </svg>
                                 </div>
@@ -64,59 +64,9 @@
                         <option v-for="category in categories" :value="category._id">
                             {{category.title}}
                         </option>
-                    </select><button class="mt-2 cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 py-2 inline-block" title="Toggle Tailwind" @click="tailwind=!tailwind">
-                        Toggle Tailwind
-                    </button>
-                    <h2 class="font-medium my-3">
-                        Component Preview ({{ tailwind ? 'Including' : 'Excluding'}} Tailwind)
-                    </h2><iframe title="" class="aspect-video shadow bg-slate-50 w-full mb-4" :src="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview' + (tailwind ? '-tw' : '')">
-                    </iframe>
-                    <div class="mb-4 w-full block">
-                        <h2 class="font-medium my-3">
-                            Get source code
-                        </h2><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=vue'" title="Vue Single File Component">
-                            Vue SFC
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview'" title="Preview Component">
-                            Preview
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview-wc'" title="Preview Web Component">
-                            Preview WC
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=live-preview'" title="Live Preview Component">
-                            Live Preview
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=live-preview-wc'" title="Live Preview Web Component">
-                            Live Preview WC
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html'" title="Hyper Text Markup Language">
-                            HTML
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-wc'" title="Hyper Text Markup Language Web Component">
-                            HTML WC
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-base64'" title="Hyper Text Markup Language Base64 Encoded">
-                            HTML Base64
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=iframe'" title="Hyper Text Markup Language Web Component">
-                            Iframe
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=esm'" title="Ecmascript Module">
-                            ESM
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=esmwc'" title="Ecmascript Module Web Component">
-                            ESM WC
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=base64'" title="Ecmascript Module Base64 Encoded">
-                            ESM Base64
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=webcomponent'" title="Web Component">
-                            Web Component
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id" title="Git History">
-                            Git History
-                        </a>
-                    </div>
-                    <div class="mb-4 w-full block">
-                        <h2 class="font-medium my-3">
-                            Get source code including tailwind using CDN
-                        </h2><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=preview-tw'" title="Preview Component Including Tailwind">
-                            Preview Tailwind
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-tw'" title="Hyper Text Markup Language Including Tailwind">
-                            HTML Tailwind
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=html-base64-tw'" title="Hyper Text Markup Language Base64 Encoded Including Tailwind">
-                            HTML Base64 Tailwind
-                        </a><a class="cursor-pointer mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2 inline-block" target="_blank" :href="'https://api.vueplay.io/types/sfc/' + post._id + '?ref=HEAD&type=iframe-tw'" title="Hyper Text Markup Language Web Component">
-                            Iframe Tailwind
-                        </a>
-                    </div> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
+                    </select>
+                    <VueSfcViewer style="height:600px" class="mb-4" :id="id">
+                    </VueSfcViewer> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
                         Select icon
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.icon = ''" v-if="edit">
                         Remove icon
@@ -202,6 +152,7 @@
     </section>
 </template>
 <script>
+    import VueSfcViewer from "@/vueplay/VueSfcViewer.vue";
     import Meta from "@/components/Meta.vue";
     import moment from "moment";
     import defaultBase64Image from "@/logic/defaultBase64Image.js";
@@ -210,10 +161,11 @@
         props: {
             id: {
                 type: String,
-                default: "64e3ac6fabfe0f9fbec81bd5"
+                default: "64b1469b691f1cd6f7ad4328"
             }
         },
         components: {
+            VueSfcViewer: VueSfcViewer,
             Meta
         },
         emit: ["post"],
@@ -282,7 +234,7 @@
             },
             async refresh() {
                 this.post = await this.io.service("types/applications").get(this.id);
-                this.getCategories()
+                this.getCategories();
                 this.$emit("post", this.post)
             },
             async myVote(post) {
