@@ -90,18 +90,20 @@
             </div>
         </div>
         <div class="overflow-auto bg-slate-100 p-4" style="width:100%;height:100px">
-            <div class="py-0.5 px-3 rounded-xl bg-lime-200 inline-block" v-for="prop in application?.analyze?.props">
+            <div class="py-0.5 mr-1 mb-1 px-3 rounded-xl bg-lime-200 inline-block"
+                v-for="prop in application?.analyze?.props">
                 :{{ prop?.name }}
             </div>
-            <div class="bg-violet-200 py-0.5 px-3 rounded-xl inline-block" v-for="prop in application?.analyze?.methods"
-                title="Method">
+            <div class="bg-violet-200 mr-1 mb-1 py-0.5 px-3 rounded-xl inline-block"
+                v-for="method in application?.analyze?.methods" title="Method">
                 {{ method }}()
             </div>
-            <div class="bg-emerald-200 py-0.5 px-3 rounded-xl inline-block"
+            <div class="bg-emerald-200 mr-1 mb-1 py-0.5 px-3 rounded-xl inline-block"
                 v-for="injection in application?.analyze?.inject" title="Injection">
                 {{ injection }}
             </div>
-            <div class="bg-purple-200 py-0.5 px-3 rounded-xl inline-block" v-for="emit in application?.analyze?.emits">
+            <div class="bg-purple-200 mr-1 mb-1 py-0.5 px-3 rounded-xl inline-block"
+                v-for="emit in application?.analyze?.emits">
                 @{{ emit }}
             </div>
         </div>
@@ -147,10 +149,10 @@ export default {
         await this.init();
         if (!this.io) return;
         const apps = this.io.service("types/applications");
-        apps.on("updated", (data) => {
+        apps.on("updated", data => {
             if (String(data._id) === String(this.id)) this.init()
         });
-        apps.on("patched", (data) => {
+        apps.on("patched", data => {
             if (String(data._id) === String(this.id)) this.init()
         })
     },
