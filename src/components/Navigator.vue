@@ -20,9 +20,9 @@
                     Documentation
                 </button>
             </div>
-        </button> <button @click="open('https://studio.vueplay.com')" :class="{active: route === '/app'}" style="font-weight:bold;border-top-left-radius:4px;border-bottom-left-radius:4px;height:29px;border-top-right-radius:4px;border-bottom-right-radius:4px;margin-right:5px" class="px-3 hover:bg-violet-600 bg-violet-500 from-blue-500 bg-gradient-to-br hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow">
+        </button> <a :class="{active: route === '/app'}" style="font-weight:bold;border-top-left-radius:4px;border-bottom-left-radius:4px;height:29px;border-top-right-radius:4px;border-bottom-right-radius:4px;margin-right:5px;padding-top:7px;padding-bottom:7px" class="px-3 hover:bg-violet-600 bg-violet-500 from-blue-500 bg-gradient-to-br hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow" href="https://studio.vueplay.com">
             Studio ⇾
-        </button>
+        </a>
     </nav>
 </template>
 <script>
@@ -57,6 +57,13 @@
 <style scoped>
     nav {
         height: 50px;
+    }
+
+    a {
+        border-style: none;
+        cursor: pointer;
+        transition: .3s ease color;
+        height: 100%;
     }
 
     button {
