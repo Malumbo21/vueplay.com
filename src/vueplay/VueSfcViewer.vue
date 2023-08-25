@@ -68,9 +68,9 @@
                 <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'code'"
                     :class="show !== 'split' ? 'col-span-2' : ''">
                     <pre>
-                        <code>
-                        {{ raw }}
-                        </code> </pre>
+                            <code>
+                            {{ raw }}
+                            </code> </pre>
                 </div>
                 <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'preview'"
                     :class="show !== 'split' ? 'col-span-2' : ''"><iframe title="" class="bg-white h-full w-full"
@@ -124,7 +124,7 @@ export default {
     }),
     computed: {
         iframeSource() {
-            return `https://api.vueplay.io/types/sfc/${this.id}?ref=HEAD&type=preview${tailwind ? "-tw" : ""}`
+            return `https://api.vueplay.io/types/sfc/${this.id}?ref=HEAD&type=preview${this.application?.tailwind ? "-tw" : ""}`
         }
     },
     async created() {
