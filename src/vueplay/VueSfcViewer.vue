@@ -68,9 +68,9 @@
                 <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'code'"
                     :class="show !== 'split' ? 'col-span-2' : ''">
                     <pre>
-                            <code>
-                            {{ raw }}
-                            </code> </pre>
+                                <code>
+                                {{ raw }}
+                                </code> </pre>
                 </div>
                 <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'preview'"
                     :class="show !== 'split' ? 'col-span-2' : ''"><iframe title="" class="bg-white h-full w-full"
@@ -90,6 +90,9 @@
         <div class="overflow-auto bg-slate-100 p-4" style="width:100%;height:100px">
             <div class="py-0.5 px-3 rounded-xl bg-lime-200 inline-block" v-for="prop in application?.analyze?.props">
                 :{{ prop?.name }}
+            </div>
+            <div class="bg-purple-200 py-0.5 px-3 rounded-xl inline-block" v-for="emit in application?.analyze?.emits">
+                @{{ emit }}
             </div>
         </div>
     </div>
