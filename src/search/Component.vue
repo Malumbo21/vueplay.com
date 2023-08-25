@@ -57,7 +57,7 @@
                     <div class="w-16"> </div>
                 </div>
                 <div class="grow">
-                    <VueSfcViewer style="height:600px">
+                    <VueSfcViewer style="height:600px" :id="id">
                     </VueSfcViewer>
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
