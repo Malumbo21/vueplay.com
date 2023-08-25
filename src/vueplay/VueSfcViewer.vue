@@ -1,16 +1,16 @@
 <template>
     <div class="bg-slate-50 rounded" style="max-width:100%;max-height:100%" :class="fullWindow ? 'full-window' : ''">
-        <div class="grid-cols-2 grid bg-slate-100" style="width:100%;height:40px">
+        <div class="grid-cols-2 grid bg-slate-100" style="width:100%;height:36px">
             <div class="h-full">
-                <button style="height:31px" class="disabled:opacity-40 px-2 bg-slate-200 m-0.5 rounded text-center"
+                <button style="height:31px" class="px-1 text-sm disabled:opacity-40 bg-slate-200 m-0.5 rounded text-center"
                     @click="show = 'split'" :disabled="show === 'split'">
                     Split
                 </button><button style="height:31px"
-                    class="disabled:opacity-40 px-2 bg-slate-200 m-0.5 rounded text-center hover:bg-slate-300"
+                    class="px-1 text-sm disabled:opacity-40 bg-slate-200 m-0.5 rounded text-center hover:bg-slate-300"
                     @click="show = 'preview'" :disabled="show === 'preview'">
                     Preview
                 </button><button style="height:31px"
-                    class="disabled:opacity-40 px-2 bg-slate-200 m-0.5 rounded text-center hover:bg-slate-300"
+                    class="px-1 text-sm disabled:opacity-40 bg-slate-200 m-0.5 rounded text-center hover:bg-slate-300"
                     @click="show = 'code'" :disabled="show === 'code'">
                     Code
                 </button>
@@ -192,13 +192,11 @@ export default {
     }
 };
 </script>
-<style scoped>
-.full-window {
+<style scoped>.full-window {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh !important;
     z-index: 100;
-}
-</style>
+}</style>
