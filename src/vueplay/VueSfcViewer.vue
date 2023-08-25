@@ -54,6 +54,13 @@
                         <path fill-rule="evenodd"
                             d="M3.22 3.22a.75.75 0 011.06 0l3.97 3.97V4.5a.75.75 0 011.5 0V9a.75.75 0 01-.75.75H4.5a.75.75 0 010-1.5h2.69L3.22 4.28a.75.75 0 010-1.06zm17.56 0a.75.75 0 010 1.06l-3.97 3.97h2.69a.75.75 0 010 1.5H15a.75.75 0 01-.75-.75V4.5a.75.75 0 011.5 0v2.69l3.97-3.97a.75.75 0 011.06 0zM3.75 15a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-2.69l-3.97 3.97a.75.75 0 01-1.06-1.06l3.97-3.97H4.5a.75.75 0 01-.75-.75zm10.5 0a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-2.69l3.97 3.97a.75.75 0 11-1.06 1.06l-3.97-3.97v2.69a.75.75 0 01-1.5 0V15z"
                             clip-rule="evenodd" />
+                    </svg> </button><button style="width:31px;height:31px"
+                    class="bg-slate-200 m-1 rounded text-center inline-block hover:bg-slate-300" title="Close full window"
+                    @click="openPreview()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="mx-auto" style="width:80%;height:80%;padding:10%">
+                        <path fill-rule="evenodd"
+                            d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z"
+                            clip-rule="evenodd" />
                     </svg> </button> </div>
         </div>
         <div class="flex-row flex bg-slate-50" style="width:100%;height:calc(100% - 140px)">
@@ -61,9 +68,9 @@
                 <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'code'"
                     :class="show !== 'split' ? 'col-span-2' : ''">
                     <pre>
-            <code>
-            {{ raw }}
-            </code> </pre>
+                <code>
+                {{ raw }}
+                </code> </pre>
                 </div>
                 <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'preview'"
                     :class="show !== 'split' ? 'col-span-2' : ''"><iframe title="" class="bg-white h-full w-full"
@@ -174,17 +181,18 @@ export default {
         },
         async getESMBase64() {
             return (await fetch(`https://api.vueplay.io/types/sfc/${this.id}?ref=HEAD&type=base64`)).text()
+        },
+        openPreview() {
+            window.open(`https://api.vueplay.io/types/sfc/${this.id}?ref=HEAD&type=preview${tailwind ? "-tw" : ""}`, '_blank')
         }
     }
 };
 </script>
-<style scoped>
-.full-window {
+<style scoped>.full-window {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
     z-index: 100;
-}
-</style>
+}</style>
