@@ -57,6 +57,8 @@
                     <div class="w-16"> </div>
                 </div>
                 <div class="grow">
+                    <VueSfcViewer style="height:600px">
+                    </VueSfcViewer>
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="" placeholder="Description">
@@ -64,9 +66,7 @@
                         <option v-for="category in categories" :value="category._id">
                             {{category.title}}
                         </option>
-                    </select>
-                    <VueSfcViewer style="height:600px" class="mb-4" :id="id">
-                    </VueSfcViewer> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
+                    </select> <button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="selectImage" v-if="edit">
                         Select icon
                     </button><button class="mr-2 bg-slate-50 hover:bg-slate-100 shadow rounded px-2 mb-2 py-2" @click="post.icon = ''" v-if="edit">
                         Remove icon
