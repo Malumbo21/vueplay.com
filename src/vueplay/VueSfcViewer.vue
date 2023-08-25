@@ -27,7 +27,7 @@
                             d="M261 500.999C99.5 506.132 51.5 621.499 40.5 683.999C54.8333 660.832 100 610 166.5 610C244 610 303 696.5 339 723.5C382.737 756.303 470.623 799.615 586 764.5C678 736.5 720.667 638.832 730 592.499C685.5 652.999 618 689.338 534.5 646.499C477 616.999 434 495.5 261 500.999Z"
                             fill="#07B6D5" />
                     </svg> </button><button style="width:31px;height:31px"
-                    class="bg-slate-200 m-1 rounded text-center hover:bg-slate-300 inline-block" title="History"
+                    class="bg-slate-200 m-1 mr-0 rounded text-center hover:bg-slate-300 inline-block" title="History"
                     @click="showHistory = !showHistory" :class="showHistory ? 'opacity-50' : ''">
                     <svg xmlns="http://www.w3.org/2000/svg" width="92pt" height="92pt" viewBox="0 0 92 92" class="mx-auto"
                         style="width:80%;height:80%;padding:10%">
@@ -65,15 +65,15 @@
         </div>
         <div class="flex-row flex bg-slate-50" style="width:100%;height:calc(100% - 140px)">
             <div class="grid-cols-2 grid grow">
-                <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'code'"
-                    :class="show !== 'split' ? 'col-span-2' : ''">
+                <div class="p-4 overflow-auto h-full" :class="show !== 'split' ? 'col-span-2' : ''"
+                    v-show="show === 'split' || show === 'code'">
                     <pre>
-                                <code>
-                                {{ raw }}
-                                </code> </pre>
+                                    <code>
+                                    {{ raw }}
+                                    </code> </pre>
                 </div>
-                <div class="p-4 overflow-auto h-full" v-if="show === 'split' || show === 'preview'"
-                    :class="show !== 'split' ? 'col-span-2' : ''"><iframe title="" class="bg-white h-full w-full"
+                <div class="p-4 overflow-auto h-full" :class="show !== 'split' ? 'col-span-2' : ''"
+                    v-show="show === 'split' || show === 'preview'"><iframe title="" class="bg-white h-full w-full"
                         :src="iframeSource">
                     </iframe> </div>
             </div>
