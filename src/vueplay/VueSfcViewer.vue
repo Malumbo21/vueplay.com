@@ -48,7 +48,7 @@
                     Git History
                 </label>
                 <div class="p-2 rounded mb-2 bg-slate-100" v-for="commit in history">
-                    {{ commit.commit.message }}
+                    {{ commit.commit.message }} - {{moment.unix(commit.commit?.author?.timestamp || commit.commit?.committer?.timestamp).format('DD.MM.YYYY')}}
                 </div>
             </div>
         </div>
@@ -69,6 +69,7 @@
     </div>
 </template>
 <script>
+    import moment from "https://cdn.jsdelivr.net/npm/moment@2.29.4/+esm";
     export default {
         inject: ["io"],
         props: {
@@ -78,6 +79,7 @@
             }
         },
         data: () => ({
+            moment,
             fullWindow: false,
             show: "split",
             showHistory: false,
