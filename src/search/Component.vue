@@ -99,7 +99,7 @@
                     </div>
                     <div class=" mt-10">
                         <p class="text-gray-500">
-                            Activity Feed
+                            Activity Feed...
                         </p>
                     </div>
                 </div>
