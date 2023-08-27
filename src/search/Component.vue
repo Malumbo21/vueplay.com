@@ -61,7 +61,7 @@
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="" placeholder="Description">
 </textarea>
-                    <VueSfcViewer style="height:600px" :id="id" class="mb-6">
+                    <VueSfcViewer style="height:600px" :id="id" class="my-6">
                     </VueSfcViewer><select v-model="post.category_id" class="mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-if="edit">
                         <option v-for="category in categories" :value="category._id">
                             {{category.title}}
