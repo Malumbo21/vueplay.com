@@ -152,7 +152,7 @@
     </section>
 </template>
 <script>
-    import VueSfcViewer from "@/vueplay/VueSfcViewer.vue";
+    import VueSfcViewer from "https://api.vueplay.io/types/sfc/64e4ce0bffa513b7cecc6f12?ref=HEAD&type=esm";
     import Meta from "@/components/Meta.vue";
     import moment from "moment";
     import defaultBase64Image from "@/logic/defaultBase64Image.js";
