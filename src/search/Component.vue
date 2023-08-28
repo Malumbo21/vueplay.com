@@ -155,6 +155,7 @@
     import Meta from "@/components/Meta.vue";
     import moment from "moment";
     import defaultBase64Image from "@/logic/defaultBase64Image.js";
+    console.log('viewer', VueSfcViewer)
     export default {
         inject: ["io", "user", "login", "logout"],
         props: {
