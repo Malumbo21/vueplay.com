@@ -60,8 +60,7 @@
                     <p class="text-gray-700 mb-3" v-if="!edit">
                         {{ post?.description }}
                     </p> <textarea v-model="post.description" rows="" cols="" class="rounded w-full h-32 mb-3 border" v-else="" placeholder="Description" />
-                    <VueSfcViewer title="Vue Single File Viewer" class="rounded bg-slate-50 my-6 w-full" style="height:600px" :id="id" />
-                    <select v-model="post.category_id" class="mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-if="edit">
+                    <VueSfcViewer title="Vue Single File Viewer" class="rounded bg-slate-50 w-full" style="height:600px" :id="id" /> <select v-model="post.category_id" class="mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-if="edit">
                         <option v-for="category in categories" :value="category._id">
                             {{category.title}}
                         </option>
@@ -155,7 +154,6 @@
     import Meta from "@/components/Meta.vue";
     import moment from "moment";
     import defaultBase64Image from "@/logic/defaultBase64Image.js";
-    console.log('viewer', VueSfcViewer)
     export default {
         inject: ["io", "user", "login", "logout"],
         props: {
