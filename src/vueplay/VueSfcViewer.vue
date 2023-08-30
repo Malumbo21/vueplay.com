@@ -116,10 +116,74 @@ import {
     loadGrammars,
     loadTheme
 } from "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/+esm";
-import * as monaco from "https://cdn.jsdelivr.net/npm/monaco-editor-core@0.41.0/+esm";
 import * as onigasm from "https://cdn.jsdelivr.net/npm/onigasm@2.2.5/+esm";
+import * as monaco from "https://cdn.jsdelivr.net/npm/monaco-editor-core@0.41.0/+esm";
+import volar from "https://cdn.jsdelivr.net/npm/@volar/monaco@1.10.1/+esm";
 import moment from "https://cdn.jsdelivr.net/npm/moment@2.29.4/+esm";
 
+function loadOnigasm() {
+    return onigasm.loadWASM("https://cdn.jsdelivr.net/npm/onigasm@2.2.5/lib/onigasm.wasm")
+}
+let getData = async () => {
+    return await (await fetch("https://api.vueplay.io/types/sfc/64b1469b691f1cd6f7ad4328?ref=HEAD&type=vue")).text()
+};
+let vueWorker = async () => {
+    let url = "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js";
+    return new Worker(URL.createObjectURL(new Blob([`
+          const process = { env: { NODE_ENV: 'development' } }
+          ${await (await fetch(url)).text()}
+        `], {
+        type: "text/javascript"
+    })))
+};
+let editorWorker = async () => {
+    let url = "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js";
+    return new Worker(URL.createObjectURL(new Blob([`
+          self.MonacoEnvironment = {
+            baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+          };
+          importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+  `], {
+        type: "text/javascript"
+    })))
+};
+async function setupMonacoEnv(takeoverMode = false) {
+    let initialized = false;
+    monaco.languages.register({
+        id: "vue",
+        extensions: [".vue"]
+    });
+    monaco.languages.onLanguage("vue", setup);
+    if (takeoverMode) {
+        monaco.languages.onLanguage("javascript", setup);
+        monaco.languages.onLanguage("typescript", setup);
+        monaco.languages.onLanguage("javascriptreact", setup);
+        monaco.languages.onLanguage("typescriptreact", setup);
+        monaco.languages.onLanguage("json", setup)
+    }
+    async function setup() {
+        if (initialized) return;
+        initialized = true;
+        window.MonacoEnvironment = {};
+        window.MonacoEnvironment.getWorker = async () => editorWorker();
+        const getWorker = window.MonacoEnvironment.getWorker;
+        window.MonacoEnvironment.getWorker = async (_, label) => {
+            if (label === "vue") return await vueWorker();
+            return getWorker()
+        };
+        const worker = monaco.editor.createWebWorker({
+            moduleId: "vs/language/vue/vueWorker",
+            label: "vue",
+            createData: {}
+        });
+        const languageId = takeoverMode ? ["vue", "javascript", "typescript", "javascriptreact", "typescriptreact", "json"] : ["vue"];
+        const getSyncUris = () => monaco.editor.getModels().map(model => model.uri);
+        volar.editor.activateMarkers(worker, languageId, "vue", getSyncUris, monaco.editor);
+        volar.editor.activateAutoInsertion(worker, languageId, getSyncUris, monaco.editor);
+        await volar.languages.registerProvides(worker, languageId, getSyncUris, monaco.languages)
+    }
+    await setup()
+}
 export default {
     inject: ["io"],
     props: {
@@ -129,7 +193,6 @@ export default {
         }
     },
     data: () => ({
-        theme: null,
         identifier: null,
         moment,
         fullWindow: false,
@@ -157,20 +220,6 @@ export default {
         }
     },
     async created() {
-        if (!window.MonacoEnvironment) {
-            window.MonacoEnvironment = {
-                async getWorker(_, label) {
-                    return new Worker(URL.createObjectURL(new Blob([`
-                            const process = { env: { NODE_ENV: 'development' } }
-                            ${await (await fetch("https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js")).text()}
-                        `], {
-                        type: "text/javascript"
-                    })))
-                }
-            }
-            await onigasm.loadWASM("https://cdn.jsdelivr.net/npm/onigasm@2.2.5/lib/onigasm.wasm")
-        }
-        this.theme = await loadTheme(monaco.editor)
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
         if (id) {
@@ -194,24 +243,58 @@ export default {
             this.history = await this.getHistory();
             this.raw = await this.getRaw();
             this.preview = await this.getPreview(this.application.tailwind);
-            const model = monaco.editor.createModel(this.raw, "vue");
-            let editorInstance = monaco.editor.create(this.$refs.editor, {
-                theme: this.theme,
-                model,
-                selectOnLineNumbers: true,
-                automaticLayout: true,
-                autoIndent: true,
-                formatOnPaste: true,
-                formatOnType: true
-            });
-            await loadGrammars(monaco, editorInstance);
-
-            editorInstance.onDidChangeModelContent(() => {
-                this.raw = editorInstance.getValue()
-                console.log('value changed', this.raw)
-            });
-            this.$nextTick(() => {
-                editorInstance.getAction("editor.action.formatDocument").run()
+            await this.loadEditor()
+        },
+        async loadEditor() {
+            const afterReady = async theme => {
+                const model = monaco.editor.createModel(this.raw, "vue", "demo.vue");
+                const element = this.$refs.editor;
+                const editorInstance = monaco.editor.create(element, {
+                    theme,
+                    model,
+                    selectOnLineNumbers: true,
+                    automaticLayout: true,
+                    autoIndent: true,
+                    formatOnPaste: true,
+                    formatOnType: true,
+                    "semanticHighlighting.enabled": true
+                }); // Support for semantic highlighting
+                // Support for semantic highlighting
+                const t = editorInstance._themeService._theme;
+                t.getTokenStyleMetadata = (type, modifiers, _language) => {
+                    const _readonly = modifiers.includes("readonly");
+                    switch (type) {
+                        case "function":
+                        case "method":
+                            return {
+                                foreground: 12
+                            };
+                        case "class":
+                            return {
+                                foreground: 11
+                            };
+                        case "variable":
+                        case "property":
+                            return {
+                                foreground: _readonly ? 21 : 9
+                            };
+                        default:
+                            return {
+                                foreground: 0
+                            }
+                    }
+                };
+                loadGrammars(monaco, editorInstance);
+                editorInstance.onDidChangeModelContent(() => {
+                    this.raw = editorInstance.getValue();
+                    console.log("value changed", this.raw)
+                });
+                this.$nextTick(() => {
+                    editorInstance.getAction("editor.action.formatDocument").run()
+                })
+            };
+            Promise.all([setupMonacoEnv(), loadOnigasm(), loadTheme(monaco.editor)]).then(([, , theme]) => {
+                afterReady(theme.light)
             })
         },
         async getApplication() {
