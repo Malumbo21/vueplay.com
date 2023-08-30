@@ -357,7 +357,6 @@ export default {
                     token: await this.io.authentication.getAccessToken()
                 });
                 console.log("results", results);
-                alert("Updated!");
                 this.v++
                 await this.refresh()
             } catch (e) {
