@@ -313,76 +313,112 @@
 	import Meta from "@/components/Meta.vue";
 	import moment from "moment";
 	import defaultBase64Image from "@/logic/defaultBase64Image.js";
-	export default { inject: ["io", "user",
+	export default {
+		inject: ["io", "user",
 			"login", "logout"
-		], props: { id: { type: String,
-				default: "64b1469b691f1cd6f7ad4328" } },
+		],
+		props: {
+			id: {
+				type: String,
+				default: "64b1469b691f1cd6f7ad4328"
+			}
+		},
 		components: { VueSfcViewer, Meta },
-		emit: ["post"], data: () =>
-		({ tailwind: true, comment: "",
+		emit: ["post"],
+		data: () =>
+			({
+				tailwind: true,
+				comment: "",
 				edit: false,
 				post: null,
 				background: defaultBase64Image,
 				moment,
-		categories: [] }), created() { this
-				.refresh() },
-		methods: { async getCategories() { const
+				categories: []
+			}),
+		created() {
+			this
+				.refresh()
+		},
+		methods: {
+			async getCategories() {
+				const
 					categories =
 					await this.io
 					.service(
 						"types/categories"
-						)
+					)
 					.find();
 				this.categories =
 					categories?.data ||
-					[] },
-			async postComment() { if (
-						await this.login()
-						) { await this.io
-							.service(
-								"types/comments"
-								)
-							.create({ application_id: this
-									.post
-									._id,
-								comment: this
-									.comment });
-						await this
+					[]
+			},
+			async postComment() {
+				if (
+					await this.login()
+				) {
+					await this.io
+						.service(
+							"types/comments"
+						)
+						.create({
+							application_id: this
+								.post
+								._id,
+							comment: this
+								.comment
+						});
+					await this
 						.refresh();
-						this.comment = "";
-						alert(
-						"Posted!") } else { alert
-							(
-								"You need to be logged in to post a comment") } },
+					this.comment = "";
+					alert(
+						"Posted!")
+				}
+				else {
+					alert
+						(
+							"You need to be logged in to post a comment"
+						)
+				}
+			},
 			async saveComment(
-			comment) { await this.io
+				comment) {
+				await this.io
 					.service(
 						"types/comments"
-						)
+					)
 					.patch(comment
-					._id, { comment: comment
-							.comment });
+						._id, {
+							comment: comment
+								.comment
+						});
 				comment.edit = false;
-				alert("Saved") },
+				alert("Saved")
+			},
 			async removeComment(
-				comment) { if (confirm(
-							"Delete comment?"
-							)) { await this
-							.io.service(
-								"types/comments"
-								)
-							.remove(comment
-								._id);
-						await this
+				comment) {
+				if (confirm(
+						"Delete comment?"
+					)) {
+					await this
+						.io.service(
+							"types/comments"
+						)
+						.remove(comment
+							._id);
+					await this
 						.refresh();
-						alert(
-						"Removed!") } },
-			async savePost() { await this
+					alert(
+						"Removed!")
+				}
+			},
+			async savePost() {
+				await this
 					.io.service(
 						"types/applications"
-						)
+					)
 					.patch(this.post
-						._id, { title: this
+						._id, {
+							title: this
 								.post
 								.title,
 							description: this
@@ -396,141 +432,215 @@
 								.public,
 							category_id: this
 								.post
-								.category_id }
-						);
+								.category_id
+						}
+					);
 				await this.refresh();
 				this.edit = false;
-				alert("Saved") },
-			async remove(post) { if (
-						confirm(
-							"Delete component?"
-							)) { await this
-							.io.service(
-								"types/applications"
-								)
-							.remove(post
-								._id);
-						alert("Removed!");
-						this.$router.push(
-							"/search") } },
-			async refresh() { this.post =
+				alert("Saved")
+			},
+			async remove(post) {
+				if (
+					confirm(
+						"Delete component?"
+					)) {
+					await this
+						.io.service(
+							"types/applications"
+						)
+						.remove(post
+							._id);
+					alert("Removed!");
+					this.$router.push(
+						"/search")
+				}
+			},
+			async refresh() {
+				this.post =
 					await this.io
 					.service(
 						"types/applications"
-						)
+					)
 					.get(this.id);
 				this.getCategories();
 				this.$emit("post", this
-					.post) }, async myVote(
-				post) { const votes =
+					.post)
+			},
+			async myVote(
+				post) {
+				const votes =
 					await this.io
 					.service(
 						"types/votes")
-					.find({ query: { application_id: post
+					.find({
+						query: {
+							application_id: post
 								._id,
 							user_id: this
 								.user
-								?._id } }); return votes
-					?.[0] || false },
-			async vote(post) { if (
-						await this.login()
-						) { const myVote =
-							await this
-							.myVote(
-							post); if (
-							myVote
-							) { await this
-								.io
-								.service(
-									"types/votes"
-									)
-								.remove(
-									myVote
+								?._id
+						}
+					});
+				return votes
+					?.[0] || false
+			},
+			async vote(post) {
+				if (
+					await this.login()
+				) {
+					const myVote =
+						await this
+						.myVote(
+							post);
+					if (
+						myVote
+					) {
+						await this
+							.io
+							.service(
+								"types/votes"
+							)
+							.remove(
+								myVote
+								._id
+							)
+					}
+					else {
+						await this
+							.io
+							.service(
+								"types/votes"
+							)
+							.create({
+								application_id: post
 									._id
-									) } else { await this
-								.io
-								.service(
-									"types/votes"
-									)
-								.create({ application_id: post
-										._id }) } await this
-							.refreshVotes(
-								post
-								) } else { alert
-							(
-								"You have to be logged in to cast a vote") } },
-			async refreshVotes(post) { post
+							})
+					}
+					await this
+						.refreshVotes(
+							post
+						)
+				}
+				else {
+					alert
+						(
+							"You have to be logged in to cast a vote"
+						)
+				}
+			},
+			async refreshVotes(post) {
+				post
 					.votes = await this
 					.io.service(
 						"types/votes")
-					.find({ query: { application_id: post
-								._id } }) },
-			async myLike(comment) { const
+					.find({
+						query: {
+							application_id: post
+								._id
+						}
+					})
+			},
+			async myLike(comment) {
+				const
 					likes = await this
 					.io.service(
 						"types/likes")
-					.find({ query: { comment_id: comment
+					.find({
+						query: {
+							comment_id: comment
 								._id,
 							user_id: this
 								.user
-								?._id } }); return likes
-					?.[0] || false },
-			async like(comment) { if (
-						await this.login()
-						) { const myLike =
-							await this
-							.myLike(
-								comment); if (
-							myLike
-							) { await this
-								.io
-								.service(
-									"types/likes"
-									)
-								.remove(
-									myLike
+								?._id
+						}
+					});
+				return likes
+					?.[0] || false
+			},
+			async like(comment) {
+				if (
+					await this.login()
+				) {
+					const myLike =
+						await this
+						.myLike(
+							comment);
+					if (
+						myLike
+					) {
+						await this
+							.io
+							.service(
+								"types/likes"
+							)
+							.remove(
+								myLike
+								._id
+							)
+					}
+					else {
+						await this
+							.io
+							.service(
+								"types/likes"
+							)
+							.create({
+								comment_id: comment
 									._id
-									) } else { await this
-								.io
-								.service(
-									"types/likes"
-									)
-								.create({ comment_id: comment
-										._id }) } await this
-							.refreshLikes(
-								comment
-								) } else { alert
-							(
-								"You have to be logged in to like") } },
+							})
+					}
+					await this
+						.refreshLikes(
+							comment
+						)
+				}
+				else {
+					alert
+						(
+							"You have to be logged in to like"
+						)
+				}
+			},
 			async refreshLikes(
-			comment) { comment.likes =
+				comment) {
+				comment.likes =
 					await this.io
 					.service(
 						"types/likes")
-					.find({ query: { comment_id: comment
-								._id } }) },
-			selectImage() { let input =
+					.find({
+						query: {
+							comment_id: comment
+								._id
+						}
+					})
+			},
+			selectImage() {
+				let input =
 					document.createElement(
 						"input");
 				input.type = "file";
 				input.multiple = false;
 				input.accept = "image/*";
 				input.onchange =
-			async () => { let files =
+					async () => {
+						let files =
 							Array.from(
 								input
 								.files
-								); let
+							);
+						let
 							file =
 							files[
-							0]; let
+								0];
+						let
 							reader =
 							new FileReader;
 						reader
 							.readAsDataURL(
 								file);
 						reader.onload =
-							async e => { this
+							async e => {
+								this
 									.post
 									.icon =
 									await this
@@ -538,89 +648,121 @@
 										e
 										.target
 										.result
-										) };
+									)
+							};
 						reader
 							.onerror =
-							e => { alert
+							e => {
+								alert
 									(
-										"Could not load file");
+										"Could not load file"
+									);
 								console
 									.log(
 										e
-										) } };
-				input.click() },
+									)
+							}
+					};
+				input.click()
+			},
 			resizeImage(
-			src) { return new Promise((
-							resolve, reject
-							) => { let
-								MAX_WIDTH =
-								1000; let
-								MAX_HEIGHT =
-								1000; let
-								canvas =
-								document
-								.createElement(
-									"canvas"
-									); let
-								ctx =
-								canvas
-								.getContext(
-									"2d"
-									); let
-								image =
-								new Image;
-							image.onload =
-								() => { let
-										width =
-										image
-										.width; let
-										height =
-										image
-										.height; if (
-										width >
-										height
-										) { if (
-											width >
-											MAX_WIDTH
-											) { height
-												*=
-												MAX_WIDTH /
-												width;
-											width
-												=
-												MAX_WIDTH } } else { if (
-											height >
-											MAX_HEIGHT
-											) { width
-												*=
-												MAX_HEIGHT /
-												height;
-											height
-												=
-												MAX_HEIGHT } } canvas
-										.width =
+				src) {
+				return new Promise((
+					resolve, reject
+				) => {
+					let
+						MAX_WIDTH =
+						1000;
+					let
+						MAX_HEIGHT =
+						1000;
+					let
+						canvas =
+						document
+						.createElement(
+							"canvas"
+						);
+					let
+						ctx =
+						canvas
+						.getContext(
+							"2d"
+						);
+					let
+						image =
+						new Image;
+					image.onload =
+						() => {
+							let
+								width =
+								image
+								.width;
+							let
+								height =
+								image
+								.height;
+							if (
+								width >
+								height
+							) {
+								if (
+									width >
+									MAX_WIDTH
+								) {
+									height
+										*=
+										MAX_WIDTH /
 										width;
-									canvas
-										.height =
+									width
+										=
+										MAX_WIDTH
+								}
+							}
+							else {
+								if (
+									height >
+									MAX_HEIGHT
+								) {
+									width
+										*=
+										MAX_HEIGHT /
 										height;
-									ctx.drawImage(
-										image,
-										0,
-										0,
-										width,
-										height
-										); let
-										dataurl =
-										canvas
-										.toDataURL(
-											"image/png",
-											0.7
-											);
-									resolve
-										(
-											dataurl) };
-							image.src =
-							src }) } } };
+									height
+										=
+										MAX_HEIGHT
+								}
+							}
+							canvas
+								.width =
+								width;
+							canvas
+								.height =
+								height;
+							ctx.drawImage(
+								image,
+								0,
+								0,
+								width,
+								height
+							);
+							let
+								dataurl =
+								canvas
+								.toDataURL(
+									"image/png",
+									0.7
+								);
+							resolve
+								(
+									dataurl
+								)
+						};
+					image.src =
+						src
+				})
+			}
+		}
+	};
 
 </script>
 <style scoped></style>
