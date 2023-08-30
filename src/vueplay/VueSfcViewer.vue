@@ -361,7 +361,8 @@ export default {
                     token: await this.io.authentication.getAccessToken()
                 });
                 console.log('results', results)
-                alert("Saved! Refresh to see updated content.")
+                alert("Updated!")
+                await this.init()
             } catch (e) {
                 alert("You do not have permission to make patches")
             }
