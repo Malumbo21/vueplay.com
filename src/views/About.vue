@@ -6,12 +6,13 @@
 		<header class="">
 			<div style="padding-top:10px;padding-bottom:10px;margin-top:-10px"
 				@click="$router.push('/pricing')"
-				class="hover:bg-zinc-50 bg-white cursor-pointer">
+				class="hover:bg-slate-200 cursor-pointer">
 				<h2 data-v-d443ee1d=""
-					style="padding: 0px; margin: 0px;;height:23px">
+					style="padding: 0px; margin: 0px;;height:23px"
+					class="text-slate-700">
 					<span
 						data-v-d443ee1d=""
-						style="color:#f23a07ff;font-weight:bold">
+						style="color:#eb7c5eff;font-weight:bold">
 						Limited Offer!
 					</span>
 					Get Premium Access
@@ -20,7 +21,8 @@
 						style="text-decoration: line-through;font-size:14px">
 						$199.00
 					</span> <span
-						style="font-weight:bold;font-size:14px">
+						style="font-weight:bold;font-size:14px"
+						class="ml-1">
 						$49.00
 					</span>
 					USD
