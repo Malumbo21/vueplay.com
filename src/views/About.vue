@@ -8,23 +8,23 @@
 				@click="$router.push('/pricing')"
 				class="hover:bg-zinc-50 bg-white cursor-pointer">
 				<h2 data-v-d443ee1d=""
-					style="padding: 0px; margin: 0px;">
+					style="padding: 0px; margin: 0px;;height:23px">
 					<span
 						data-v-d443ee1d=""
-						style="color:#74AE86;font-weight:bold">New:</span>
-					For a limited time,
-					get Premium Access
-					for just
+						style="color:#f23a07ff;font-weight:bold">
+						Limited Offer!
+					</span>
+					Get Premium Access
+					For Just
 					<span
 						style="text-decoration: line-through;font-size:14px">
 						$199.00
-					</span>
-					<span
+					</span> <span
 						style="font-weight:bold;font-size:14px">
 						$49.00
 					</span>
 					USD
-					per year!
+					Per Year
 				</h2>
 			</div>
 			<div style="background-size:contain;background-position:center;background-repeat:no-repeat;width:266px;height:125px;margin-right:auto;margin-left:auto;margin-top:40px;position:relative;max-width:calc(100% - 100px);margin-bottom:-20px;left:5px"
