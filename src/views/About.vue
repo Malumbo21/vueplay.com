@@ -13,7 +13,7 @@
 					<span
 						data-v-d443ee1d=""
 						style="color:#eb7c5eff;font-weight:bold">
-						Limited Offer!
+						Limited Offer -
 					</span>
 					Get Premium Access
 					For Just
