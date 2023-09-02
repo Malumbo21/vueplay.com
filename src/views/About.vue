@@ -8,7 +8,7 @@
 				@click="$router.push('/pricing')"
 				class="cursor-pointer">
 				<h2 data-v-d443ee1d=""
-					style="padding: 0px; margin: 0px;;height:23px"
+					style="padding:0px 20px; margin: 0px;;height:23px"
 					class="text-slate-700">
 					<span
 						data-v-d443ee1d=""
