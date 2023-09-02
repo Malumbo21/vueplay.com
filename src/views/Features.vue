@@ -23,7 +23,7 @@
 			<section
 				class="p-12 gap-12 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 container m-auto grid">
 				<div
-					class="p-6 inline-block shadow-slate-300 shadow rounded bg-white">
+					class="inline-block p-6 shadow-slate-300 shadow rounded bg-white">
 					<div
 						class="bg-emerald-200 w-12 h-12 rounded pt-2">
 						<svg xmlns="http://www.w3.org/2000/svg"
@@ -327,12 +327,8 @@
 					</p>
 				</div>
 			</section>
-			<section
-				class="p-6 m-auto container">
-				<div class="">
-				</div>
-			</section>
-			<section><button
+			<section class="my-12">
+				<button
 					@click="$router.push('/pricing')"
 					class="bg-slate-200 transition-shadow hover:drop-shadow-lg drop-shadow">
 					Pricing
@@ -340,7 +336,8 @@
 					@click="open('https://studio.vueplay.com')"
 					class="bg-purple-500 from-blue-500 bg-gradient-to-br hover:bg-purple-600 hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow">
 					Get Started ⇾
-				</button></section>
+				</button>
+			</section>
 		</main>
 		<Footer />
 	</div>
