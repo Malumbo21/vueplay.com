@@ -18,7 +18,7 @@
 				Early Bird Offer!
 			</h2>
 			<p data-v-d443ee1d=""
-				style="margin-top:10px;margin-bottom:40px">
+				style="margin-top:10px;margin-bottom:40px;padding-right:20px;padding-left:20px">
 				For a limited time, get
 				Premium Access for just
 				$49.00 USD (inc.) per
