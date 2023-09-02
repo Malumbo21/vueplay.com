@@ -4,9 +4,9 @@
 		<Meta />
 		<VueNavigator class="z-20" />
 		<header class="">
-			<div style="padding-top:10px;padding-bottom:10px;margin-top:-10px"
+			<div style="padding-top:20px;padding-bottom:20px;margin-top:-10px"
 				@click="$router.push('/pricing')"
-				class="hover:bg-slate-200 cursor-pointer">
+				class="cursor-pointer">
 				<h2 data-v-d443ee1d=""
 					style="padding: 0px; margin: 0px;;height:23px"
 					class="text-slate-700">
