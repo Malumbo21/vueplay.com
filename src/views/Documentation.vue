@@ -83,7 +83,7 @@
 						</li>
 					</ul>
 				</div><router-view
-					class="bg-white m-auto container grow h-full overflow-auto">
+					class="bg-white m-auto grow h-full overflow-auto">
 				</router-view>
 				<div class="absolute h-full w-full"
 					v-if="menu"
