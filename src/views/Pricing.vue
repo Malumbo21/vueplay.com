@@ -12,13 +12,13 @@
 				Pricing
 			</h1>
 			<h2 data-v-d443ee1d=""
-				style="padding: 0px;margin:0px;font-size:29px">
+				style="padding: 0px;margin:40px 0px 20px;font-size:29px">
 				<span data-v-d443ee1d=""
 					style="color: rgb(227, 68, 124);">New:</span>
 				Early Bird Offer!
 			</h2>
 			<p data-v-d443ee1d=""
-				style="margin-top:15px">
+				style="margin-top:10px;margin-bottom:40px">
 				For a limited time, get
 				Premium Access for just
 				$49.00 USD (inc.) per
@@ -33,13 +33,13 @@
 					style="margin-bottom:50px;max-width:786px;text-align:left;margin-right:auto;margin-left:auto" />
 			</section>
 			<p data-v-d443ee1d=""
-				style="margin-top:15px;margin-bottom:30px">
+				style="margin-top:80px;margin-bottom:50px">
 				Upgrade to Premium on
-				your profile inside
-				Studio.
+				your profile in
+				Studio
 			</p>
 			<section
-				style="text-align:center"
+				style="text-align:center;margin-top:50px;margin-bottom:10px"
 				class="pb-12 bg-slate-100">
 				<button
 					@click="$router.push('/features')"
