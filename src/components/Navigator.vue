@@ -8,7 +8,7 @@
 			:class="{active: route === '/'}"
 			class="hover:text-green-700 text-slate-700 pr-2 sm:hidden">
 			Home
-		</button><button @click="to('/features')"
+		</button> <button @click="to('/features')"
 			:class="{active: route === '/features'}"
 			class="hover:text-green-700 text-slate-700 px-2">
 			Features
@@ -62,9 +62,7 @@
 					clip-rule="evenodd" />
 				<path
 					d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
-			</svg>
-
-		</a>
+			</svg> </a>
 	</nav>
 </template>
 <script>
