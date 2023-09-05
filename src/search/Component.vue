@@ -88,13 +88,13 @@
 					</div>
 				</div>
 				<div
-					class="inline-flex w-32"
-					:style="'background: url(' + (post.icon || background) + ')'"
-					style="background-repeat:no-repeat;background-size:contain;background-position:center"
+					class="inline-flex w-32 rounded"
+					:style="'background: url(' + (post?.icon || background) + ')'"
+					style="background-repeat:no-repeat;background-size:contain;background-position:center;background-color:#F5F5F5"
 				>
 					<img
 						class="rounded w-full opacity-0"
-						:src="post.icon || background"
+						:src="post?.icon || background"
 						v-if="post?.icon"
 					/>
 				</div>
