@@ -40,7 +40,11 @@
 						style="width:80%;height:80%;padding:10%"
 					>
 						<path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
-						<path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd" />
+						<path
+							fill-rule="evenodd"
+							d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 				</button>
 				<button
@@ -56,7 +60,11 @@
 						class="mx-auto"
 						style="width:80%;height:80%;padding:10%"
 					>
-	  					<path fill-rule="evenodd" d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm14.25 6a.75.75 0 01-.22.53l-2.25 2.25a.75.75 0 11-1.06-1.06L15.44 12l-1.72-1.72a.75.75 0 111.06-1.06l2.25 2.25c.141.14.22.331.22.53zm-10.28-.53a.75.75 0 000 1.06l2.25 2.25a.75.75 0 101.06-1.06L8.56 12l1.72-1.72a.75.75 0 10-1.06-1.06l-2.25 2.25z" clip-rule="evenodd" />
+						<path
+							fill-rule="evenodd"
+							d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm14.25 6a.75.75 0 01-.22.53l-2.25 2.25a.75.75 0 11-1.06-1.06L15.44 12l-1.72-1.72a.75.75 0 111.06-1.06l2.25 2.25c.141.14.22.331.22.53zm-10.28-.53a.75.75 0 000 1.06l2.25 2.25a.75.75 0 101.06-1.06L8.56 12l1.72-1.72a.75.75 0 10-1.06-1.06l-2.25 2.25z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 				</button>
 				<button
@@ -73,7 +81,11 @@
 						class="mx-auto animate-spin"
 						style="width:80%;height:80%;padding:10%"
 					>
-						<path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V4.356a.75.75 0 00-1.5 0v3.18l-1.9-1.9A9 9 0 003.306 9.67a.75.75 0 101.45.388zm15.408 3.352a.75.75 0 00-.919.53 7.5 7.5 0 01-12.548 3.364l-1.902-1.903h3.183a.75.75 0 000-1.5H2.984a.75.75 0 00-.75.75v4.992a.75.75 0 001.5 0v-3.18l1.9 1.9a9 9 0 0015.059-4.035.75.75 0 00-.53-.918z" clip-rule="evenodd" />
+						<path
+							fill-rule="evenodd"
+							d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V4.356a.75.75 0 00-1.5 0v3.18l-1.9-1.9A9 9 0 003.306 9.67a.75.75 0 101.45.388zm15.408 3.352a.75.75 0 00-.919.53 7.5 7.5 0 01-12.548 3.364l-1.902-1.903h3.183a.75.75 0 000-1.5H2.984a.75.75 0 00-.75.75v4.992a.75.75 0 001.5 0v-3.18l1.9 1.9a9 9 0 0015.059-4.035.75.75 0 00-.53-.918z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 					<svg
 						v-else
@@ -82,7 +94,11 @@
 						class="mx-auto"
 						style="width:80%;height:80%;padding:10%"
 					>
-						<path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+						<path
+							fill-rule="evenodd"
+							d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 				</button>
 			</div>
@@ -113,25 +129,25 @@
 					</svg>
 				</button>
 				<button
-						style="width:31px;height:31px"
-						class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block hover:bg-slate-300"
-						title="Preview in New Window"
-						@click="openPreview(application?.tailwind)"
+					style="width:31px;height:31px"
+					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block hover:bg-slate-300"
+					title="Preview in New Window"
+					@click="openPreview(application?.tailwind)"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+						class="mx-auto"
+						style="width:80%;height:80%;padding:10%"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							class="mx-auto"
-							style="width:80%;height:80%;padding:10%"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</button>
+						<path
+							fill-rule="evenodd"
+							d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+				</button>
 				<button
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center hover:bg-slate-300 inline-block"
@@ -149,7 +165,7 @@
 					>
 						<defs>
 							<clipPath id="a">
-								<path d="M0 .113h91.887V92H0Zm0 0"/>
+								<path d="M0 .113h91.887V92H0Zm0 0" />
 							</clipPath>
 						</defs>
 						<g clip-path="url(#a)">
@@ -214,7 +230,10 @@
 					class="p-4 overflow-auto h-full"
 					:class="show !== 'split' ? 'col-span-2' : ''"
 				>
-					<div class="editor" ref="editor"/>
+					<div
+						class="editor"
+						ref="editor"
+					/>
 				</div>
 				<div
 					v-show="show === 'split' || show === 'preview'"
@@ -241,7 +260,7 @@
 					v-for="commit in history"
 					class="p-2 rounded mb-2 bg-slate-100"
 				>
-					
+
 					{{
 						moment.unix(commit.commit?.author?.timestamp ||
 						commit.commit?.committer?.timestamp).format('DD.MM.YYYY - HH:mm')
@@ -253,322 +272,348 @@
 	</div>
 </template>
 <script>
-import { loadGrammars, loadTheme } from "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/+esm"
-import * as onigasm from "https://cdn.jsdelivr.net/npm/onigasm@2.2.5/+esm"
-import * as monaco from "https://cdn.jsdelivr.net/npm/monaco-editor-core-colorpicker@0.38.0/+esm"
-import volar from "https://cdn.jsdelivr.net/npm/@volar/monaco@1.10.1/+esm"
-import moment from "https://cdn.jsdelivr.net/npm/moment@2.29.4/+esm"
+	import {
+		loadGrammars,
+		loadTheme
+	} from "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/+esm"
+	import * as onigasm from "https://cdn.jsdelivr.net/npm/onigasm@2.2.5/+esm"
+	import * as monaco from "https://cdn.jsdelivr.net/npm/monaco-editor-core-colorpicker@0.38.0/+esm"
+	import volar from "https://cdn.jsdelivr.net/npm/@volar/monaco@1.10.1/+esm"
+	import moment from "https://cdn.jsdelivr.net/npm/moment@2.29.4/+esm"
 
-function loadOnigasm() {
-	if (window.loadedOnigasm) return
-	window.loadedOnigasm = true
-	return onigasm.loadWASM("https://cdn.jsdelivr.net/npm/onigasm@2.2.5/lib/onigasm.wasm")
-}
-let vueWorker = async () => {
-	let url = "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js"
-	return new Worker(URL.createObjectURL(new Blob([`
+	function loadOnigasm() {
+		if (window.loadedOnigasm) return
+		window.loadedOnigasm = true
+		return onigasm.loadWASM("https://cdn.jsdelivr.net/npm/onigasm@2.2.5/lib/onigasm.wasm")
+	}
+	let vueWorker = async () => {
+		let url = "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js"
+		return new Worker(URL.createObjectURL(new Blob([`
 		const process = { env: { NODE_ENV: 'development' } }
 		${await (await fetch(url)).text()}
-    `], { type: "text/javascript" })))
-}
-let editorWorker = async () => {
-	let url = "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js"
-	return new Worker(URL.createObjectURL(new Blob([`
+    `], {
+			type: "text/javascript"
+		})))
+	}
+	let editorWorker = async () => {
+		let url = "https://cdn.jsdelivr.net/npm/monaco-volar@0.4.0/dist/worker/vue.worker.js"
+		return new Worker(URL.createObjectURL(new Blob([`
         self.MonacoEnvironment = { baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min' }
         importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js')
-  	`], { type: "text/javascript" })))
-}
-async function setupMonacoEnv() {
-	let initialized = false
-	monaco.languages.register({
-		id: "vue",
-		extensions: [".vue"]
-	})
-	monaco.languages.onLanguage("vue", setup)
-	/*
-	monaco.languages.onLanguage("javascript", setup)
-	monaco.languages.onLanguage("typescript", setup)
-	monaco.languages.onLanguage("javascriptreact", setup)
-	monaco.languages.onLanguage("typescriptreact", setup)
-	monaco.languages.onLanguage("json", setup)
-	*/
-
-	async function setup() {
-		if (initialized) return
-		initialized = true
-		window.MonacoEnvironment = {}
-		window.MonacoEnvironment.getWorker = async () => editorWorker()
-		const getWorker = window.MonacoEnvironment.getWorker
-		window.MonacoEnvironment.getWorker = async (_, label) => {
-			if (label === "vue") return await vueWorker()
-			return getWorker()
-		}
-		const worker = monaco.editor.createWebWorker({
-			moduleId: "vs/language/vue/vueWorker",
-			label: "vue",
-			createData: {}
-		})
-		const languageId = [
-			"vue",
-			/*"javascript",
-			"typescript",
-			"javascriptreact",
-			"typescriptreact",
-			"json"*/
-		]
-		const getSyncUris = () => monaco.editor.getModels().map(model => model.uri)
-		volar.editor.activateMarkers(worker, languageId, "vue", getSyncUris, monaco.editor)
-		volar.editor.activateAutoInsertion(worker, languageId, getSyncUris, monaco.editor)
-		await volar.languages.registerProvides(worker, languageId, getSyncUris, monaco.languages)
+  	`], {
+			type: "text/javascript"
+		})))
 	}
-	await setup()
-}
-export default {
-	inject: ["io"],
-	props: {
-		id: {
-			type: String,
-			default: "64b1469b691f1cd6f7ad4328"
-		},
-		user: {
-			type: Object,
-			default: null
-		}
-	},
-	data: () => ({
-		identifier: null,
-		moment,
-		fullWindow: false,
-		show: "preview",
-		showHistory: false,
-		history: null,
-		application: null,
-		raw: "",
-		preview: "",
-		webComponent: "",
-		webComponentPreview: "",
-		livePreview: "",
-		livePreviewWebComponent: "",
-		html: "",
-		htmlWebComponent: "",
-		htmlBase64: "",
-		iframe: "",
-		esm: "",
-		esmWebComponent: "",
-		esmBase64: "",
-		version: 0,
-		saving: false
-	}),
-	computed: {
-		iframeSource() {
-			return `https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${this.application?.tailwind ? "-tw" : ""}&v=${this.version}`
-		}
-	},
-	async created() {
-		const urlParams = new URLSearchParams(window.location.search)
-		const id = urlParams.get("id")
-		if (id) {
-			this.identifier = id
-		} else {
-			this.identifier = this.id
-		}
-		await this.init()
-		if (!this.io) return
-		const apps = this.io.service("types/applications")
-		apps.on("updated", data => {
-			if (String(data._id) === String(this.identifier)) this.init()
+	async function setupMonacoEnv() {
+		let initialized = false
+		monaco.languages.register({
+			id: "vue",
+			extensions: [".vue"]
 		})
-		apps.on("patched", data => {
-			if (String(data._id) === String(this.identifier)) this.init()
-		})
-	},
-	watch: {
-		raw(raw) {
-			this.$refs.preview.contentWindow.postMessage({ raw }, '*')
-		}
-	},
-	methods: {
-		async init() {
-			await this.refresh()
-			await this.loadEditor()
-		},
-		async refresh() {
-			this.application = await this.getApplication()
-			this.history = await this.getHistory()
-			this.raw = await this.getRaw()
-			this.preview = await this.getPreview(this.application.tailwind)
-		},
-		async loadEditor() {
-			const afterReady = async theme => {
-				let model = monaco.editor.getModel("demo.vue")
-				if (model) {
-					model.setValue(this.raw)
-				} else {
-					model = monaco.editor.createModel(this.raw, "vue", "demo.vue")
-				}
-				const element = this.$refs.editor
-				const editorInstance = monaco.editor.create(element, {
-					theme,
-					model,
-					selectOnLineNumbers: true,
-					automaticLayout: true,
-					autoIndent: true,
-					wordWrapOverride1: 'off',
-					"semanticHighlighting.enabled": true
-				})
-				const t = editorInstance._themeService._theme
-				t.getTokenStyleMetadata = (type, modifiers, _language) => {
-					const _readonly = modifiers.includes("readonly")
-					switch (type) {
-						case "function":
-						case "method":
-							return {
-								foreground: 12
-							}
-						case "class":
-							return {
-								foreground: 11
-							}
-						case "variable":
-						case "property":
-							return {
-								foreground: _readonly ? 21 : 9
-							}
-						default:
-							return {
-								foreground: 0
-							}
-					}
-				}
-				loadGrammars(monaco, editorInstance)
-				editorInstance.onDidChangeModelContent(() => {
-					this.raw = editorInstance.getValue()
-				})
+		monaco.languages.onLanguage("vue", setup)
+		/*
+		monaco.languages.onLanguage("javascript", setup)
+		monaco.languages.onLanguage("typescript", setup)
+		monaco.languages.onLanguage("javascriptreact", setup)
+		monaco.languages.onLanguage("typescriptreact", setup)
+		monaco.languages.onLanguage("json", setup)
+		*/
+		async function setup() {
+			if (initialized) return
+			initialized = true
+			window.MonacoEnvironment = {}
+			window.MonacoEnvironment.getWorker = async () => editorWorker()
+			const getWorker = window.MonacoEnvironment.getWorker
+			window.MonacoEnvironment.getWorker = async (_, label) => {
+				if (label === "vue") return await vueWorker()
+				return getWorker()
 			}
-			Promise.all([setupMonacoEnv(), loadOnigasm(), loadTheme(monaco.editor)]).then(([, , theme]) => {
-				afterReady(theme.light)
+			const worker = monaco.editor.createWebWorker({
+				moduleId: "vs/language/vue/vueWorker",
+				label: "vue",
+				createData: {}
+			})
+			const languageId = [
+				"vue",
+				/*"javascript",
+				"typescript",
+				"javascriptreact",
+				"typescriptreact",
+				"json"*/
+			]
+			const getSyncUris = () => monaco.editor.getModels()
+				.map(model => model.uri)
+			volar.editor.activateMarkers(worker, languageId, "vue", getSyncUris, monaco.editor)
+			volar.editor.activateAutoInsertion(worker, languageId, getSyncUris, monaco.editor)
+			await volar.languages.registerProvides(worker, languageId, getSyncUris, monaco.languages)
+		}
+		await setup()
+	}
+	export default {
+		inject: ["io"],
+		props: {
+			id: {
+				type: String,
+				default: "64b1469b691f1cd6f7ad4328"
+			},
+			user: {
+				type: Object,
+				default: null
+			}
+		},
+		data: () => ({
+			identifier: null,
+			moment,
+			fullWindow: false,
+			show: "preview",
+			showHistory: false,
+			history: null,
+			application: null,
+			raw: "",
+			preview: "",
+			webComponent: "",
+			webComponentPreview: "",
+			livePreview: "",
+			livePreviewWebComponent: "",
+			html: "",
+			htmlWebComponent: "",
+			htmlBase64: "",
+			iframe: "",
+			esm: "",
+			esmWebComponent: "",
+			esmBase64: "",
+			version: 0,
+			saving: false
+		}),
+		computed: {
+			iframeSource() {
+				return `https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${this.application?.tailwind ? "-tw" : ""}&v=${this.version}`
+			}
+		},
+		async created() {
+			const urlParams = new URLSearchParams(window.location.search)
+			const id = urlParams.get("id")
+			if (id) {
+				this.identifier = id
+			} else {
+				this.identifier = this.id
+			}
+			await this.init()
+			if (!this.io) return
+			const apps = this.io.service("types/applications")
+			apps.on("updated", data => {
+				if (String(data._id) === String(this.identifier)) this.init()
+			})
+			apps.on("patched", data => {
+				if (String(data._id) === String(this.identifier)) this.init()
 			})
 		},
-		async getApplication() {
-			return (await fetch(
-				`https://api.vueplay.io/types/applications/${this.identifier}`
-			)).json()
+		watch: {
+			raw(raw) {
+				this.$refs.preview.contentWindow.postMessage({
+					raw
+				}, '*')
+			}
 		},
-		async getHistory() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}`
-			)).json()
-		},
-		async getRaw() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=vue`
-			)).text()
-		},
-		async getPreview(tailwind =
-			false) {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${tailwind ? "-tw" : ""}`
-			)).text()
-		},
-		async getLivePreview() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=live-preview`
-			)).text()
-		},
-		async getLivePreviewWebComponent() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=live-preview-wc`
-			))
-				.text()
-		},
-		async getWebComponent() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=webcomponent`
-			)).text()
-		},
-		async getWebComponentPreview() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview-wc`
-			)).text()
-		},
-		async getHtml(tailwind = false) {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=html${tailwind ? "-tw" : ""}`
-			)).text()
-		},
-		async getHtmlWebComponentPreview() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=html-wc`
-			)).text()
-		},
-		async getHtmlBase64(tailwind = false) {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=html-base64${tailwind ? "-tw" : ""}`
-			)).text()
-		},
-		async getIframe(tailwind = false) {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=iframe${tailwind ? "-tw" : ""}`
-			)).text()
-		},
-		async getESM() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=esm`
-			)).text()
-		},
-		async getESMWebComponent() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=esmwc`
-			)).text()
-		},
-		async getESMBase64() {
-			return (await fetch(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=base64`
-			)).text()
-		},
-		openPreview(tailwind) {
-			window.open(
-				`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${tailwind ? "-tw" : ""}`,
-				"_blank"
-			)
-		},
-		async save() {
-			this.saving = true
-			try {
-				let results = await this.io.service("types/sfc").patch(this.id, {
-					content: this.raw,
-					token: await this.io.authentication.getAccessToken()
-				})
-				this.version++
+		methods: {
+			async init() {
 				await this.refresh()
+				await this.loadEditor()
+			},
+			async refresh() {
+				this.application = await this.getApplication()
+				this.history = await this.getHistory()
+				this.raw = await this.getRaw()
+				this.preview = await this.getPreview(this.application.tailwind)
+			},
+			async loadEditor() {
+				const afterReady = async theme => {
+					let model = monaco.editor.getModel("demo.vue")
+					if (model) {
+						model.setValue(this.raw)
+					} else {
+						model = monaco.editor.createModel(this.raw, "vue", "demo.vue")
+					}
+					const element = this.$refs.editor
+					const editorInstance = monaco.editor.create(element, {
+						theme,
+						model,
+						selectOnLineNumbers: true,
+						automaticLayout: true,
+						autoIndent: true,
+						wordWrapOverride1: 'off',
+						"semanticHighlighting.enabled": true
+					})
+					const t = editorInstance._themeService._theme
+					t.getTokenStyleMetadata = (type, modifiers, _language) => {
+						const _readonly = modifiers.includes("readonly")
+						switch (type) {
+							case "function":
+							case "method":
+								return {
+									foreground: 12
+								}
+							case "class":
+								return {
+									foreground: 11
+								}
+							case "variable":
+							case "property":
+								return {
+									foreground: _readonly ? 21 : 9
+								}
+							default:
+								return {
+									foreground: 0
+								}
+						}
+					}
+					loadGrammars(monaco, editorInstance)
+					editorInstance.onDidChangeModelContent(() => {
+						this.raw = editorInstance.getValue()
+					})
+				}
+				Promise.all([setupMonacoEnv(), loadOnigasm(), loadTheme(monaco.editor)])
+					.then(([, , theme]) => {
+						afterReady(theme.light)
+					})
+			},
+			async getApplication() {
+				return (await fetch(
+						`https://api.vueplay.io/types/applications/${this.identifier}`
+					))
+					.json()
+			},
+			async getHistory() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}`
+					))
+					.json()
+			},
+			async getRaw() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=vue`
+					))
+					.text()
+			},
+			async getPreview(tailwind =
+				false) {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${tailwind ? "-tw" : ""}`
+					))
+					.text()
+			},
+			async getLivePreview() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=live-preview`
+					))
+					.text()
+			},
+			async getLivePreviewWebComponent() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=live-preview-wc`
+					))
+					.text()
+			},
+			async getWebComponent() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=webcomponent`
+					))
+					.text()
+			},
+			async getWebComponentPreview() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview-wc`
+					))
+					.text()
+			},
+			async getHtml(tailwind = false) {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=html${tailwind ? "-tw" : ""}`
+					))
+					.text()
+			},
+			async getHtmlWebComponentPreview() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=html-wc`
+					))
+					.text()
+			},
+			async getHtmlBase64(tailwind = false) {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=html-base64${tailwind ? "-tw" : ""}`
+					))
+					.text()
+			},
+			async getIframe(tailwind = false) {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=iframe${tailwind ? "-tw" : ""}`
+					))
+					.text()
+			},
+			async getESM() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=esm`
+					))
+					.text()
+			},
+			async getESMWebComponent() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=esmwc`
+					))
+					.text()
+			},
+			async getESMBase64() {
+				return (await fetch(
+						`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=base64`
+					))
+					.text()
+			},
+			openPreview(tailwind) {
+				window.open(
+					`https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${tailwind ? "-tw" : ""}`,
+					"_blank"
+				)
+			},
+			async save() {
+				this.saving = true
+				try {
+					let results = await this.io.service("types/sfc")
+						.patch(this.id, {
+							content: this.raw,
+							token: await this.io.authentication.getAccessToken()
+						})
+					this.version++
+					await this.refresh()
+				} catch (e) {
+					alert("You do not have permission to make patches")
+				}
+				this.saving = false
 			}
-			catch (e) {
-				alert("You do not have permission to make patches")
-			}
-			this.saving = false
 		}
 	}
-}
 
 </script>
 <style scoped>
-.full-window {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100vw;
-	height: 100vh !important;
-	z-index: 100;
-}
+	.full-window {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100vw;
+		height: 100vh !important;
+		z-index: 100;
+	}
 
-.editor {
-	height: 100%;
-	width: 100%;
-}
+	.editor {
+		height: 100%;
+		width: 100%;
+	}
+
 </style>
 <style>
-@font-face {
-	font-family: codicon;
-	src: url('https://cdn.jsdelivr.net/npm/monaco-editor@0.36.1/esm/vs/base/browser/ui/codicons/codicon/codicon.ttf');
-}
+	@font-face {
+		font-family: codicon;
+		src: url('https://cdn.jsdelivr.net/npm/monaco-editor@0.36.1/esm/vs/base/browser/ui/codicons/codicon/codicon.ttf');
+	}
+
 </style>
