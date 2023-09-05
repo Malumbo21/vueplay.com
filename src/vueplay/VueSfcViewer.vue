@@ -400,7 +400,12 @@ export default {
 		},
 		async loadEditor() {
 			const afterReady = async theme => {
-				const model = monaco.editor.createModel(this.raw, "vue", "demo.vue")
+				let model = monaco.editor.getModel("demo.vue")
+				if (model) {
+					model.setValue(this.raw)
+				} else {
+					model = monaco.editor.createModel(this.raw, "vue", "demo.vue")
+				}
 				const element = this.$refs.editor
 				const editorInstance = monaco.editor.create(element, {
 					theme,
