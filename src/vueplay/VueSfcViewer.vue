@@ -403,6 +403,7 @@ export default {
 					selectOnLineNumbers: true,
 					automaticLayout: true,
 					autoIndent: true,
+					wordWrapOverride1: 'off',
 					"semanticHighlighting.enabled": true
 				})
 				const t = editorInstance._themeService._theme
