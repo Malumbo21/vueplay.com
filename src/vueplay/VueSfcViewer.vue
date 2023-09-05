@@ -237,11 +237,12 @@
 					v-for="commit in history"
 					class="p-2 rounded mb-2 bg-slate-100"
 				>
-					{{ commit.commit.message }} -
+					
 					{{
 						moment.unix(commit.commit?.author?.timestamp ||
-						commit.commit?.committer?.timestamp).format('DD.MM.YYYY')
-					}}
+						commit.commit?.committer?.timestamp).format('DD.MM.YYYY - HH:mm')
+					}} |
+					{{ commit.commit.message }}
 				</div>
 			</div>
 		</div>
