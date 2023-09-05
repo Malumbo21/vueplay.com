@@ -14,6 +14,7 @@
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block disabled:opacity-40 hover:bg-slate-300"
 					@click="show = 'split'"
 					:disabled="show === 'split'"
+					title="Split View"
 					v-show="fullWindow"
 				>
 					<svg
@@ -29,6 +30,7 @@
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block disabled:opacity-40 hover:bg-slate-300"
 					@click="show = 'preview'"
+					title="Preview Changes"
 					:disabled="show === 'preview'"
 				>
 					<svg
@@ -45,6 +47,7 @@
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block disabled:opacity-40 hover:bg-slate-300"
 					@click="show = 'code'"
+					title="Code Editor"
 					:disabled="show === 'code'"
 				>
 					<svg
@@ -60,6 +63,7 @@
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block disabled:opacity-40 hover:bg-slate-300"
 					:disabled="user?._id !== application?.user_id || saving"
+					title="Save Changes"
 					@click="save()"
 				>
 					<svg
@@ -87,7 +91,7 @@
 					v-if="application?.tailwind"
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block"
-					title="Component depends on Tailwind"
+					title="Depends on Tailwind"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +115,7 @@
 				<button
 						style="width:31px;height:31px"
 						class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block hover:bg-slate-300"
-						title="Open preview"
+						title="Preview in New Window"
 						@click="openPreview(application?.tailwind)"
 					>
 						<svg
@@ -131,7 +135,7 @@
 				<button
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center hover:bg-slate-300 inline-block"
-					title="History"
+					title="Git History"
 					@click="showHistory = !showHistory"
 					:class="showHistory ? 'opacity-50' : ''"
 				>
@@ -160,7 +164,7 @@
 					v-if="!fullWindow"
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 mr-0 rounded text-center inline-block hover:bg-slate-300"
-					title="Full window"
+					title="Expand View"
 					@click="fullWindow = true, show = 'split'"
 				>
 					<svg
@@ -181,7 +185,7 @@
 					v-if="fullWindow"
 					style="width:31px;height:31px"
 					class="bg-slate-200 m-0.5 rounded text-center inline-block hover:bg-slate-300"
-					title="Close full window"
+					title="Shrink View"
 					@click="fullWindow = false, show = 'preview'"
 				>
 					<svg
