@@ -1,7 +1,6 @@
 <template>
 	<div class="comparison">
-		<div
-			class="bg-emerald-500 shadow-lg free drop-shadow">
+		<div class="bg-emerald-500 shadow-lg free drop-shadow">
 			<h2>Free</h2>
 			<p>
 				Try out the playground
@@ -25,16 +24,11 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="shadow-slate-300 shadow-lg early-bird drop-shadow from-fuchsia-400 bg-purple-400 bg-gradient-to-br hover:bg-purple-500 hover:from-fuchsia-500 text-white duration-300 transition hover:drop-shadow-lg drop-shadow">
+		<div class="shadow-slate-300 shadow-lg early-bird drop-shadow from-fuchsia-400 bg-purple-400 bg-gradient-to-br hover:bg-purple-500 hover:from-fuchsia-500 text-white duration-300 transition hover:drop-shadow-lg drop-shadow">
 			<h2 style="color:#ffffffff">
 
-
-
-
 				Premium
-				<span
-					style="display:inline-block;color:#ffe100ff">
+				<span style="display:inline-block;color:#ffe100ff">
 					★
 				</span>
 			</h2>
@@ -45,9 +39,11 @@
 			<div class="price">
 				49.00 USD / Year
 			</div>
-			<div class="price"
-				style="margin-top:-16px;font-size:25px;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:rgb(112, 7, 7)">
-				199.00 USD / Year
+			<div
+				class="price"
+				style="margin-top:-16px;font-size:25px;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:rgb(112, 7, 7)"
+			>
+				59.00 USD / Year
 			</div>
 			<div class="feature-list">
 				<div>Everything in Free
@@ -69,8 +65,7 @@
 		data: () => ({}),
 		methods: {
 			redirect(url) {
-				location
-					.href = url
+				location.href = url;
 			}
 		}
 	};
