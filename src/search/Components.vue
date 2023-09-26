@@ -44,7 +44,10 @@
 						Top
 					</option>
 					<option value="upcoming">
-						Upcoming
+						Latest upcoming
+					</option>
+					<option value="top-upcoming">
+						Top upcoming
 					</option>
 				</select><span>
 					components in
@@ -229,7 +232,10 @@
 				}
 				if (this.sort === "top") query.top = true;
 				else if (this.sort === "upcoming") query.published = false;
-				else {
+				else if (this.sort === "top-upcoming") {
+					query.top = true;
+					query.published = false;
+				} else {
 					query.$sort = {
 						createdAt: -1
 					};
