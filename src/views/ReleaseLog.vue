@@ -21,7 +21,7 @@
 						class=""
 						style="height:29px"
 					>
-						Feature - Upgraded Tailwind Controls Selector
+						Feature - Upgraded Tailwind Control Selectors
 					</li>
 					<li
 						class=""
