@@ -127,8 +127,19 @@
 						:id="id"
 						:user="user"
 					/> <select
+						v-model="post.published"
+						class="mt-2 mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						v-if="edit && (user?.permissions?.includes('admin') || user?.value?.permissions?.includes('admin'))"
+					>
+						<option :value="false">
+							Not published
+						</option>
+						<option :value="false">
+							Published
+						</option>
+					</select><select
 						v-model="post.category_id"
-						class="mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						class="mt-2 mb-2 w-full h-10 block max-w-full pl-4 pr-2 text-sm text-gray-900 placeholder:text-slate-500 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 						v-if="edit"
 					>
 						<option
@@ -173,7 +184,7 @@
 							{{ moment(post.createdAt).format('MMMM DD, YYYY') }}
 						</span> <span
 							class="text-xs ml-1"
-							v-if="post?.user?._id === user?._id"
+							v-if="post?.user?._id === user?._id || post?.user?._id === user?.value?._id"
 							@click="remove(post)"
 						>
 							·
@@ -192,7 +203,7 @@
 								/>
 							</svg> </span> <span
 							class="text-xs ml-1"
-							v-if="!edit && post?.user?._id === user?._id"
+							v-if="!edit && (post?.user?._id === user?._id || post?.user?._id === user?.value?._id || user?.permissions?.includes('admin') || user?.value?.permissions?.includes('admin'))"
 						>
 							·
 							<svg
