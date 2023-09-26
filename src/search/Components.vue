@@ -218,7 +218,8 @@
 			async refresh(sort = this.sort) {
 				this.sort = sort;
 				let query = {
-					public: true
+					public: true,
+					published: true
 				};
 				if (this.term) {
 					query.title = {
