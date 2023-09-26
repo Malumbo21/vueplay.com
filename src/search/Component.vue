@@ -134,7 +134,7 @@
 						<option :value="false">
 							Not published
 						</option>
-						<option :value="false">
+						<option :value="true">
 							Published
 						</option>
 					</select><select
@@ -427,7 +427,8 @@
 						description: this.post.description,
 						icon: this.post.icon,
 						public: this.post.public,
-						category_id: this.post.category_id
+						category_id: this.post.category_id,
+						published: this.post.published
 					});
 				await this.refresh();
 				this.edit = false;
