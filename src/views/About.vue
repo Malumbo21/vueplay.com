@@ -5,7 +5,7 @@
 		<header class="">
 			<div
 				style="padding-top:20px;padding-bottom:20px;margin-top:-10px"
-				@click="$router.push('/pricing')"
+				@click="$router.push('/release-log')"
 				class="cursor-pointer"
 			>
 				<h2
@@ -15,22 +15,18 @@
 				>
 					<span
 						data-v-d443ee1d=""
-						style="color:#eb7c5eff;font-weight:bold"
+						style="color:#eb5ec5ff;font-weight:bold"
 					>
-						Limited Offer -
+						New -
 					</span>
-					Get Premium Access
-					For Just
-					<span style="text-decoration: line-through;font-size:14px">
-						$59.00
-					</span> <span
+					Version
+					<span
 						style="font-weight:bold;font-size:14px"
-						class="ml-1"
+						class=""
 					>
-						$49.00
+						1.0.7
 					</span>
-					USD
-					Per Year
+					have been released!
 				</h2>
 			</div>
 			<div
