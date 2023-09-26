@@ -228,7 +228,7 @@
 					};
 				}
 				if (this.sort === "top") query.top = true;
-				if (this.sort === "upcoming") query.published = false;
+				else if (this.sort === "upcoming") query.published = false;
 				else {
 					query.$sort = {
 						createdAt: -1
