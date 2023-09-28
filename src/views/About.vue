@@ -88,11 +88,15 @@
 					</svg> </button>
 			</section>
 			<section>
-				<div
-					style="background-size:contain;background-position:center;background-repeat:no-repeat;margin-right:auto;margin-left:auto;margin-top:70px;position:relative;margin-bottom:50px;max-width:calc(100% - 40px);aspect-ratio:1/.517;box-sizing:border-box;width:700px"
-					class="shadow-slate-200 shadow-xl screenshot"
-				>
-				</div>
+				<iframe
+					src="https://www.youtube.com/embed/GkvK3w5VTPY?si=KoDzHTghgFPmFPyd"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen=""
+					class="shadow-slate-200 shadow-xl mx-auto"
+					style="margin-right:auto;margin-left:auto;margin-top:70px;position:relative;margin-bottom:50px;max-width:calc(100% - 40px);aspect-ratio:1/.517;width:700px"
+				></iframe>
 				<section style="width:100%;text-align:center">
 					<a
 						class="bg-slate-50 hover:bg-slate-100 rounded-lg"
