@@ -89,7 +89,7 @@
 			</section>
 			<section>
 				<iframe
-					src="https://www.youtube.com/embed/GkvK3w5VTPY?si=q7fPCwYYtGZD2FRa"
+					src="https://www.youtube.com/embed/videoseries?si=s6G0b6IipaV4VZIg&amp;list=PLwvel81e87FywGrpfv_1qoruzBnHV9zZ5"
 					title="YouTube video player"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
