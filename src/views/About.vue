@@ -95,7 +95,7 @@
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowfullscreen=""
 					class="shadow-slate-200 shadow-xl mx-auto"
-					style="margin-right:auto;margin-left:auto;margin-top:70px;position:relative;margin-bottom:50px;max-width:calc(100% - 40px);aspect-ratio:1/.517;width:700px"
+					style="margin-right:auto;margin-left:auto;margin-top:70px;position:relative;margin-bottom:50px;max-width:calc(100% - 40px);aspect-ratio:16/9;width:700px"
 				></iframe>
 				<section style="width:100%;text-align:center">
 					<a
