@@ -99,6 +99,18 @@
 				></iframe>
 				<section style="width:100%;text-align:center">
 					<a
+						href="https://www.producthunt.com/posts/vue-play-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;play&#0045;2"
+						target="_blank"
+						class="mb-8 justify-center flex"
+					>
+						<img
+							src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=416946&theme=light"
+							alt="Vue&#0032;Play - Create&#0032;Vue&#0032;Applications&#0032;using&#0032;a&#0032;Visual&#0032;Designer | Product Hunt"
+							style="width: 250px; height: 54px;"
+							width="250"
+							height="54"
+							class="inline-flex"
+						/></a><a
 						class="bg-slate-50 hover:bg-slate-100 rounded-lg"
 						style="margin:auto;width:250px;display:block;border:1px;border-style:solid;border-color:#4599DF;color:#4599DF"
 						href="https://www.facebook.com/groups/vueplay"
