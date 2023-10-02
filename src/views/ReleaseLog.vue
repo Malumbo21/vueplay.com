@@ -17,22 +17,13 @@
 					26.09.2023 - Release 1.0.7
 				</h3>
 				<ul class="indent-3 ml-5 list-disc">
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Upgraded Tailwind Control Selectors
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Hide unverified components from studio
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Expose component attributes in advanced tab
 					</li>
 				</ul>
@@ -42,22 +33,13 @@
 					14.08.2023 - Release 1.0.6
 				</h3>
 				<ul class="indent-3 ml-5 list-disc">
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Support for Composition API
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Support for v-bind in styles
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Added &lt;suspense/&gt; element to support async / await on root level of setup
 					</li>
 				</ul>
@@ -67,10 +49,7 @@
 					24.07.2023 - Release 1.0.5
 				</h3>
 				<ul class="indent-3 ml-5 list-disc">
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Drag and drop Tailwind Hero Icons into the Playground
 					</li>
 				</ul>
@@ -80,52 +59,28 @@
 					17.07.2023 - Release 1.0.4
 				</h3>
 				<ul class="indent-3 ml-5 list-disc">
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Create Single File Components
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Publishment of Single File Components
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Add keyframe on animation timeline
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Duplicate keyframe on animation timeline
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Delete keyframe on animation timeline
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Line height style controller
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Feature - Router highlight overlay
 					</li>
-					<li
-						class=""
-						style="height:29px"
-					>
+					<li class="">
 						Enhancement - Correct position of drag and drop ghost
 					</li>
 				</ul>
