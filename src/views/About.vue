@@ -4,33 +4,7 @@
 		<VueNavigator class="z-20" />
 		<header class="">
 			<div
-				style="padding-top:20px;padding-bottom:20px;margin-top:-10px"
-				@click="$router.push('/release-log')"
-				class="cursor-pointer"
-			>
-				<h2
-					data-v-d443ee1d=""
-					style="padding:0px 20px; margin: 0px;;height:23px"
-					class="text-slate-700"
-				>
-					<span
-						data-v-d443ee1d=""
-						style="color:#eb5ec5ff;font-weight:bold"
-					>
-						New -
-					</span>
-					Version
-					<span
-						style="font-weight:bold;font-size:14px"
-						class=""
-					>
-						1.0.7
-					</span>
-					have been released!
-				</h2>
-			</div>
-			<div
-				style="background-size:contain;background-position:center;background-repeat:no-repeat;width:266px;height:125px;margin-right:auto;margin-left:auto;margin-top:40px;position:relative;max-width:calc(100% - 100px);margin-bottom:-20px;left:5px"
+				style="background-size:contain;background-position:center;background-repeat:no-repeat;width:266px;height:125px;margin-right:auto;margin-left:auto;margin-top:0px;position:relative;max-width:calc(100% - 100px);margin-bottom:-20px;left:5px"
 				class="logo"
 			>
 			</div>
@@ -185,7 +159,7 @@
 	</div>
 </template>
 <script>
-	import VueNavigator from "@/components/Navigator.vue";
+	import VueNavigator from "@/components/NavigatorClean.vue";
 	import Footer from "@/components/Footer.vue";
 	import Meta from "@/components/Meta.vue";
 	export default {

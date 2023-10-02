@@ -1,7 +1,7 @@
 <template>
 	<nav
 		style="min-height:80px"
-		class="relative text-right shadow bg-slate-50 w-full top-0 block"
+		class="relative text-right w-full top-0 block"
 	>
 		<div
 			style="width:216px;background-size:contain;background-repeat:no-repeat;margin-left:15px;cursor:pointer;float:left;height:35px;margin-top:23px;margin-bottom:7px"
