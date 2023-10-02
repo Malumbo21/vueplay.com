@@ -16,7 +16,7 @@
 				<h3>
 					26.09.2023 - Release 1.0.7
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
 						Feature - Upgraded Tailwind Control Selectors
 					</li>
@@ -32,7 +32,7 @@
 				<h3>
 					14.08.2023 - Release 1.0.6
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
 						Feature - Support for Composition API
 					</li>
@@ -48,7 +48,7 @@
 				<h3>
 					24.07.2023 - Release 1.0.5
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
 						Feature - Drag and drop Tailwind Hero Icons into the Playground
 					</li>
@@ -58,7 +58,7 @@
 				<h3>
 					17.07.2023 - Release 1.0.4
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
 						Feature - Create Single File Components
 					</li>
