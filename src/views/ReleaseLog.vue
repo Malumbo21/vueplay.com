@@ -89,7 +89,7 @@
 				<h3>
 					07.07.2023 - Release 1.0.3
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li
 						class=""
 						style="height:29px"
@@ -108,7 +108,7 @@
 				<h3>
 					20.06.2023 - Release 1.0.2
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
 						Design - Progress bar on save / pull / push
 					</li>
@@ -130,7 +130,7 @@
 				<h3>
 					12.06.2023 - Release 1.0.1
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li>
 						Design - Improved navigation selector
 					</li>
@@ -167,7 +167,7 @@
 				<h3>
 					22.05.2023 - Release 1.0.0
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li>
 						Design - New login screen
 					</li>
@@ -204,7 +204,7 @@
 				<h3>
 					02.05.2023 - First launch
 				</h3>
-				<ul class="indent-3 ml-5 list-disc">
+				<ul class="indent-0 ml-5 list-disc">
 					<li>
 						Initial release - Launched on Product Hunt
 					</li>
