@@ -1,93 +1,108 @@
 <template v-for="i in 8">
-	<div
-		class="bg-white flex flex-col h-screen">
+	<div class="bg-white flex flex-col h-screen">
 		<Meta
 			description="Read the Vue Play documentation for better insights to the software."
-			title="Documentation">
+			title="Documentation"
+		>
 		</Meta>
-		<VueNavigator
-			class="absolute z-50" />
+		<VueNavigator class="absolute z-50" />
 		<main
 			style="width:100%;min-height:calc(100vh - 50px)"
-			class="relative overflow-auto flex-1">
-			<div
-				class="h-full overflow-hidden flex relative w-full">
+			class="relative overflow-auto flex-1"
+		>
+			<div class="h-full overflow-hidden flex relative w-full">
 				<label
 					class="from-slate-600 bg-slate-500 shadow-md bg-gradient-to-tl fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-6 text-sm text-white rounded-lg"
-					for="toggle">
-					<svg class="w-6 h-6"
+					for="toggle"
+				>
+					<svg
+						class="w-6 h-6"
 						fill="currentColor"
 						viewBox="0 0 20 20"
-						xmlns="http://www.w3.org/2000/svg">
+						xmlns="http://www.w3.org/2000/svg"
+					>
 						<path
 							clip-rule="evenodd"
 							fill-rule="evenodd"
-							d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+							d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+						>
 						</path>
-					</svg>
-				</label><input
+					</svg> </label><input
 					class="peer hidden"
 					type="checkbox"
 					id="toggle"
-					v-model="menu" />
-				<div
-					class="bg-white md:p-7 md:w-80 xl:w-80 md:shadow-md shadow-lg pt-24 border-r border-slate-200 peer-checked:px-7 peer-checked:pt-24 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
-					<h3
-						class="whitespace-nowrap font-bold text-slate-800 ml-2">
+					v-model="menu"
+				/>
+				<div class="bg-white md:p-7 md:w-80 xl:w-80 md:shadow-md shadow-lg pt-24 border-r border-slate-200 peer-checked:px-7 peer-checked:pt-24 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 h-full absolute md:relative top-0 overflow-auto">
+					<h3 class="whitespace-nowrap font-bold text-slate-800 ml-2">
 						Getting Started
 					</h3>
-					<ul
-						class="space-y-1 ml-3 mt-4 border-l border-slate-400">
-						<li class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
+					<ul class="space-y-1 ml-3 mt-4 border-l border-slate-400">
+						<li
+							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
 							@click="$router.push('/documentation'), menu=false"
 							:class="{'font-semibold': $route.path === '/documentation','border-emerald-400': $route.path === '/documentation','border-l-4': $route.path === '/documentation'}"
-							style="height:25px">
+							style="height:25px"
+						>
 							Introduction
 						</li>
-						<li @click="$router.push('/documentation/deployment'), menu=false"
+						<li
+							@click="$router.push('/documentation/deployment'), menu=false"
 							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
-							:class="{'font-semibold': $route.path === '/documentation/deployment','border-emerald-400': $route.path === '/documentation/deployment','border-l-4': $route.path === '/documentation/deployment'}">
+							:class="{'font-semibold': $route.path === '/documentation/deployment','border-emerald-400': $route.path === '/documentation/deployment','border-l-4': $route.path === '/documentation/deployment'}"
+						>
 							Deployment
 						</li>
-						<li @click="$router.push('/documentation/keyboard-shortcuts'), menu=false"
+						<li
+							@click="$router.push('/documentation/keyboard-shortcuts'), menu=false"
 							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
-							:class="{'font-semibold': $route.path === '/documentation/keyboard-shortcuts','border-emerald-400': $route.path === '/documentation/keyboard-shortcuts','border-l-4': $route.path === '/documentation/keyboard-shortcuts'}">
+							:class="{'font-semibold': $route.path === '/documentation/keyboard-shortcuts','border-emerald-400': $route.path === '/documentation/keyboard-shortcuts','border-l-4': $route.path === '/documentation/keyboard-shortcuts'}"
+						>
 							Keyboard
 							Shortcuts
 						</li>
 					</ul>
-					<h3
-						class="mt-6 whitespace-nowrap font-bold text-slate-800 ml-2">
+					<h3 class="mt-6 whitespace-nowrap font-bold text-slate-800 ml-2">
 						General
 					</h3>
-					<ul
-						class="space-y-1 ml-3 mt-4 border-l border-slate-400">
-						<li class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
+					<ul class="space-y-1 ml-3 mt-4 border-l border-slate-400">
+						<li
+							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
+							@click="$router.push('/documentation/controls'), menu=false"
+							:class="{'font-semibold': $route.path === '/documentation/controls','border-emerald-400': $route.path === '/documentation/controls','border-l-4': $route.path === '/documentation/controls'}"
+							style="height:25px"
+						>
+							Controls
+						</li>
+						<li
+							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
 							@click="$router.push('/documentation/typescript'), menu=false"
 							:class="{'font-semibold': $route.path === '/documentation/typescript','border-emerald-400': $route.path === '/documentation/typescript','border-l-4': $route.path === '/documentation/typescript'}"
-							style="height:25px">
+							style="height:25px"
+						>
 							TypeScript
 						</li>
 					</ul>
-					<h3
-						class="mt-6 whitespace-nowrap font-bold text-slate-800 ml-2">
+					<h3 class="mt-6 whitespace-nowrap font-bold text-slate-800 ml-2">
 						Other
 					</h3>
-					<ul
-						class="space-y-1 ml-3 mt-4 border-l border-slate-400">
-						<li class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
+					<ul class="space-y-1 ml-3 mt-4 border-l border-slate-400">
+						<li
+							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
 							@click="$router.push('/documentation/faq'), menu=false"
 							:class="{'font-semibold': $route.path === '/documentation/faq','border-emerald-400': $route.path === '/documentation/faq','border-l-4': $route.path === '/documentation/faq'}"
-							style="height:25px">
+							style="height:25px"
+						>
 							FAQ
 						</li>
 					</ul>
-				</div><router-view
-					class="bg-white m-auto grow h-full overflow-auto">
+				</div><router-view class="bg-white m-auto grow h-full overflow-auto">
 				</router-view>
-				<div class="absolute h-full w-full"
+				<div
+					class="absolute h-full w-full"
 					v-if="menu"
-					@click="menu=false">
+					@click="menu=false"
+				>
 				</div>
 			</div>
 		</main>
@@ -98,11 +113,21 @@
 	import VueNavigator from "@/components/Navigator.vue";
 	import Footer from "@/components/Footer.vue";
 	import Meta from "@/components/Meta.vue";
-	export default { components: { VueNavigator,
-			Footer, Meta }, data: () =>
-	({ menu: false }), methods: { open(
-			url) { location.href =
-				url } } };
+	export default {
+		components: {
+			VueNavigator,
+			Footer,
+			Meta
+		},
+		data: () => ({
+			menu: false
+		}),
+		methods: {
+			open(url) {
+				location.href = url;
+			}
+		}
+	};
 
 </script>
 <style scoped>
