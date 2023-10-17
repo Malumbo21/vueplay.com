@@ -4,7 +4,7 @@
 		</Meta>
 		<article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
 			<h1 class="mb-6 text-4xl">
-				Controllers
+				Controls
 			</h1>
 			<p
 				style="margin-top:15px"
