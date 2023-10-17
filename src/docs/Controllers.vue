@@ -28,7 +28,7 @@
 			</p>
 			<p
 				style="margin-top:15px"
-				class="text-xl py-2 font-medium"
+				class="pt-8 text-xl font-medium"
 			>
 				Example:
 			</p>
@@ -47,7 +47,124 @@ export default {
 </code> </pre>
 			<p
 				style="margin-top:15px"
-				class="text-xl py-2 font-medium"
+				class="pb-3 text-xl py-2 font-medium"
+			>
+				List of all available Vue Play Controls:
+			</p>
+			<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+				<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+					<tr>
+						<th
+							scope="col"
+							class="px-6 py-3"
+							style="max-width:400px"
+						>
+							Controller
+						</th>
+						<th
+							scope="col"
+							class="px-6 py-3 text-right"
+						>
+							Description
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p
+				style="margin-top:15px"
+				class="pb-3 pt-8 text-xl font-medium"
 			>
 				List of all available Elementor Controls:
 			</p>
@@ -59,13 +176,13 @@ export default {
 							class="px-6 py-3"
 							style="max-width:400px"
 						>
-							Description
+							Controller
 						</th>
 						<th
 							scope="col"
 							class="px-6 py-3 text-right"
 						>
-							Shortcuts
+							Description
 						</th>
 					</tr>
 				</thead>
@@ -75,25 +192,93 @@ export default {
 							scope="row"
 							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
 						>
-							Select next element inside parent
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
 						</th>
 						<td class="px-6 py-4 text-right">
 							<p class="text-gray-500 dark:text-gray-400">
-
-								<kbd class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
-									TAB
-								</kbd>
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
+							</p>
+						</td>
+					</tr>
+					<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+						<th
+							scope="row"
+							class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+						>
+							<var class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+								TEXT
+							</var>
+						</th>
+						<td class="px-6 py-4 text-right">
+							<p class="text-gray-500 dark:text-gray-400">
+								Description
 							</p>
 						</td>
 					</tr>
 				</tbody>
 			</table>
-			<p
-				style="margin-top:15px"
-				class="text-xl py-2 font-medium"
-			>
-				List of all available Vue Play Controls:
-			</p>
 		</article>
 	</section>
 </template>
