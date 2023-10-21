@@ -37,10 +37,6 @@ const routes = [{
             {
                 path: 'controls',
                 component: () => import('@/docs/Controls.vue')
-            },
-            {
-                path: 'typescript',
-                component: () => import('@/docs/Typescript.vue')
             }
         ]
     },

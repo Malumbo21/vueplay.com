@@ -74,14 +74,6 @@
 						>
 							Controls
 						</li>
-						<li
-							class="hover:text-slate-900 text-slate-700 cursor-pointer pl-6"
-							@click="$router.push('/documentation/typescript'), menu=false"
-							:class="{'font-semibold': $route.path === '/documentation/typescript','border-emerald-400': $route.path === '/documentation/typescript','border-l-4': $route.path === '/documentation/typescript'}"
-							style="height:25px"
-						>
-							TypeScript
-						</li>
 					</ul>
 					<h3 class="mt-6 whitespace-nowrap font-bold text-slate-800 ml-2">
 						Other

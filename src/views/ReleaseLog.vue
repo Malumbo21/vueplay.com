@@ -14,6 +14,47 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					21.10.2023 - Release 1.0.8
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Feature - Export Single File Component as WordPress Elementor Addon Plugin
+					</li>
+					<li class="">
+						Feature - Relative paths supported
+					</li>
+					<li class="">
+						Feature - Typescript support
+					</li>
+					<li class="">
+						Feature - :slotted, :global and :deep support for scoped styles
+					</li>
+					<li class="">
+						Enhancement - Improved controls to work side by side with Elementor controls
+					</li>
+					<li class="">
+						Enhancement - Speed improvements
+					</li>
+					<li class="">
+						Enhancement - File paths added to intellisense inside code editor
+					</li>
+					<li class="">
+						Fix - Live preview should now work (locally only)
+					</li>
+					<li class="">
+						Pricing - Students have special price on Vue Play when purchased from
+						<a
+							href="https://github.com/marketplace/vue-play-studio"
+							target="_blank"
+							class="text-slate-400"
+						>
+							the Github Marketplace.
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					26.09.2023 - Release 1.0.7
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
