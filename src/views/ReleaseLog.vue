@@ -18,7 +18,7 @@
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
-						Feature - Export Single File Component as WordPress Elementor Addon Plugin
+						Feature - Export Single File Component(s) as WordPress Elementor Addon Plugin
 					</li>
 					<li class="">
 						Feature - Relative paths supported
@@ -28,6 +28,12 @@
 					</li>
 					<li class="">
 						Feature - :slotted, :global and :deep support for scoped styles
+					</li>
+					<li class="">
+						Feature - Support ?raw imports identical to vite
+					</li>
+					<li class="">
+						Feature - Support .json imports
 					</li>
 					<li class="">
 						Enhancement - Improved controls to work side by side with Elementor controls
