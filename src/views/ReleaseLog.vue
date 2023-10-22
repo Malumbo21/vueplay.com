@@ -1,4 +1,4 @@
-<template>
+<template class="">
 	<div class="bg-slate-100">
 		<Meta
 			description="24.07.2023 - Release 1.0.5 | Drag and drop Tailwind Hero Icons into the Playground with Vue Play"
@@ -45,7 +45,7 @@
 						Enhancement - File paths added to intellisense inside code editor
 					</li>
 					<li class="">
-						Fix - Live preview should now work (locally only)
+						Fix - Live preview should now work (locally)
 					</li>
 					<li class="">
 						Pricing - Students have special price on Vue Play when purchased from
