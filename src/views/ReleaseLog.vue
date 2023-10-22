@@ -55,7 +55,7 @@
 						<a
 							href="https://github.com/marketplace/vue-play-studio"
 							target="_blank"
-							class="text-slate-400"
+							class="text-purple-700"
 						>
 							the Github Marketplace.
 						</a>
