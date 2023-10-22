@@ -48,6 +48,9 @@
 						Fix - Live preview should now work (locally)
 					</li>
 					<li class="">
+						Fix - Multi line attributes now works
+					</li>
+					<li class="">
 						Pricing - Students have special price on Vue Play when purchased from
 						<a
 							href="https://github.com/marketplace/vue-play-studio"
