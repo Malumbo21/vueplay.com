@@ -214,13 +214,12 @@
 								</h3>
 							</div>
 						</div>
-					</div>
-					<button
+					</div> <button
 						@click="open('https://studio.vueplay.com')"
 						class="inline-block mx-auto bg-purple-500 from-blue-500 bg-gradient-to-br hover:bg-purple-600 hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow"
 						style="width:260px;margin-left:18px;margin-bottom:90px"
 					>
-						Open Studio
+						Go to Studio
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
