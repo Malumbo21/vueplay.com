@@ -71,8 +71,13 @@
 					class="shadow-slate-200 shadow-xl mx-auto"
 					style="margin-right:auto;margin-left:auto;margin-top:70px;position:relative;margin-bottom:50px;max-width:calc(100% - 40px);aspect-ratio:16/9;width:700px"
 				></iframe>
-				<section style="width:100%;text-align:center">
-					<a
+				<section
+					style="width:100%;text-align:center"
+					class=""
+				>
+					<div class="mb-10 pt-10 bg-white pb-10 flex">
+						<div class="p-5 max-w-screen-sm grow mx-auto"></div>
+					</div><a
 						href="https://www.producthunt.com/posts/vue-play-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;play&#0045;2"
 						target="_blank"
 						class="mb-8 justify-center flex"
