@@ -78,7 +78,7 @@
 					<div class="bg-gradient-to-b from-slate-100 mb-10 pt-10 bg-white pb-10 flex">
 						<div class="place-content-between inline-flex p-5 max-w-screen-sm grow mx-auto">
 							<div class="bg-slate-200 p-2"></div>
-							<div class="bg-slate-200 p-2"><svg
+							<div class="p-2"><svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
@@ -91,7 +91,7 @@
 									/>
 								</svg></div>
 							<div class="bg-slate-200 p-2"></div>
-							<div class="bg-slate-200 p-2"><svg
+							<div class="p-2"><svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
