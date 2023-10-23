@@ -306,7 +306,11 @@
 						</svg> <span style="padding-top:13px;display:inline-block;font-weight:bold;padding-bottom:12px">
 							Follow us on
 							Telegram
-						</span></a> <a
+						</span></a><a
+						href="https://madewithvuejs.com/p/vue-play/shield-link"
+						target="_blank"
+						class="inline-block mt-12 mx-auto"
+					><img src="https://madewithvuejs.com/storage/repo-shields/4476-shield.svg" /></a> <a
 						href="https://www.producthunt.com/posts/vue-playground?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;playground"
 						target="_blank"
 						v-if="false"
