@@ -31,7 +31,10 @@
 			style="width:100%"
 			class="grow"
 		>
-			<section style="width:100%">
+			<section
+				style="width:100%"
+				class=""
+			>
 				<button
 					@click="$router.push('/features')"
 					class="hover:bg-slate-300 bg-slate-200 transition-shadow hover:drop-shadow-lg drop-shadow"
@@ -75,109 +78,177 @@
 					style="width:100%;text-align:center"
 					class="pb-16 bg-white"
 				>
-					<div class="bg-gradient-to-b from-slate-100 mb-10 pt-10 bg-white pb-10 flex">
-						<div class="items-center place-content-between inline-flex p-5 max-w-screen-sm grow mx-auto">
-							<div class="p-2"><svg
+					<div class="justify-center mb-10 pb-5 bg-gradient-to-b from-slate-100 pt-10 bg-white flex">
+						<div class="md:scale-100 sm:scale-90 sm:text-sm text-sm scale-75 md:text-base font-bold uppercase text-indigo-900 items-center place-content-between inline-flex p-5 max-w-screen-sm grow mx-auto">
+							<div class="items-center place-content-between flex-col inline-flex h-28 p-2">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="fill-emerald-500 animate-none w-10 h-10"
 								>
 									<path
 										fill-rule="evenodd"
-										d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z"
+										d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
 										clip-rule="evenodd"
 									/>
-								</svg><svg
+								</svg>
+								<h3 class="whitespace-nowrap mt-3">
+									Vue Play
+								</h3>
+							</div>
+							<div class="mb-11 h-9">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="animate-pulse fill-slate-400 w-6 h-6"
 								>
 									<path
 										fill-rule="evenodd"
-										d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3 10.5a.75.75 0 000-1.5H9a.75.75 0 000 1.5h6z"
+										d="M4.72 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 010-1.06zm6 0a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 010-1.06z"
 										clip-rule="evenodd"
 									/>
-								</svg></div>
-							<div class="p-2"><svg
+								</svg>
+							</div>
+							<div class="items-center place-content-between flex-col inline-flex h-28 p-2"><svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="animate-pulse fill-teal-500 h-9 w-9"
+								>
+									<path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+								</svg>
+								<h3 class="mt-3">
+									Element
+								</h3>
+							</div>
+							<div class="mb-11 h-9">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									class="animate-pulse fill-slate-400 w-6 h-6"
 								>
 									<path
 										fill-rule="evenodd"
-										d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+										d="M4.72 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 010-1.06zm6 0a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 010-1.06z"
 										clip-rule="evenodd"
 									/>
-								</svg></div>
-							<div class="p-2"><svg
+								</svg>
+							</div>
+							<div class="items-center place-content-between flex-col inline-flex h-28 p-2">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="fill-cyan-500 animate-pulse h-9 w-9"
 								>
 									<path d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 1.91-.114 3.79-.342 5.632-.676a.75.75 0 01.878.645 49.17 49.17 0 01.376 5.452.657.657 0 01-.66.664c-.354 0-.675-.186-.958-.401a1.647 1.647 0 00-1.003-.349c-1.035 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401.31 0 .557.262.534.571a48.774 48.774 0 01-.595 4.845.75.75 0 01-.61.61c-1.82.317-3.673.533-5.555.642a.58.58 0 01-.611-.581c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.035-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959a.641.641 0 01-.658.643 49.118 49.118 0 01-4.708-.36.75.75 0 01-.645-.878c.293-1.614.504-3.257.629-4.924A.53.53 0 005.337 15c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.036 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.369 0 .713.128 1.003.349.283.215.604.401.959.401a.656.656 0 00.659-.663 47.703 47.703 0 00-.31-4.82.75.75 0 01.83-.832c1.343.155 2.703.254 4.077.294a.64.64 0 00.657-.642z" />
-								</svg></div>
-							<div class="p-2"><svg
+								</svg>
+								<h3 class="mt-3">
+									Component
+								</h3>
+							</div>
+							<div class="mb-11 h-9">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="animate-pulse fill-slate-400 w-6 h-6"
 								>
 									<path
 										fill-rule="evenodd"
-										d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+										d="M4.72 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 010-1.06zm6 0a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 010-1.06z"
 										clip-rule="evenodd"
 									/>
-								</svg></div>
-							<div class="p-2"><svg
+								</svg>
+							</div>
+							<div class="items-center place-content-between flex-col inline-flex h-28 p-2">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="h-9 w-9 fill-sky-500 animate-pulse"
 								>
 									<path
 										fill-rule="evenodd"
 										d="M1.5 7.125c0-1.036.84-1.875 1.875-1.875h6c1.036 0 1.875.84 1.875 1.875v3.75c0 1.036-.84 1.875-1.875 1.875h-6A1.875 1.875 0 011.5 10.875v-3.75zm12 1.5c0-1.036.84-1.875 1.875-1.875h5.25c1.035 0 1.875.84 1.875 1.875v8.25c0 1.035-.84 1.875-1.875 1.875h-5.25a1.875 1.875 0 01-1.875-1.875v-8.25zM3 16.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875v2.25c0 1.035-.84 1.875-1.875 1.875h-5.25A1.875 1.875 0 013 18.375v-2.25z"
 										clip-rule="evenodd"
 									/>
-								</svg></div>
-							<div class="p-2"><svg
+								</svg>
+								<h3 class="mt-3">
+									Layout
+								</h3>
+							</div>
+							<div class="mb-11 h-9">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="animate-pulse fill-slate-400 w-6 h-6"
 								>
 									<path
 										fill-rule="evenodd"
-										d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+										d="M4.72 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 010-1.06zm6 0a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 010-1.06z"
 										clip-rule="evenodd"
 									/>
-								</svg></div>
-							<div class="p-2"><svg
+								</svg>
+							</div>
+							<div class="items-center place-content-between flex-col inline-flex h-28 p-2">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="currentColor"
-									class="w-6 h-6"
+									class="fill-blue-500 mt-1 w-8 h-8"
 								>
-									<path d="M21.721 12.752a9.711 9.711 0 00-.945-5.003 12.754 12.754 0 01-4.339 2.708 18.991 18.991 0 01-.214 4.772 17.165 17.165 0 005.498-2.477zM14.634 15.55a17.324 17.324 0 00.332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 00.332 4.647 17.385 17.385 0 005.268 0zM9.772 17.119a18.963 18.963 0 004.456 0A17.182 17.182 0 0112 21.724a17.18 17.18 0 01-2.228-4.605zM7.777 15.23a18.87 18.87 0 01-.214-4.774 12.753 12.753 0 01-4.34-2.708 9.711 9.711 0 00-.944 5.004 17.165 17.165 0 005.498 2.477zM21.356 14.752a9.765 9.765 0 01-7.478 6.817 18.64 18.64 0 001.988-4.718 18.627 18.627 0 005.49-2.098zM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 001.988 4.718 9.765 9.765 0 01-7.478-6.816zM13.878 2.43a9.755 9.755 0 016.116 3.986 11.267 11.267 0 01-3.746 2.504 18.63 18.63 0 00-2.37-6.49zM12 2.276a17.152 17.152 0 012.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0112 2.276zM10.122 2.43a18.629 18.629 0 00-2.37 6.49 11.266 11.266 0 01-3.746-2.504 9.754 9.754 0 016.116-3.985z" />
-								</svg></div>
+									<path d="M10.5 18a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
+									<path
+										fill-rule="evenodd"
+										d="M7.125 1.5A3.375 3.375 0 003.75 4.875v14.25A3.375 3.375 0 007.125 22.5h9.75a3.375 3.375 0 003.375-3.375V4.875A3.375 3.375 0 0016.875 1.5h-9.75zM6 4.875c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125h-9.75A1.125 1.125 0 016 19.125V4.875z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+								<h3 class="mt-3">
+									App
+								</h3>
+							</div>
 						</div>
-					</div><a
-						href="https://www.producthunt.com/posts/vue-play-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;play&#0045;2"
-						target="_blank"
-						class="mb-4 justify-center flex"
+					</div>
+					<button
+						@click="open('https://studio.vueplay.com')"
+						class="inline-block mx-auto bg-purple-500 from-blue-500 bg-gradient-to-br hover:bg-purple-600 hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow"
+						style="width:260px;margin-left:18px;margin-bottom:90px"
 					>
-						<img
-							src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=416946&theme=light"
-							alt="Vue&#0032;Play - Create&#0032;Vue&#0032;Applications&#0032;using&#0032;a&#0032;Visual&#0032;Designer | Product Hunt"
-							style="width: 250px; height: 54px;"
-							width="250"
-							height="54"
-							class="inline-flex"
-						/></a><a
+						Open Studio
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							class="w-4 h-4 ml-1 -mt-1 inline-block"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+								clip-rule="evenodd"
+							/>
+							<path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+						</svg> </button>
+					<div>
+						<a
+							href="https://www.producthunt.com/posts/vue-play-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;play&#0045;2"
+							target="_blank"
+							class="inline-block mb-4 justify-center"
+						>
+							<img
+								src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=416946&theme=light"
+								alt="Vue&#0032;Play - Create&#0032;Vue&#0032;Applications&#0032;using&#0032;a&#0032;Visual&#0032;Designer | Product Hunt"
+								style="width: 250px; height: 54px;"
+								width="250"
+								height="54"
+								class="inline-flex"
+							/></a>
+					</div><a
 						class="bg-slate-50 hover:bg-slate-100 rounded-lg"
 						style="margin:auto;width:250px;display:block;border:1px;border-style:solid;border-color:#4599DF;color:#4599DF"
 						href="https://www.facebook.com/groups/vueplay"
