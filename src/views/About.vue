@@ -215,6 +215,12 @@
 							</div>
 						</div>
 					</div>
+					<h2
+						style="margin-bottom:74px"
+						class="md:text-slate-900 text-3xl font-bold"
+					>
+						1100+ Registered Users
+					</h2>
 					<h2 style="margin-bottom:74px">
 						Release your full potential with Vue Play Website Builder.
 					</h2> <button
