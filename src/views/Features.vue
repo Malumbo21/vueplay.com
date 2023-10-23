@@ -1,4 +1,7 @@
-<template v-for="i in 8">
+<template
+	v-for="i in 8"
+	class=""
+>
 	<div class="bg-slate-100">
 		<Meta
 			title="Features"

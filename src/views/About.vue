@@ -1,8 +1,8 @@
 <template>
 	<div class="bg-slate-100 flex flex-col h-screen overflow-auto">
 		<Meta />
-		<VueNavigator class="z-20" />
-		<header class="">
+		<VueNavigator class="mb-5 z-20" />
+		<header>
 			<div
 				style="background-size:contain;background-position:center;background-repeat:no-repeat;width:266px;height:125px;margin-right:auto;margin-left:auto;margin-top:0px;position:relative;max-width:calc(100% - 100px);margin-bottom:-20px;left:5px"
 				class="logo"
@@ -159,7 +159,7 @@
 	</div>
 </template>
 <script>
-	import VueNavigator from "@/components/NavigatorClean.vue";
+	import VueNavigator from "@/components/Navigator.vue";
 	import Footer from "@/components/Footer.vue";
 	import Meta from "@/components/Meta.vue";
 	export default {

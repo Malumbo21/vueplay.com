@@ -1,74 +1,78 @@
 <template v-for="i in 8">
-	<div
-		class="bg-white flex flex-col h-screen">
-		<VueNavigator
-			class="absolute z-50" />
+	<div class="bg-white flex flex-col h-screen">
+		<VueNavigator class="absolute z-50" />
 		<main
 			style="width:100%;min-height:calc(100vh - 50px)"
-			class="flex-1 relative overflow-auto">
-			<div
-				class="relative h-full w-full flex">
+			class="flex-1 relative overflow-auto"
+		>
+			<div class="relative h-full w-full flex">
 				<label
 					class="bg-white fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-16 lg:mt-4 ml-3 text-sm text-slate-900 rounded-lg"
-					for="toggle"><svg
+					for="toggle"
+				><svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="w-6 h-6">
+						class="w-6 h-6"
+					>
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-					</svg>
-				</label><input
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+						/>
+					</svg> </label><input
 					class="peer hidden"
 					type="checkbox"
 					id="toggle"
-					v-model="menu" />
-				<div
-					class="bottom-0 bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 absolute md:relative top-0 overflow-auto">
+					v-model="menu"
+				/>
+				<div class="bottom-0 bg-white pt-10 md:w-96 md:p-7 md:shadow-md shadow-lg border-r border-slate-200 peer-checked:px-7 peer-checked:pt-16 peer-checked:md:pt-10 peer-checked:pb-7 duration-200 transition-all ease-in-out w-0 max-w-full z-30 peer-checked:w-80 absolute md:relative top-0 overflow-auto">
 					<button
 						class="border mr-2 bg-slate-50 hover:bg-slate-100 rounded-2xl pl-3 pr-4 mb-4 py-2"
-						@click="$router.push('/search')">
-						<svg xmlns="http://www.w3.org/2000/svg"
+						@click="$router.push('/search')"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							fill="currentColor"
-							class="w-5 h-5 -mt-1 mr-1 inline">
+							class="w-5 h-5 -mt-1 mr-1 inline"
+						>
 							<path
 								fill-rule="evenodd"
 								d="M11.03 3.97a.75.75 0 010 1.06l-6.22 6.22H21a.75.75 0 010 1.5H4.81l6.22 6.22a.75.75 0 11-1.06 1.06l-7.5-7.5a.75.75 0 010-1.06l7.5-7.5a.75.75 0 011.06 0z"
-								clip-rule="evenodd" />
+								clip-rule="evenodd"
+							/>
 						</svg>
 						Go back
 					</button>
-					<h3
-						class="text-slate-500 font-medium mb-1 whitespace-nowrap">
+					<h3 class="text-slate-500 font-medium mb-1 whitespace-nowrap">
 						Category
 					</h3><span>
 						{{ post?.category?.title || 'Not set' }}
 					</span>
-					<h3
-						class="text-slate-500 mt-4 font-medium mb-2 whitespace-nowrap">
+					<h3 class="text-slate-500 mt-4 font-medium mb-2 whitespace-nowrap">
 						Voters
 					</h3>
-					<div class="flex mb-1.5"
-						v-for="vote in votes">
-						<div class="h-7 w-7 bg-cover rounded-full bg-slate-500"
-							:style="'background-image: url(' + vote?.user?.[0]?.picture + ')'">
-						</div><span
-							class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow">
+					<div
+						class="flex mb-1.5"
+						v-for="vote in votes"
+					>
+						<div
+							class="h-7 w-7 bg-cover rounded-full bg-slate-500"
+							:style="'background-image: url(' + vote?.user?.[0]?.picture + ')'"
+						>
+						</div><span class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow">
 							{{ vote.user?.[0]?.name }}
 						</span>
 					</div>
-					<div
-						class="flex mb-1.5">
-						<div
-							class="h-7 w-7">
+					<div class="flex mb-1.5">
+						<div class="h-7 w-7">
 						</div><span
 							class="text-sm pl-2 pt-1 text-ellipsis overflow-hidden whitespace-nowrap grow"
-							v-show="false">
+							v-show="false"
+						>
 							and 35
 							more...
 						</span>
@@ -77,10 +81,13 @@
 				<Component
 					class="bg-white m-auto grow h-full overflow-auto pt-16 lg:pt-7 relative"
 					@post="post = $event"
-					:id="id" />
-				<div class="absolute h-full w-full"
+					:id="id"
+				/>
+				<div
+					class="absolute h-full w-full"
 					v-if="menu"
-					@click="menu = false">
+					@click="menu = false"
+				>
 				</div>
 			</div>
 		</main>
@@ -91,12 +98,23 @@
 	import VueNavigator from "@/components/Navigator.vue";
 	import Footer from "@/components/Footer.vue";
 	import Component from "@/search/Component.vue";
-	export default { props: ["id"],
-		components: { VueNavigator, Footer,
-			Component }, data: () =>
-	({ menu: false, post: null }),
-		computed: { votes() { return this
-					.post?.votes } } };
+	export default {
+		props: ["id"],
+		components: {
+			VueNavigator,
+			Footer,
+			Component
+		},
+		data: () => ({
+			menu: false,
+			post: null
+		}),
+		computed: {
+			votes() {
+				return this.post?.votes;
+			}
+		}
+	};
 
 </script>
 <style scoped>
