@@ -76,7 +76,7 @@
 					class="pb-16 bg-white"
 				>
 					<div class="bg-gradient-to-b from-slate-100 mb-10 pt-10 bg-white pb-10 flex">
-						<div class="inline-flex p-5 max-w-screen-sm grow mx-auto">
+						<div class="place-content-between inline-flex p-5 max-w-screen-sm grow mx-auto">
 							<div class="bg-slate-200 p-2"></div>
 							<div class="bg-slate-200 p-2"></div>
 							<div class="bg-slate-200 p-2"></div>
