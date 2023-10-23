@@ -1,4 +1,4 @@
-<template>
+<template class="">
 	<div class="bg-slate-100 flex flex-col h-screen overflow-auto">
 		<Meta />
 		<VueNavigator class="mb-5 z-20" />
@@ -61,7 +61,7 @@
 						<path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
 					</svg> </button>
 			</section>
-			<section>
+			<section class="">
 				<iframe
 					src="https://www.youtube.com/embed/videoseries?si=s6G0b6IipaV4VZIg&amp;list=PLwvel81e87FywGrpfv_1qoruzBnHV9zZ5"
 					title="YouTube video player"
@@ -73,14 +73,20 @@
 				></iframe>
 				<section
 					style="width:100%;text-align:center"
-					class=""
+					class="pb-16 bg-white"
 				>
-					<div class="mb-10 pt-10 bg-white pb-10 flex">
-						<div class="p-5 max-w-screen-sm grow mx-auto"></div>
+					<div class="bg-gradient-to-b from-slate-100 mb-10 pt-10 bg-white pb-10 flex">
+						<div class="inline-flex p-5 max-w-screen-sm grow mx-auto">
+							<div class="bg-slate-200 p-2"></div>
+							<div class="bg-slate-200 p-2"></div>
+							<div class="bg-slate-200 p-2"></div>
+							<div class="bg-slate-200 p-2"></div>
+							<div class="bg-slate-200 p-2"></div>
+						</div>
 					</div><a
 						href="https://www.producthunt.com/posts/vue-play-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;play&#0045;2"
 						target="_blank"
-						class="mb-8 justify-center flex"
+						class="mb-4 justify-center flex"
 					>
 						<img
 							src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=416946&theme=light"
@@ -196,7 +202,6 @@
 		display: inline-block;
 		text-align: center;
 		width: 100%;
-		margin-bottom: 50px;
 	}
 
 	header {
