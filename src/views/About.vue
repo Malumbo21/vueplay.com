@@ -2,7 +2,7 @@
 	<div class="bg-slate-100 flex flex-col h-screen overflow-auto">
 		<Meta />
 		<VueNavigator class="mb-5 z-20" />
-		<header>
+		<header class="">
 			<div
 				style="background-size:contain;background-position:center;background-repeat:no-repeat;width:266px;height:125px;margin-right:auto;margin-left:auto;margin-top:0px;position:relative;max-width:calc(100% - 100px);margin-bottom:-20px;left:5px"
 				class="logo"
@@ -222,7 +222,7 @@
 						1100+ Registered Users
 					</h2>
 					<h2 style="margin-bottom:74px">
-						Release your full potential with Vue Play Website Builder.
+						Release your full potential with Vue Play, a Vue.js Drag and Drop Website Builder.
 					</h2> <button
 						@click="open('https://studio.vueplay.com')"
 						class="inline-block mx-auto bg-purple-500 from-blue-500 bg-gradient-to-br hover:bg-purple-600 hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow"
