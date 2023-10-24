@@ -222,7 +222,7 @@
 						1100+ Registered Users
 					</h2>
 					<h2
-						style="margin-bottom:25px;max-width:450px;color:#15244fff"
+						style="margin-bottom:50px;max-width:450px;color:#15244fff"
 						class="decoration-slate-500 mx-auto md:text-slate-900 text-3xl font-bold"
 					>
 						Export Vue.js Single File Components to WordPress Elementor Addons
