@@ -216,12 +216,47 @@
 						</div>
 					</div>
 					<h2
-						style="margin-bottom:74px"
-						class="md:text-slate-900 text-3xl font-bold"
+						style="margin-bottom:100px;color:#15244fff;margin-top:75px"
+						class="text-5xl md:text-slate-900 font-bold"
 					>
 						1100+ Registered Users
 					</h2>
-					<h2 style="margin-bottom:74px">
+					<h2
+						style="margin-bottom:15px;max-width:450px;color:#15244fff"
+						class="decoration-slate-500 mx-auto md:text-slate-900 text-3xl font-bold"
+					>
+						Export Vue.js Single File Components to WordPress Elementor Addons
+					</h2>
+					<div
+						class="items-center place-content-between justify-center flex"
+						style="margin-bottom:70px"
+					>
+						<img
+							src="@/assets/vue-logo.png"
+							width="120"
+							height="120"
+						/>
+						<div class=""><svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="mx-5 fill-slate-500 w-12 h-12"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+									clip-rule="evenodd"
+								/>
+							</svg></div><img
+							src="@/assets/elementor-logo.svg"
+							width="120"
+							height="120"
+						/>
+					</div>
+					<h2
+						style="margin-bottom:40px;max-width:340px;margin-top:100px;color:#0b1329ff"
+						class="font-semibold mx-auto text-lg"
+					>
 						Release your full potential with Vue Play, a Vue.js Drag and Drop Website Builder.
 					</h2> <button
 						@click="open('https://studio.vueplay.com')"
