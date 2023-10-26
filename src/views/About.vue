@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<h1
-				style="width:calc(100% - 40px);margin:auto;margin-top:40px;margin-bottom:40px"
+				style="width:calc(100% - 40px);margin-top:40px;margin-bottom:40px"
 				class="text-xl"
 			>
 				Create Vue Applications
