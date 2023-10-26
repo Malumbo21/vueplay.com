@@ -1,39 +1,16 @@
 <template>
-	<Accordion>
-		<b title="This is the title">
-			bold text is awesome
-		</b>
+	<Accordion title="Carousel">
+		<Carousel></Carousel>
 	</Accordion>
-	<Accordion>
-		<b title="This is the title">
-			bold text is awesome 2
-		</b>
-	</Accordion>
-	<Accordion>
-		<b title="This is the title">
-			bold text is awesome 3
-		</b>
-	</Accordion>
-	<Accordion group="group2">
-		<b title="This is the title">
-			bold text is awesome 3
-		</b>
-	</Accordion>
-	<Accordion group="group2">
-		<b title="This is the title">
-			bold text is awesome 3
-		</b>
-	</Accordion>
-	<Accordion group="group2">
-		<b title="This is the title">
-			bold text is awesome 3
-		</b>
+	<Accordion title="Description">
 	</Accordion>
 </template>
 <script>
-	import Accordion from '@/layouts/Accordion.vue';
+	import Carousel from '@/vueplay/Carousel.vue';
+	import Accordion from '@/vueplay/Accordion.vue';
 	export default {
 		components: {
+			Carousel: Carousel,
 			Accordion: Accordion
 		},
 		data: () => ({})
