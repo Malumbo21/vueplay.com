@@ -16,6 +16,10 @@ const routes = [{
         component: () => import('@/views/Pricing.vue')
     },
     {
+        path: '/accordion',
+        component: () => import('@/layouts/TestAccordion.vue')
+    },
+    {
         path: '/documentation',
         component: () => import('@/views/Documentation.vue'),
         children: [{

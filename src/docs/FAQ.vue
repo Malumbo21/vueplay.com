@@ -1,89 +1,113 @@
 <template>
-    <section class="p-6 pt-20 md:pt-6 pb-40">
-        <Meta title="Frequently Asked Questions" description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker.">
-        </Meta>
-        <article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
-            <h1 class="mb-12 text-4xl">
-                Frequently Asked Questions
-            </h1>
-            <div class="bg-slate-50 border mb-6 rounded-lg p-8">
-                <p class="pb-4 text-xl font-medium">
-                    Why was Vue Play created?
-                </p>
-                <p class="text-lg" style="margin-bottom:10px">
-                    Vue Play was created to simplify web development in a visual way, inspired by several tools like
-                    <a href="https://elementor.com/" target="_blank" class="hover:text-blue-700 text-blue-600">
-                        Elementor,
-                    </a> <a href="https://www.adobe.com/no/products/photoshop" target="_blank" class="hover:text-blue-700 text-blue-600">
-                        Adobe Photoshop,
-                    </a> <a href="https://www.adobe.com/no/products/flash" target="_blank" class="hover:text-blue-700 text-blue-600">
-                        Adobe Flash
-                    </a>
-                    and
-                    <a href="https://gamemaker.io" target="_blank" class="hover:text-blue-700 text-blue-600">
-                        GameMaker.
-                    </a>
-                </p>
-                <p class="text-lg" style="margin-bottom:10px">
-                    The main difference is that it is built up the "Vue.js" way which opens up alot of opportunities, like building everything from ground up with components.
-                </p>
-                <p class="text-lg">
-                    It also opens possibilities to connect Vue Play with frameworks like
-                    <a href="https://www.electronjs.org/" target="_blank" class="hover:text-blue-700 text-blue-600">
-                        Electron
-                    </a>
-                    to create Native Software for Windows, Mac & Linux or
-                    <a href="https://capacitorjs.com/" target="_blank" class="hover:text-blue-700 text-blue-600">
-                        Capacitor
-                    </a>
-                    by Ionic to build IOS and Android apps in the future!
-                </p>
-            </div>
-            <div class="bg-slate-50 border mb-6 rounded-lg p-8">
-                <p class="pb-4 text-xl font-medium">
-                    What are Components in Vue Play?
-                </p>
-                <p class="text-lg">
-                    Vue Play is built up using Vue.js SFC's (Vue Single File Components) which are files ending with the .vue extension. This files houses specific functionalities + templates and works like modules in a webpage. This modules will be available as Components in Vue Play, to be dragged into any playground. It can be authored by developers from us or the community.
-                </p>
-            </div>
-            <div class="bg-slate-50 border mb-6 rounded-lg p-8">
-                <p class="pb-4 text-xl font-medium">
-                    I found a premade Tailwind Component where i copied the code, how can I get it into my Vue Play application?
-                </p>
-                <p class="text-lg">
-                    You can paste pre-made tailwind components into the playground using the Context Menu (Three Dots) or Keyboard Shortcuts [CTRL + V] or [CMD + V] on mac while you are in the playground.
-                </p>
-            </div>
-            <div class="bg-slate-50 border mb-6 rounded-lg p-8">
-                <p class="pb-4 text-xl font-medium">
-                    I have a question, found a bug or have a feature request. What do I do?
-                </p>
-                <p class="text-lg">
-                    We are working on a community page which is coming soon to handle support, feature requests and bug reports. In the meantime, feel free to post an issue on
-                    <a href="https://github.com/vueplayground/vueplay.com" target="_blank">
-                        GitHub.
-                    </a>
-                </p>
-            </div>
-            <div class="bg-slate-50 border mb-6 rounded-lg p-8">
-                <p class="pb-4 text-xl font-medium">
-                    Is "vueplay.com" built entirely with Vue Play?
-                </p>
-                <p class="text-lg">
-                    Yes, this website "vueplay.com" is entirely built with Vue Play! (The actual software "studio.vueplay.com" is not, but is built from the ground up with coding.)
-                </p>
-            </div>
-        </article>
-    </section>
+	<section class="p-6 pt-20 md:pt-6 pb-40">
+		<Meta
+			title="Frequently Asked Questions"
+			description="Vue Play was created to simplify web development in a visual way, inspired by several tools like Elementor, Adobe Photoshop, Adobe Flash and GameMaker."
+		>
+		</Meta>
+		<article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
+			<h1 class="mb-12 text-4xl">
+				Frequently Asked Questions
+			</h1>
+			<Accordion title="Why was Vue Play created?">
+				<p
+					class="text-lg"
+					style="margin-bottom:10px"
+				>
+					Vue Play was created to simplify web development in a visual way, inspired by several tools like
+					<a
+						href="https://elementor.com/"
+						target="_blank"
+						class="hover:text-blue-700 text-blue-600"
+					>
+						Elementor,
+					</a> <a
+						href="https://www.adobe.com/no/products/photoshop"
+						target="_blank"
+						class="hover:text-blue-700 text-blue-600"
+					>
+						Adobe Photoshop,
+					</a> <a
+						href="https://www.adobe.com/no/products/flash"
+						target="_blank"
+						class="hover:text-blue-700 text-blue-600"
+					>
+						Adobe Flash
+					</a>
+					and
+					<a
+						href="https://gamemaker.io"
+						target="_blank"
+						class="hover:text-blue-700 text-blue-600"
+					>
+						GameMaker.
+					</a>
+				</p>
+				<p
+					class="text-lg"
+					style="margin-bottom:10px"
+				>
+					The main difference is that it is built up the "Vue.js" way which opens up alot of opportunities, like building everything from ground up with components.
+				</p>
+				<p class="text-lg">
+					It also opens possibilities to connect Vue Play with frameworks like
+					<a
+						href="https://www.electronjs.org/"
+						target="_blank"
+						class="hover:text-blue-700 text-blue-600"
+					>
+						Electron
+					</a>
+					to create Native Software for Windows, Mac & Linux or
+					<a
+						href="https://capacitorjs.com/"
+						target="_blank"
+						class="hover:text-blue-700 text-blue-600"
+					>
+						Capacitor
+					</a>
+					by Ionic to build IOS and Android apps in the future!
+				</p>
+			</Accordion>
+			<Accordion title="What are Components in Vue Play?">
+				<p class="text-lg">
+					Vue Play is built up using Vue.js SFC's (Vue Single File Components) which are files ending with the .vue extension. This files houses specific functionalities + templates and works like modules in a webpage. This modules will be available as Components in Vue Play, to be dragged into any playground. It can be authored by developers from us or the community.
+				</p>
+			</Accordion>
+			<Accordion title="How can I get premade components into my application?">
+				<p class="text-lg">
+					You can paste pre-made tailwind components into the playground using the Context Menu (Three Dots) or Keyboard Shortcuts [CTRL + V] or [CMD + V] on mac while you are in the playground.
+				</p>
+			</Accordion>
+			<Accordion title="I have a question, found a bug or have a feature request. What do I do?">
+				<p class="text-lg">
+					We are working on a community page which is coming soon to handle support, feature requests and bug reports. In the meantime, feel free to post an issue on
+					<a
+						href="https://github.com/vueplayground/vueplay.com"
+						target="_blank"
+					>
+						GitHub.
+					</a>
+				</p>
+			</Accordion>
+			<Accordion title="Is vueplay.com built entirely with Vue Play?">
+				<p class="text-lg">
+					Yes, this website "vueplay.com" is entirely built with Vue Play! (The actual software "studio.vueplay.com" is not, but is built from the ground up with coding.)
+				</p>
+			</Accordion>
+		</article>
+	</section>
 </template>
 <script>
-    import Meta from "@/components/Meta.vue";
-    export default {
-        components: {
-            Meta
-        },
-        data: () => ({})
-    };
+	import Meta from "@/components/Meta.vue";
+	import Accordion from "@/vueplay/Accordion.vue";
+	export default {
+		components: {
+			Meta,
+			Accordion
+		},
+		data: () => ({})
+	};
+
 </script>
 <style scoped></style>
