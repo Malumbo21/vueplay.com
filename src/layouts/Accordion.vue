@@ -9,7 +9,7 @@
 			class="hover:bg-slate-50 text-slate-800 border-b duration-75 transition-colors cursor-pointer bg-slate-100 p-4 place-content-between grow flex list-none"
 		>
 			<span style="height:18px">
-				{{ title }} {{ id }}
+				{{ title }}
 			</span> <svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -60,29 +60,29 @@
 		emits: ['open', 'close'],
 		data: () => ({
 			isOpen: false,
-			id: 0
+			id: 1
 		}),
 		mounted() {
-			if (!document.accordion) document.accordion = {}
-			let i = 1
+			if (!document.accordion) document.accordion = {};
+			let i = 1;
 			for (const element of document.querySelectorAll('.vp-accordion-' + this.group)) {
-				if (this.$el === element) this.id = i
-				i++
+				if (this.$el === element) this.id = i;
+				i++;
 			}
 			if (document.accordion[this.group]) {
-				this.isOpen = document.accordion[this.group] === this.id
+				this.isOpen = document.accordion[this.group] === this.id;
 			} else {
 				this.isOpen = this.open;
 			}
-			document.body.addEventListener(this.group, this.listen)
+			document.body.addEventListener(this.group, this.listen);
 		},
 		beforeUnmount() {
-			document.body.removeEventListener(this.group, this.listen)
+			document.body.removeEventListener(this.group, this.listen);
 		},
 		watch: {
 			isOpen(open) {
 				if (open) {
-					document.accordion[this.group] = this.id
+					document.accordion[this.group] = this.id;
 					this.$emit('open');
 				} else {
 					this.$emit('close');
@@ -90,18 +90,18 @@
 				this.emit({
 					id: this.id,
 					open
-				})
+				});
 			}
 		},
 		methods: {
 			emit(event) {
 				document.body.dispatchEvent(new CustomEvent(this.group, {
 					detail: event
-				}))
+				}));
 			},
 			listen(event) {
 				if (event.detail.open && event.detail.id !== this.id) {
-					this.isOpen = false
+					this.isOpen = false;
 				}
 			}
 		}
