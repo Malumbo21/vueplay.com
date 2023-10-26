@@ -1,4 +1,4 @@
-<template class="">
+<template>
 	<div>
 		<details
 			class="group"
@@ -8,10 +8,7 @@
 				@click.prevent="isOpen = !isOpen"
 				class="hover:bg-slate-50 text-slate-800 border-b duration-75 transition-colors cursor-pointer bg-slate-100 p-4 place-content-between grow flex list-none"
 			>
-				<span
-					style="height:18px"
-					class=""
-				>
+				<span style="height:18px">
 					Title
 				</span> <svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +35,7 @@
 				</svg>
 			</summary>
 			<div class="p-4">
-				<slot class="">
+				<slot>
 					Lorem ipsum dolor sit amet
 				</slot>
 			</div>
