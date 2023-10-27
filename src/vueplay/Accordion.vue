@@ -6,15 +6,15 @@
 	>
 		<summary
 			@click.prevent="isOpen = !isOpen"
-			class="hover:bg-slate-50 text-slate-800 border-b duration-75 transition-colors cursor-pointer bg-slate-100 p-4 place-content-between grow flex list-none"
+			class="font-medium text-slate-900 hover:bg-slate-50 border-b duration-75 transition-colors cursor-pointer bg-slate-100 p-4 place-content-between grow flex list-none"
 		>
-			<span style="height:18px">
+			<span class="overflow-hidden whitespace-nowrap text-ellipsis">
 				{{ title }}
 			</span> <svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 				fill="currentColor"
-				class="w-5 h-5 group-open:hidden"
+				class="min-w-max w-5 h-5 group-open:hidden"
 			>
 				<path
 					fill-rule="evenodd"
@@ -25,7 +25,7 @@
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 				fill="currentColor"
-				class="w-5 h-5 hidden group-open:inline"
+				class="min-w-max w-5 h-5 hidden group-open:inline"
 			>
 				<path
 					fill-rule="evenodd"
@@ -34,7 +34,7 @@
 				/>
 			</svg>
 		</summary>
-		<div class="p-4">
+		<div class="bg-slate-50 p-4">
 			<slot>
 				Lorem ipsum dolor sit amet
 			</slot>
