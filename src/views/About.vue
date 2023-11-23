@@ -219,7 +219,7 @@
 						style="margin-bottom:100px;color:#15244fff;margin-top:75px"
 						class="text-5xl md:text-slate-900 font-bold"
 					>
-						100+ Registered Users
+						1200+ Registered Users
 					</h2>
 					<h2
 						style="margin-bottom:50px;max-width:450px;color:#15244fff"
