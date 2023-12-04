@@ -18,7 +18,7 @@
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
 					<li class="">
-						Feature - Published on npm
+						Feature - Published on npm: `npm i -g @vueplayground/vueplay`
 					</li>
 					<li class="">
 						Feature - CLI build with local project storage
