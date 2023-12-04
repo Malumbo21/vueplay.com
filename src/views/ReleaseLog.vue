@@ -14,6 +14,22 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					04.12.2023 - Release 1.0.9
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Feature - Published on npm
+					</li>
+					<li class="">
+						Feature - CLI build with local project storage
+					</li>
+					<li class="">
+						Feature - Sync project directory to get full freedom using any text editor of your choice
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					21.10.2023 - Release 1.0.8
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
