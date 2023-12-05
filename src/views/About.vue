@@ -308,7 +308,7 @@
 							/></a>
 					</div><a
 						class="bg-slate-50 hover:bg-slate-100 rounded-lg"
-						style="margin:auto;width:250px;display:block;border:1px;border-style:solid;border-color:#4599DF;color:#4599DF"
+						style="width:250px;display:block;border:1px;border-style:solid;border-color:#4599DF;color:#4599DF;margin-right:auto;margin-left:auto"
 						href="https://www.facebook.com/groups/vueplay"
 						target="_blank"
 					>
@@ -333,7 +333,7 @@
 							Facebook
 						</span></a><a
 						class="bg-slate-50 hover:bg-slate-100 rounded-lg"
-						style="margin:auto;width:250px;display:block;border:1px;border-style:solid;border-color:#5AB3F0;color:#5AB3F0;margin-top:15px"
+						style="width:250px;display:block;border:1px;border-style:solid;border-color:#5AB3F0;color:#5AB3F0;margin-top:15px;margin-right:auto;margin-left:auto"
 						href="https://t.me/vueplay"
 						target="_blank"
 					>
@@ -366,7 +366,7 @@
 							Telegram
 						</span></a><a
 						class="bg-slate-50 hover:bg-slate-100 rounded-lg"
-						style="margin:auto;width:250px;display:block;border:1px;border-style:solid;border-color:#333;color:#333;margin-top:15px"
+						style="width:250px;display:block;border:1px;border-style:solid;border-color:#333;color:#333;margin-top:15px;margin-left:auto;margin-right:auto"
 						href="https://github.com/marketplace/vue-play-studio"
 						target="_blank"
 					>
