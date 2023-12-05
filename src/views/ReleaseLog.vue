@@ -14,6 +14,26 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					05.12.2023 - Release 1.1.1
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Bugfix - Always check state after local changes (2)
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
+					05.12.2023 - Release 1.1.0
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Bugfix - Always check state after local changes
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					04.12.2023 - Release 1.0.9
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
