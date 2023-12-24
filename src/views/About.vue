@@ -217,7 +217,7 @@
 					</div>
 					<h2
 						style="margin-bottom:100px;color:#15244fff;margin-top:75px"
-						class="text-5xl md:text-slate-900 font-bold"
+						class="text-4xl md:text-slate-900 font-bold"
 					>
 						1300+ Registered Users
 					</h2>
@@ -255,7 +255,7 @@
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							fill="currentColor"
-							class="mx-5 fill-slate-500 w-10 h-1"
+							class="mx-5 fill-slate-500 w-10 h-10"
 						>
 							<path
 								fill-rule="evenodd"
