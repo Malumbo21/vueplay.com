@@ -233,14 +233,14 @@
 					>
 						<img
 							src="@/assets/vue-logo.png"
-							width="120"
-							height="120"
+							width="70"
+							height="70"
 						/>
 						<div class=""><svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								fill="currentColor"
-								class="mx-5 fill-slate-500 w-12 h-12"
+								class="mx-5 fill-slate-500 w-10 h-10"
 							>
 								<path
 									fill-rule="evenodd"
@@ -249,13 +249,13 @@
 								/>
 							</svg></div><img
 							src="@/assets/wordpress-logo.png"
-							width="120"
-							height="120"
+							width="70"
+							height="70"
 						/><svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							fill="currentColor"
-							class="mx-5 fill-slate-500 w-12 h-12"
+							class="mx-5 fill-slate-500 w-10 h-1"
 						>
 							<path
 								fill-rule="evenodd"
@@ -264,8 +264,8 @@
 							/>
 						</svg><img
 							src="@/assets/elementor-logo.svg"
-							width="120"
-							height="120"
+							width="70"
+							height="70"
 						/>
 					</div>
 					<h2
