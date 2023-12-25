@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<h1
-				style="width:calc(100% - 40px);margin-top:40px;margin-bottom:40px"
+				style="width:calc(100% - 40px);margin-top:40px;margin-bottom:40px;margin-left:20px;height:37.99406433105469px"
 				class="text-xl"
 			>
 				Create Vue Applications
@@ -31,10 +31,7 @@
 			style="width:100%"
 			class="grow"
 		>
-			<section
-				style="width:100%"
-				class=""
-			>
+			<section style="width:100%">
 				<button
 					@click="$router.push('/features')"
 					class="hover:bg-slate-300 bg-slate-200 transition-shadow hover:drop-shadow-lg drop-shadow"
@@ -216,7 +213,7 @@
 						</div>
 					</div>
 					<h2
-						style="margin-bottom:100px;color:#15244fff;margin-top:75px"
+						style="margin-bottom:100px;color:#15244fff;margin-top:75px;width:calc(100% - 40px);margin-left:20px"
 						class="text-4xl md:text-slate-900 font-bold"
 					>
 						1300+ Registered Users
@@ -240,7 +237,7 @@
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								fill="currentColor"
-								class="mx-5 fill-slate-500 w-10 h-10"
+								class="mx-2 fill-slate-500 w-10 h-10"
 							>
 								<path
 									fill-rule="evenodd"
@@ -255,7 +252,7 @@
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							fill="currentColor"
-							class="mx-5 fill-slate-500 w-10 h-10"
+							class="mx-2 fill-slate-500 w-10 h-10"
 						>
 							<path
 								fill-rule="evenodd"
@@ -460,15 +457,15 @@
 	section button {
 		border: none;
 		padding-top: 10px;
-		padding-right: 15px;
+		padding-right: 10px;
 		padding-bottom: 10px;
-		padding-left: 15px;
+		padding-left: 10px;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
 		border-bottom-left-radius: 8px;
 		border-bottom-right-radius: 8px;
 		font-size: 17px;
-		margin-right: 20px;
+		margin-right: 10px;
 		cursor: pointer;
 		transition: .5s ease background;
 	}
