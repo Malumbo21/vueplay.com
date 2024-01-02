@@ -10,25 +10,6 @@
 			<h1 class="text-6xl mt-12 mb-6">
 				Pricing
 			</h1>
-			<h2
-				data-v-d443ee1d=""
-				style="padding: 0px;margin:40px 0px 20px;font-size:29px"
-			>
-				<span
-					data-v-d443ee1d=""
-					style="color: rgb(227, 68, 124);"
-				>
-				</span>
-				Early Bird Offer
-			</h2>
-			<p
-				data-v-d443ee1d=""
-				style="margin-top:10px;margin-bottom:40px;padding-right:20px;padding-left:20px"
-			>
-				Get
-				Premium Access For Just
-				$49.00 USD / Yr. (inc.) - Out December 2023!
-			</p>
 		</header>
 		<main class="bg-slate-100 grow">
 			<section

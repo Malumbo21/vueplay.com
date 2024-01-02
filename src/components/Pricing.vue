@@ -37,11 +37,12 @@
 				without any limitations.
 			</p>
 			<div class="price">
-				49.00 USD / Year
+				59.00 USD / Year
 			</div>
 			<div
 				class="price"
 				style="margin-top:-16px;font-size:25px;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:rgb(112, 7, 7)"
+				v-if="false"
 			>
 				59.00 USD / Year
 			</div>
