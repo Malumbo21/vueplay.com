@@ -14,6 +14,25 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					10.01.2024 - Release 1.1.5
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Announcement - Starter Kit is under development
+					</li>
+					<li class="">
+						Enhancement - Temporarily hided uncompleted layouts
+					</li>
+					<li class="">
+						Enhancement - Moved desktop sync buttons to bottom of file explorer
+					</li>
+					<li class="">
+						Enhancement - Improved login page
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					05.12.2023 - Release 1.1.4
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
