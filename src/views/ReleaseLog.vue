@@ -29,6 +29,9 @@
 					<li class="">
 						Enhancement - Improved login page
 					</li>
+					<li class="">
+						Enhancement - Improved loader design
+					</li>
 				</ul>
 			</section>
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
