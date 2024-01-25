@@ -14,6 +14,19 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					25.01.2024 - Release 1.1.6
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Enhancement - Improvement of scoped isolation
+					</li>
+					<li class="">
+						Enhancement - Added icons on menu
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					10.01.2024 - Release 1.1.5
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
