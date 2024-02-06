@@ -14,6 +14,34 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					06.02.2024 - Release 1.1.7
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li class="">
+						Feature - Component property controls
+					</li>
+					<li class="">
+						Feature - Swap between dynamic and static attributes
+					</li>
+					<li class="">
+						Feature - Attribute categories has been grouped
+					</li>
+					<li class="">
+						Enhancement - Improved attribute controls
+					</li>
+					<li class="">
+						Enhancement - Selector optimalization
+					</li>
+					<li class="">
+						Enhancement - Speed optimalization
+					</li>
+					<li class="">
+						Bugfix - Scroll position for controls should now work properly
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					25.01.2024 - Release 1.1.6
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
