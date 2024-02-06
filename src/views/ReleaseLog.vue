@@ -21,10 +21,10 @@
 						Feature - Component property controls
 					</li>
 					<li class="">
-						Feature - Swap between dynamic and static attributes
+						Feature - Attribute categories has been grouped
 					</li>
 					<li class="">
-						Feature - Attribute categories has been grouped
+						Feature - Swap between dynamic and static attributes
 					</li>
 					<li class="">
 						Enhancement - Improved attribute controls
