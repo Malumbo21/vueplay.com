@@ -266,10 +266,10 @@
 						/>
 					</div>
 					<h2
-						style="margin-bottom:40px;max-width:340px;margin-top:100px;color:#0b1329ff"
+						style="margin-bottom:40px;max-width:30px;margin-top:100px;color:#0b1329ff"
 						class="font-semibold mx-auto text-lg"
 					>
-						Release your full potential with Vue Play, a Vue.js Drag and Drop Website Builder.
+						Release your full potential with Vue Play, a Vue.js Drag and Drop Component / Website Builder.
 					</h2> <button
 						@click="open('https://studio.vueplay.com')"
 						class="inline-block mx-auto bg-purple-500 from-blue-500 bg-gradient-to-br hover:bg-purple-600 hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow"
