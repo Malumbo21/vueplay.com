@@ -273,7 +273,7 @@
 					</h2> <button
 						@click="open('https://studio.vueplay.com')"
 						class="inline-block mx-auto bg-purple-500 from-blue-500 bg-gradient-to-br hover:bg-purple-600 hover:from-blue-600 text-white duration-300 transition hover:drop-shadow-lg drop-shadow"
-						style="width:260px;margin-left:10px;margin-top: 20px; margin-bottom:70px"
+						style="width:260px;margin-left:8px;margin-top: 20px; margin-bottom:20px"
 					>
 						Start building for free
 						<svg
