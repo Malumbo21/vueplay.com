@@ -14,6 +14,31 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					19.02.2024 - Release 1.1.8
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Add object-position & object-fit controls
+					</li>
+					<li>
+						Feature - Add new css units (svw, svh, lvw, lvh, dvw, dvh)
+					</li>
+					<li>
+						Feature - Support router links when running inside router
+					</li>
+					<li>
+						Feature - Default to File Explorer for apps
+					</li>
+					<li>
+						Enhancement - Update to latest vue, vue-router & tailwindcss
+					</li>
+					<li>
+						Enhancement - Update css style control design & improved controls
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					06.02.2024 - Release 1.1.7
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
