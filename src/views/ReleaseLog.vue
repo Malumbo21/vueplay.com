@@ -18,6 +18,9 @@
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
 					<li>
+						Feature - Updated starter kit for new applications
+					</li>
+					<li>
 						Feature - Add object-position & object-fit controls
 					</li>
 					<li>
