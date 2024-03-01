@@ -14,6 +14,32 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					01.03.2024 - Release 1.2.0
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Hotfix - Error with new breadcrumb resolved
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
+					01.03.2024 - Release 1.1.9
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Breadcrumb DOM navigation
+					</li>
+					<li>
+						Feature - Improved responsive code editor, opens in new window
+					</li>
+					<li>
+						Enhancement - Improved files and DOM layer views
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					19.02.2024 - Release 1.1.8
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
