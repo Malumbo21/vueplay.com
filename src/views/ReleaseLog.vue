@@ -14,6 +14,19 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					04.03.2024 - Release 1.2.1
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Added letter spacing
+					</li>
+					<li>
+						Enhancement - Updated color picker & other dependencies
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					01.03.2024 - Release 1.2.0
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
