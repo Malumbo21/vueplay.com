@@ -33,9 +33,6 @@
 					<li>
 						Feature - Realtime code/view mirroring for open .vue file
 					</li>
-					<li>
-						Feature - Added letter spacing
-					</li>
 				</ul>
 			</section>
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
