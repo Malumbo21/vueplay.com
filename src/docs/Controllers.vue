@@ -1,4 +1,8 @@
 <template>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+	/>
 	<section class="p-6 pt-20 md:pt-6 pb-40">
 		<Meta title="Deployment">
 		</Meta>
@@ -33,25 +37,25 @@
 				Example:
 			</p>
 			<pre>
-<code style="margin-top:15px" class="text-lg">
+				<code class="language-javascript">
 export default {
-  props: {
-    color: {
-      type: String,
-      default: '#fff',
-      controller: 'color'
-    },
-    size: {
-      type: String,
-      default: 'lg',
-      controller: 'select',
-      options: [
-        { key: 'Small', value: 'sm' },
-        { key: 'Medium', value: 'md' },
-        { key: 'Large', value: 'lg' },
-      ]
-    }
-  }
+	props: {
+		color: {
+			type: String,
+			default: '#fff',
+			controller: 'color'
+		},
+		size: {
+			type: String,
+			default: 'lg',
+			controller: 'select',
+			options: [
+				{ key: 'Small', value: 'sm' },
+				{ key: 'Medium', value: 'md' },
+				{ key: 'Large', value: 'lg' },
+			]
+		}
+	}
 }
 </code> </pre>
 			<p
@@ -1050,9 +1054,13 @@ export default {
 </template>
 <script>
 	import Meta from "@/components/Meta.vue";
+	import hljs from 'highlight.js';
 	export default {
 		components: {
 			Meta
+		},
+		mounted() {
+			hljs.highlightAll();
 		}
 	};
 
