@@ -22,9 +22,8 @@
 					href="https://developers.elementor.com/docs/editor-controls/"
 					target="_blank"
 				>
-					Elementor Editor Controls
+					Elementor Editor Controls.
 				</a>
-				.
 			</p>
 			<p
 				style="margin-top:15px"
