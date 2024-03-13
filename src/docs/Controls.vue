@@ -33,7 +33,7 @@
 				Example:
 			</p>
 			<pre>
-<code class="language-javascript">
+<code class="shadow-lg drop-shadow-xl rounded language-javascript">
 export default {
   props: {
     color: {
