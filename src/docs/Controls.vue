@@ -10,19 +10,19 @@
 				style="margin-top:15px"
 				class="text-xl py-2 font-medium"
 			>
-				Properties can be controlled in Vue Play or Elementor by defining a controller type on the property object. For select controller type you can also define an 'option' property with key/value pairs.
+				Properties can be controlled in Vue Play (and elementor) by defining controller types.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				When building components to be imported in Vue Play or as an Elementor Addon, you have the options to define specific controllers by using the built in Vue Play or
+				Controls will be available both in Vue Play and
 				<a
 					class="hover:text-blue-700 text-blue-600"
 					href="https://developers.elementor.com/docs/editor-controls/"
 					target="_blank"
 				>
-					Elementor Editor Controls.
+					Elementor.
 				</a>
 			</p>
 			<p
@@ -38,12 +38,12 @@ export default {
     color: {
       type: String,
       default: '#fff',
-      controller: 'color'
+      control: 'color'
     },
     size: {
       type: String,
       default: 'lg',
-      controller: 'select',
+      control: 'select',
       options: [
         { key: 'Small', value: 'sm' },
         { key: 'Medium', value: 'md' },
@@ -67,7 +67,7 @@ export default {
 							class="px-6 py-3"
 							style="max-width:400px"
 						>
-							Controllers
+							Controls
 						</th>
 						<th
 							scope="col"
