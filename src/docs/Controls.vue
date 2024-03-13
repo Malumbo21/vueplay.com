@@ -28,12 +28,12 @@
 			</p>
 			<p
 				style="margin-top:15px"
-				class="pt-8 text-xl font-medium"
+				class="mb-2 pt-8 text-xl font-medium"
 			>
 				Example:
 			</p>
 			<pre>
-<code style="margin-top:15px" class="text-lg">
+<code class="language-javascript">
 export default {
   props: {
     color: {
@@ -1050,11 +1050,138 @@ export default {
 </template>
 <script>
 	import Meta from "@/components/Meta.vue";
+	import hljs from 'highlight.js';
 	export default {
 		components: {
 			Meta
+		},
+		mounted() {
+			hljs.highlightAll();
 		}
 	};
 
 </script>
-<style scoped></style>
+<style>
+	pre code.hljs {
+		display: block;
+		overflow-x: auto;
+		padding: 1em;
+	}
+
+	code.hljs {
+		padding: 3px 5px;
+	}
+
+	.hljs {
+		background: #333;
+		color: #fff;
+	}
+
+	.hljs-doctag,
+	.hljs-meta-keyword,
+	.hljs-name,
+	.hljs-strong {
+		font-weight: bold;
+	}
+
+	.hljs-code,
+	.hljs-emphasis {
+		font-style: italic;
+	}
+
+	.hljs-section,
+	.hljs-tag {
+		color: #62c8f3;
+	}
+
+	.hljs-selector-class,
+	.hljs-selector-id,
+	.hljs-template-variable,
+	.hljs-variable {
+		color: #ade5fc;
+	}
+
+	.hljs-meta-string,
+	.hljs-string {
+		color: #a2fca2;
+	}
+
+	.hljs-attr,
+	.hljs-quote,
+	.hljs-selector-attr {
+		color: #7bd694;
+	}
+
+	.hljs-tag .hljs-attr {
+		color: inherit;
+	}
+
+	.hljs-attribute,
+	.hljs-title,
+	.hljs-type {
+		color: #ffa;
+	}
+
+	.hljs-number,
+	.hljs-symbol {
+		color: #d36363;
+	}
+
+	.hljs-bullet,
+	.hljs-template-tag {
+		color: #b8d8a2;
+	}
+
+	.hljs-built_in,
+	.hljs-keyword,
+	.hljs-literal,
+	.hljs-selector-tag {
+		color: #fcc28c;
+	}
+
+	.hljs-code,
+	.hljs-comment,
+	.hljs-formula {
+		color: #888;
+	}
+
+	.hljs-link,
+	.hljs-selector-pseudo,
+	.hljs-regexp {
+		color: #c6b4f0;
+	}
+
+	.hljs-meta {
+		color: #fc9b9b;
+	}
+
+	.hljs-deletion {
+		background: #fc9b9b;
+		color: #333;
+	}
+
+	.hljs-addition {
+		background: #a2fca2;
+		color: #333;
+	}
+
+	.hljs-subst {
+		color: #fff;
+	}
+
+	.hljs a {
+		color: inherit;
+	}
+
+	.hljs a:focus,
+	.hljs a:hover {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	.hljs mark {
+		background: #555;
+		color: inherit;
+	}
+
+</style>
