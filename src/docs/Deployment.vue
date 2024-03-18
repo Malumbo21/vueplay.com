@@ -1,6 +1,9 @@
 <template>
 	<section class="p-6 pt-20 md:pt-6 pb-40">
-		<Meta title="Deployment">
+		<Meta
+			title="Deployment"
+			description="Vue Play can generate a production-ready distribution folder from your application or publish directly to GitHub Pages using GitHub Actions."
+		>
 		</Meta>
 		<article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
 			<h1 class="mb-6 text-4xl">
