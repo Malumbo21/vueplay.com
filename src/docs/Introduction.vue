@@ -7,49 +7,50 @@
 		</Meta>
 		<article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
 			<h1 class="mb-6 text-4xl">
-				Welcome to Vue Play
+				Introduction
 			</h1>
 			<p
 				style="margin-top:15px"
 				class="text-xl py-2 font-medium"
 			>
-				A visual and innovative design tool for creating and developing Vue.js components and applications with ease in a graphical environment.
+
+				Introducing Vue Play, an innovative software for designing and developing Vue.js components and applications in a visually intuitive environment.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				Drag and drop elements to the playground to build a new component template without writing a single line of code.
+				Drag and drop elements onto the playground to construct component & templates without coding.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				Select the elements you want to style by clicking on the elements in the playground and use the style controls in the toolbar to update values like, width, height, colors, gradients, position etc.
+				Select and style elements with ease using the toolbar's controls for adjusting properties like width, height, colors, gradients, and position.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				Vue Play does also have built in support for the well known utility-first CSS framework Tailwind CSS, with easy navigation through their thousands of premade class combinations.
+				Vue Play seamlessly integrates with Tailwind CSS, providing easy access to its extensive library of utility classes.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				Use keyboard shortcuts to navigate through the elements or have an overlook in the layers view.
+				Navigate elements using keyboard shortcuts or the layers view.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				Paste any valid HTML right into the playground, duplicate elements and have full control of your files with a code editor based on the Monaco Editor.
+				Effortlessly paste HTML into the playground, duplicate elements, and move using drag and drop.
 			</p>
 			<p
 				style="margin-top:15px"
 				class="text-lg"
 			>
-				When your are happy with your product, connect to Github and publish your site to Github Pages with just a few clicks.
+				Connect to GitHub and publish your site to GitHub Pages in just a few clicks once you're satisfied with your creation.
 			</p>
 		</article>
 	</section>
