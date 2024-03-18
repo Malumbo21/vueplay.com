@@ -18,19 +18,19 @@
 					<a
 						href="https://elementor.com/"
 						target="_blank"
-						class="hover:text-blue-700 text-blue-600"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
 						Elementor,
 					</a> <a
 						href="https://www.adobe.com/no/products/photoshop"
 						target="_blank"
-						class="hover:text-blue-700 text-blue-600"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
 						Adobe Photoshop,
 					</a> <a
 						href="https://www.adobe.com/no/products/flash"
 						target="_blank"
-						class="hover:text-blue-700 text-blue-600"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
 						Adobe Flash
 					</a>
@@ -38,7 +38,7 @@
 					<a
 						href="https://gamemaker.io"
 						target="_blank"
-						class="hover:text-blue-700 text-blue-600"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
 						GameMaker.
 					</a>
@@ -54,7 +54,7 @@
 					<a
 						href="https://www.electronjs.org/"
 						target="_blank"
-						class="hover:text-blue-700 text-blue-600"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
 						Electron
 					</a>
@@ -62,7 +62,7 @@
 					<a
 						href="https://capacitorjs.com/"
 						target="_blank"
-						class="hover:text-blue-700 text-blue-600"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
 						Capacitor
 					</a>
@@ -81,18 +81,21 @@
 			</Accordion>
 			<Accordion title="I have a question, found a bug or have a feature request. What do I do?">
 				<p class="text-lg">
-					We are working on a community page which is coming soon to handle support, feature requests and bug reports. In the meantime, feel free to post an issue on
+					Feedback can be reported
+					<router-link
+						to="/feedback"
+						class="hover:text-emerald-700 text-emerald-600"
+					>
+						on the feedback page
+					</router-link>
+					or on
 					<a
 						href="https://github.com/vueplayground/vueplay.com"
 						target="_blank"
+						class="hover:text-emerald-700 text-emerald-600"
 					>
-						GitHub.
+						GitHub issues.
 					</a>
-				</p>
-			</Accordion>
-			<Accordion title="Is vueplay.com built entirely with Vue Play?">
-				<p class="text-lg">
-					Yes, this website "vueplay.com" is entirely built with Vue Play! (The actual software "studio.vueplay.com" is not, but is built from the ground up with coding.)
 				</p>
 			</Accordion>
 		</article>
