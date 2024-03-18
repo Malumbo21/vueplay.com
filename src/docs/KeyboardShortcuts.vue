@@ -155,7 +155,7 @@
 								scope="row"
 								class="px-6 py-4 font-medium text-gray-900 dark:text-white"
 							>
-								Select next element inside parent
+								Select next element inside parent scope
 							</th>
 							<td class="px-6 py-4 text-right">
 								<p class="text-gray-500 dark:text-gray-400">
@@ -171,7 +171,7 @@
 								scope="row"
 								class="px-6 py-4 font-medium text-gray-900 dark:text-white"
 							>
-								Select previous element inside parent
+								Select previous element inside parent scope
 							</th>
 							<td class="px-6 py-4 text-right">
 								<p class="text-gray-500 dark:text-gray-400">
