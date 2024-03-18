@@ -2,7 +2,7 @@
 	<section class="p-6 pt-20 md:pt-6 pb-40">
 		<Meta
 			title="Introduction"
-			description="A visual and innovative design tool for creating and developing Vue.js components and applications with ease."
+			description="Introducing Vue Play, an innovative software for designing and developing Vue.js components and applications in a visually intuitive environment."
 		>
 		</Meta>
 		<article class="py-6 max-w-2xl mx-auto mb-6 px-12 overflow-auto">
