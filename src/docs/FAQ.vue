@@ -9,6 +9,25 @@
 			<h1 class="mb-12 text-4xl">
 				Frequently Asked Questions
 			</h1>
+			<Accordion title="Where do I post questions, bugs and feature requests?">
+				<p class="text-lg">
+					Feedback can be reported
+					<router-link
+						to="/feedback"
+						class="hover:text-emerald-700 text-emerald-600"
+					>
+						on the feedback page
+					</router-link>
+					or on
+					<a
+						href="https://github.com/vueplayground/vueplay.com/issues"
+						target="_blank"
+						class="hover:text-emerald-700 text-emerald-600"
+					>
+						GitHub issues.
+					</a>
+				</p>
+			</Accordion>
 			<Accordion title="Why was Vue Play created?">
 				<p
 					class="text-lg"
@@ -85,25 +104,6 @@
 				</span><span class="text-lg">
 					while you are in the playground.
 				</span>
-			</Accordion>
-			<Accordion title="Where do I post questions, bugs and feature requests?">
-				<p class="text-lg">
-					Feedback can be reported
-					<router-link
-						to="/feedback"
-						class="hover:text-emerald-700 text-emerald-600"
-					>
-						on the feedback page
-					</router-link>
-					or on
-					<a
-						href="https://github.com/vueplayground/vueplay.com/issues"
-						target="_blank"
-						class="hover:text-emerald-700 text-emerald-600"
-					>
-						GitHub issues.
-					</a>
-				</p>
 			</Accordion>
 		</article>
 	</section>
