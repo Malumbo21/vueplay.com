@@ -81,7 +81,7 @@
 					class="px-1.5 rounded-md p-1 text-emerald-800 bg-emerald-300 text-lg"
 					style="white-space:nowrap"
 				>
-					{{ isMac ? 'CMD + V' : 'CTRL + V' }}
+					{{ isMac ? 'cmd + v' : 'ctrl + v' }}
 				</span><span class="text-lg">
 					while you are in the playground.
 				</span>
