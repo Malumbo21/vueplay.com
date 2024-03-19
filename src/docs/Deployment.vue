@@ -21,7 +21,7 @@
 			>
 				By connecting your project to GitHub, it's simple to create publishing pipelines by integrating with third-party services like
 				<a
-					class="hover:text-blue-700 text-blue-600"
+					class="hover:text-emerald-700 text-emerald-600"
 					href="https://www.netlify.com/"
 					target="_blank"
 				>
@@ -31,7 +31,7 @@
 				<a
 					target="_blank"
 					href="https://www.heroku.com/"
-					class="hover:text-blue-700 text-blue-600"
+					class="hover:text-emerald-700 text-emerald-600"
 				>
 					Heroku.
 				</a>
