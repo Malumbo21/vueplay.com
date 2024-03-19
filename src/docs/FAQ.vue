@@ -76,7 +76,7 @@
 			</Accordion>
 			<Accordion title="How can I get premade components into my application?">
 				<p class="text-lg">
-					You can paste pre-made tailwind components into the playground using the Context Menu (Three Dots) or Keyboard Shortcuts [CTRL + V] or [CMD + V] on mac while you are in the playground.
+					You can paste pre-made tailwind components into the playground using the Context Menu (Three Dots) or Keyboard Shortcuts '{{ isMac ? 'CMD + V' : 'CTRL + V' }}' while you are in the playground.
 				</p>
 			</Accordion>
 			<Accordion title="I have a question, found a bug or have a feature request. What do I do?">
@@ -109,7 +109,12 @@
 			Meta,
 			Accordion
 		},
-		data: () => ({})
+		data: () => ({}),
+		computed: {
+			isMac() {
+				return /(Mac|iPhone|iPod|iPad)/i.test(navigator?.userAgentData?.platform || navigator?.platform);
+			}
+		}
 	};
 
 </script>
