@@ -12,7 +12,7 @@
 		>
 			<div class="h-full overflow-hidden flex relative w-full">
 				<label
-					class="from-slate-600 bg-slate-500 shadow-md bg-gradient-to-tl fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-6 text-sm text-white rounded-lg"
+					class="from-emerald-600 bg-emerald-500 shadow-md bg-gradient-to-tl fixed z-40 md:hidden cursor-pointer inline-flex items-center p-2 mt-4 ml-6 text-sm text-white rounded"
 					for="toggle"
 				>
 					<svg
