@@ -86,7 +86,7 @@
 					while you are in the playground.
 				</span>
 			</Accordion>
-			<Accordion title="I have a question, found a bug or have a feature request. What do I do?">
+			<Accordion title="Where do I post questions, bugs and feature requests?">
 				<p class="text-lg">
 					Feedback can be reported
 					<router-link
