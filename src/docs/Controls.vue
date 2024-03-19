@@ -18,7 +18,7 @@
 			>
 				Controls will be available both in Vue Play and
 				<a
-					class="hover:text-blue-700 text-blue-600"
+					class="hover:text-emerald-700 text-emerald-600"
 					href="https://developers.elementor.com/docs/editor-controls/"
 					target="_blank"
 				>

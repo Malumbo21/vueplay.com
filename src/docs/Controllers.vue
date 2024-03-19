@@ -22,7 +22,7 @@
 			>
 				When building components to be imported in Vue Play or as an Elementor Addon, you have the options to define specific controllers by using the built in Vue Play or
 				<a
-					class="hover:text-blue-700 text-blue-600"
+					class="hover:text-emerald-700 text-emerald-600"
 					href="https://developers.elementor.com/docs/editor-controls/"
 					target="_blank"
 				>
