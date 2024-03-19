@@ -75,9 +75,16 @@
 				</p>
 			</Accordion>
 			<Accordion title="How can I get premade components into my application?">
-				<p class="text-lg">
-					You can paste pre-made tailwind components into the playground using the Context Menu (Three Dots) or Keyboard Shortcuts '{{ isMac ? 'CMD + V' : 'CTRL + V' }}' while you are in the playground.
-				</p>
+				<span class="text-lg">
+					You can paste pre-made tailwind components into the playground using the Context Menu (Three Dots) or Keyboard Shortcuts
+				</span><span
+					class="px-1.5 rounded-md p-1 text-emerald-800 bg-emerald-300 text-lg"
+					style="white-space:nowrap"
+				>
+					{{ isMac ? 'CMD + V' : 'CTRL + V' }}
+				</span><span class="text-lg">
+					while you are in the playground.
+				</span>
 			</Accordion>
 			<Accordion title="I have a question, found a bug or have a feature request. What do I do?">
 				<p class="text-lg">
