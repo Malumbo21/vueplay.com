@@ -97,7 +97,7 @@
 					</router-link>
 					or on
 					<a
-						href="https://github.com/vueplayground/vueplay.com"
+						href="https://github.com/vueplayground/vueplay.com/issues"
 						target="_blank"
 						class="hover:text-emerald-700 text-emerald-600"
 					>
