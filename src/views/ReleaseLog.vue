@@ -14,6 +14,16 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					23.03.2024 - Release 1.2.7
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Enhancement - Add github workflow permissions
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					20.03.2024 - Release 1.2.6
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
