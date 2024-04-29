@@ -14,6 +14,16 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					29.04.2024 - Release 1.3.0
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Allow ctrl/cmd + s to save
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					29.04.2024 - Release 1.2.9
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
