@@ -31,6 +31,22 @@
 								scope="row"
 								class="px-6 py-4 font-medium text-gray-900 dark:text-white"
 							>
+								Save
+							</th>
+							<td class="px-6 py-4 text-right">
+								<p class="text-gray-500 dark:text-gray-400">
+
+									<kbd class="inline-block my-0.5 px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+										{{isMac ? 'CMD' : 'CTRL'}} + S
+									</kbd>
+								</p>
+							</td>
+						</tr>
+						<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+							<th
+								scope="row"
+								class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+							>
 								Copy
 							</th>
 							<td class="px-6 py-4 text-right">
