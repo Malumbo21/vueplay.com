@@ -14,6 +14,19 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					15.07.2024 - Release 1.3.2
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Add zoom style control
+					</li>
+					<li>
+						Feature - Add transform-origin style control
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					04.06.2024 - Release 1.3.1
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
