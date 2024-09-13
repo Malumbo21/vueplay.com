@@ -8,7 +8,7 @@
 				limitations.
 			</p>
 			<div class="price">
-				0.00 USD / Year
+				0.00 USD / mo
 			</div>
 			<div class="feature-list">
 				<div>Drag & Drop</div>
@@ -37,7 +37,7 @@
 				without any limitations.
 			</p>
 			<div class="price">
-				59.00 USD / Year
+				9.00 USD / mo
 			</div>
 			<div
 				class="price"
