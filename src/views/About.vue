@@ -216,7 +216,7 @@
 						style="margin-bottom:100px;color:#15244fff;margin-top:75px;width:calc(100% - 40px);margin-left:20px"
 						class="text-4xl md:text-slate-900 font-bold"
 					>
-						2250+ Registered Users 🚀
+						2300+ Registered Users 🚀
 					</h2>
 					<h2
 						style="margin-bottom:50px;max-width:450px;color:#15244fff"
