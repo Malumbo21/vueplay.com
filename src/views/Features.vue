@@ -255,8 +255,7 @@
 						</svg>
 					</div>
 					<h3 class="mt-4 mb-3 font-semibold text-2xl text-left">
-						You own your
-						files
+						No lock-in
 					</h3>
 					<p class="text-slate-500 text-left">
 						Download project
