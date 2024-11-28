@@ -216,7 +216,7 @@
 						style="margin-bottom:100px;color:#15244fff;margin-top:75px;width:calc(100% - 40px);margin-left:20px"
 						class="text-4xl md:text-slate-900 font-bold"
 					>
-						2500+ Registered Users 🚀
+						{{count}} Registered Users 🚀
 					</h2>
 					<h2
 						style="margin-bottom:50px;max-width:450px;color:#15244fff"
@@ -332,12 +332,24 @@
 	import Footer from "@/components/Footer.vue";
 	import Meta from "@/components/Meta.vue";
 	export default {
+		inject: ['authUsers'],
 		components: {
 			VueNavigator,
 			Footer,
 			Meta
 		},
-		data: () => ({}),
+		data: () => ({
+			count: '2500+'
+		}),
+		async created() {
+			try {
+				this.count = (await this.authUsers.service('users')
+						.count({}))
+					?.count;
+			} catch (e) {
+				console.log('err', e);
+			}
+		},
 		methods: {
 			open(url) {
 				location.href = url;

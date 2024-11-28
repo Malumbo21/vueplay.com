@@ -18,6 +18,17 @@ const io = feathers()
 io.configure(feathers.socketio(socket))
 io.configure(feathers.authentication())
 
+const socketAuthUsers = sio('https://auth.vueplay.io', {
+    transports: ['websocket', 'polling']
+})
+const authUsers = feathers()
+const socketClient = feathers.socketio(socketAuthUsers)
+authUsers.configure(socketClient)
+authUsers.configure(feathers.authentication())
+authUsers.use('users', socketClient.service('users'), {
+    methods: ['count']
+})
+
 let boot = async () => {
 
     try {
@@ -33,6 +44,7 @@ let boot = async () => {
     })
 
     app.provide('io', io)
+    app.provide('authUsers', authUsers)
     app.provide('user', computed(() => user?.value))
     app.provide('reAuthenticate', async () => {
         try {
