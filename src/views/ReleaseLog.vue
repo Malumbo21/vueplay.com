@@ -14,6 +14,19 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					06.01.2025 - Release 1.4.5
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Share and transfer applications
+					</li>
+					<li>
+						Feature - Share and transfer components
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					29.11.2024 - Release 1.4.4
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
