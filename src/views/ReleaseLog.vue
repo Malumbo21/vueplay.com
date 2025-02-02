@@ -14,6 +14,28 @@
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>
+					02.02.2025 - Release 1.4.8
+				</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>
+						Feature - Comma separated filtering for styles and attributes
+					</li>
+					<li>
+						Feature - Improvements to component controllers
+					</li>
+					<li>
+						Feature - Support for component props with responsive breakpoints
+					</li>
+					<li>
+						Feature - Support for component props with darkmode breakpoints
+					</li>
+					<li>
+						Feature - Support for component props with selective breakpoints
+					</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>
 					17.01.2025 - Release 1.4.7
 				</h3>
 				<ul class="indent-0 ml-5 list-disc">
