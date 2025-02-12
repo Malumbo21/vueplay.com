@@ -12,9 +12,7 @@
 				style="text-shadow:0px 0px"
 				class="text-5xl mt-2"
 			>
-				<em style="margin-top:28px">
-					Drag & Drop
-				</em>
+				<em style="margin-top:28px">Drag & Drop</em>
 				<div class="mt-4">
 					Builder
 				</div>
