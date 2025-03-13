@@ -2,7 +2,7 @@
 	<div class="bg-slate-100 flex flex-col h-screen overflow-auto">
 		<Meta />
 		<VueNavigator class="mb-5 z-20" />
-		<header class="">
+		<header>
 			<div
 				style="background-size:contain;background-position:center;background-repeat:no-repeat;width:266px;height:125px;margin-right:auto;margin-left:auto;margin-top:0px;position:relative;max-width:calc(100% - 100px);margin-bottom:-20px;left:5px"
 				class="logo"
