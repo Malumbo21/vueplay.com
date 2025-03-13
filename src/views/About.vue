@@ -265,7 +265,7 @@
 						/>
 					</div>
 					<h2
-						style="margin-bottom:40px;max-width:320px;margin-top:100px;color:#0b1329ff"
+						style="margin-bottom:40px;max-width:340px;margin-top:100px;color:#0b1329ff"
 						class="font-semibold mx-auto text-lg"
 					>
 						Release your full potential with Vue Play, a Vue.js Drag and Drop Component / Website Builder.
