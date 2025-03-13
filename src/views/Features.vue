@@ -16,13 +16,7 @@
 			<h1
 				style="margin-right:auto;margin-left:auto;max-width:calc(100% - 40px);width:700px"
 				class="text-slate-600 my-4 text-xl"
-			>
-				Vue Play is a full drag
-				& drop designer for
-				building vue components,
-				websites and web
-				applications.
-			</h1>
+			>Vue Play is a full drag & drop designer for building vue components, websites and web apps.</h1>
 		</header>
 		<main style="text-align:center;width:100%;margin-bottom:50px">
 			<section class="p-12 gap-12 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 container m-auto grid">
