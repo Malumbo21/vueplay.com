@@ -349,7 +349,7 @@
 			categories: [],
 			moment
 		}),
-		created() {
+		mounted() {
 			this.refresh()
 		},
 		methods: {

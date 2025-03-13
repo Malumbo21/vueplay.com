@@ -120,7 +120,7 @@
                 this.refresh()
             }
         },
-        created() {
+        mounted() {
             this.refresh();
             this.getCategories();
             this.getStatuses()

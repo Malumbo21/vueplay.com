@@ -339,7 +339,7 @@
 		data: () => ({
 			count: '2500+'
 		}),
-		async created() {
+		async mounted() {
 			try {
 				this.count = (await this.authUsers.service('users')
 						.count({}))

@@ -28,7 +28,7 @@
 				document.head.children.author.content = this.author || this.defaults.author
 			}
 		},
-		created() {
+		mounted() {
 			this.init()
 		},
 		methods: {

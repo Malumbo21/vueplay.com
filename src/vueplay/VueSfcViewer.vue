@@ -390,7 +390,7 @@
 				return `https://api.vueplay.io/types/sfc/${this.identifier}?ref=HEAD&type=preview${this.application?.tailwind ? "-tw" : ""}&v=${this.version}`
 			}
 		},
-		async created() {
+		async mounted() {
 			const urlParams = new URLSearchParams(window.location.search)
 			const id = urlParams.get("id")
 			if (id) {
