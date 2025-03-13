@@ -59,7 +59,7 @@
 						<path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
 					</svg> </button>
 			</section>
-			<section class="">
+			<section data-allow-mismatch="">
 				<iframe
 					src="https://www.youtube.com/embed/videoseries?si=s6G0b6IipaV4VZIg&amp;list=PLwvel81e87FywGrpfv_1qoruzBnHV9zZ5"
 					title="YouTube video player"
@@ -213,7 +213,7 @@
 					<h2
 						style="margin-bottom:100px;color:#15244fff;margin-top:75px;width:calc(100% - 40px);margin-left:20px"
 						class="text-4xl md:text-slate-900 font-bold"
-						data-allow-mismatch="text"
+						data-allow-mismatch=""
 					>
 						{{new Intl.NumberFormat('en-US', { useGrouping: true }).format(count).replace(/,/g, ' ')}} Registered Users 🚀
 					</h2>
@@ -308,6 +308,7 @@
 						href="https://madewithvuejs.com/p/vue-play/shield-link"
 						target="_blank"
 						class="inline-block mt-12 mx-auto"
+						data-allow-mismatch=""
 					><img src="https://madewithvuejs.com/storage/repo-shields/4476-shield.svg" /></a> <a
 						href="https://www.producthunt.com/posts/vue-playground?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-vue&#0045;playground"
 						target="_blank"
