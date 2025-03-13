@@ -60,8 +60,11 @@ export default {
     inject: ["io", "user", "reAuthenticate"],
     data: () => ({
         authorizing: false,
-        origin: location.origin.startsWith("http") ? location.origin : "https://studio.vueplay.com"
+        origin: "https://studio.vueplay.com"
     }),
+    mounted() {
+        this.origin = location.origin.startsWith("http") ? location.origin : "https://studio.vueplay.com"
+    },
     methods: {
         login() {
             this.authorizing = true;
