@@ -213,6 +213,7 @@
 					<h2
 						style="margin-bottom:100px;color:#15244fff;margin-top:75px;width:calc(100% - 40px);margin-left:20px"
 						class="text-4xl md:text-slate-900 font-bold"
+						data-allow-mismatch="text"
 					>
 						{{new Intl.NumberFormat('en-US', { useGrouping: true }).format(count).replace(/,/g, ' ')}} Registered Users 🚀
 					</h2>
