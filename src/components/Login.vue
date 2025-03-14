@@ -1,5 +1,5 @@
 <template>
-    <Transport to="body" v-show="authorizing">
+    <Transport v-if="mounted" to="body" v-show="authorizing">
         <div class="w-screen h-screen absolute left-0 top-0" style="z-index:100000;background-color:#cacfd970"
             @click="authorizing = false">
             <div class="shadow-xl rounded -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 fixed block m-auto max-w-sm w-screen bg-slate-100 border-box text-center py-12"
@@ -60,10 +60,12 @@ export default {
     inject: ["io", "user", "reAuthenticate"],
     data: () => ({
         authorizing: false,
-        origin: "https://studio.vueplay.com"
+        origin: "https://studio.vueplay.com",
+        mounted: false
     }),
     mounted() {
         this.origin = location.origin.startsWith("http") ? location.origin : "https://studio.vueplay.com"
+        this.mounted = true
     },
     methods: {
         login() {
