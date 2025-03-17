@@ -357,6 +357,40 @@
 			open(url) {
 				location.href = url;
 			}
+		},
+		head() {
+			return {
+				title: 'About',
+				titleTemplate: '%s | Health Tips',
+				meta: [{
+					property: 'og:title',
+					content: 'My Awesome About'
+				}, {
+					property: 'og:description',
+					content: 'This is an amazing website!'
+				}, {
+					property: 'og:image',
+					content: 'https://example.com/image.jpg'
+				}, {
+					property: 'og:url',
+					content: 'https://example.com/page'
+				}, {
+					property: 'og:type',
+					content: 'website'
+				}, {
+					name: 'twitter:card',
+					content: 'summary_large_image'
+				}, {
+					name: 'twitter:title',
+					content: 'My Awesome Page'
+				}, {
+					name: 'twitter:description',
+					content: 'This is an amazing website!'
+				}, {
+					name: 'twitter:image',
+					content: 'https://example.com/image.jpg'
+				}]
+			};
 		}
 	};
 
