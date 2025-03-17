@@ -1,15 +1,9 @@
 <template>
 	<div class="space-y-0 bg-slate-100 flex flex-col h-screen">
-		<!--Meta
-			description="Try out the playground or use the full playground without any limitations."
-			title="Pricing"
-		>
-		</Meta-->
+		<!---->
 		<VueNavigator class="z-10" />
 		<header>
-			<h1 class="text-6xl mt-12 mb-6">
-				Pricing
-			</h1>
+			<h1 class="text-6xl mt-12 mb-6">Pricings</h1>
 		</header>
 		<main class="bg-slate-100 grow">
 			<section
@@ -63,11 +57,14 @@
 	import Pricing from "@/components/Pricing.vue";
 	import Footer from "@/components/Footer.vue";
 	//import Meta from "@/components/Meta.vue";
+	//import Meta from "@/components/Meta.vue";
+	//import Meta from "@/components/Meta.vue";
+	//import Meta from "@/components/Meta.vue";
 	export default {
 		components: {
 			VueNavigator,
 			Pricing,
-			Footer,
+			Footer
 			//Meta
 		},
 		data: () => ({}),
@@ -80,18 +77,35 @@
 			return {
 				title: '2Pricing',
 				titleTemplate: '%s | Health Tips',
-				meta: [
-					{ property: 'og:title', content: 'My Awesome Pricing' },
-					{ property: 'og:description', content: 'This is an amazing website!' },
-					{ property: 'og:image', content: 'https://example.com/image.jpg' },
-					{ property: 'og:url', content: 'https://example.com/page' },
-					{ property: 'og:type', content: 'website' },
-					{ name: 'twitter:card', content: 'summary_large_image' },
-					{ name: 'twitter:title', content: 'My Awesome Page' },
-					{ name: 'twitter:description', content: 'This is an amazing website!' },
-					{ name: 'twitter:image', content: 'https://example.com/image.jpg' }
-				]
-			}
+				meta: [{
+					property: 'og:title',
+					content: 'My Awesome Pricing'
+				}, {
+					property: 'og:description',
+					content: 'This is an amazing website!'
+				}, {
+					property: 'og:image',
+					content: 'https://example.com/image.jpg'
+				}, {
+					property: 'og:url',
+					content: 'https://example.com/page'
+				}, {
+					property: 'og:type',
+					content: 'website'
+				}, {
+					name: 'twitter:card',
+					content: 'summary_large_image'
+				}, {
+					name: 'twitter:title',
+					content: 'My Awesome Page'
+				}, {
+					name: 'twitter:description',
+					content: 'This is an amazing website!'
+				}, {
+					name: 'twitter:image',
+					content: 'https://example.com/image.jpg'
+				}]
+			};
 		}
 	};
 
