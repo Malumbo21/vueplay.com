@@ -1,10 +1,10 @@
 <template>
 	<div class="space-y-0 bg-slate-100 flex flex-col h-screen">
-		<Meta
+		<!--Meta
 			description="Try out the playground or use the full playground without any limitations."
 			title="Pricing"
 		>
-		</Meta>
+		</Meta-->
 		<VueNavigator class="z-10" />
 		<header>
 			<h1 class="text-6xl mt-12 mb-6">
@@ -62,13 +62,13 @@
 	import VueNavigator from "@/components/Navigator.vue";
 	import Pricing from "@/components/Pricing.vue";
 	import Footer from "@/components/Footer.vue";
-	import Meta from "@/components/Meta.vue";
+	//import Meta from "@/components/Meta.vue";
 	export default {
 		components: {
 			VueNavigator,
 			Pricing,
 			Footer,
-			Meta
+			//Meta
 		},
 		data: () => ({}),
 		methods: {
@@ -78,7 +78,7 @@
 		},
 		head() {
 			return {
-				title: 'Pricing',
+				title: '2Pricing',
 				titleTemplate: '%s | Health Tips',
 				meta: [
 					{ property: 'og:title', content: 'My Awesome Pricing' },
