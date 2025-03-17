@@ -14,7 +14,6 @@ if (fs.existsSync('./cache')) fs.rmSync('./cache', {
 })
 
 export default defineConfig({
-    base: '/',
     plugins: [vue(), dataUri()],
     resolve: {
         alias: {
