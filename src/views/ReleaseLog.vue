@@ -1,4 +1,4 @@
-<template class="">
+<template>
 	<div class="bg-slate-100">
 		<Meta
 			description="24.07.2023 - Release 1.0.5 | Drag and drop Tailwind Hero Icons into the Playground with Vue Play"
@@ -12,6 +12,18 @@
 			</h1>
 		</header>
 		<main class="p-6 m-auto max-w-xl container">
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>27.03.2025 - Release 1.5.1</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>Feature - Merchant onboarding (Early Access)</li>
+					<li>Feature - Pricing of components & themes</li>
+					<li>Feature - Server Side Rendering </li>
+					<li>Feature - Global styling</li>
+					<li>Feature - Project cloning</li>
+					<li>Feature - Theme based starter kits</li>
+					<li>Feature - Push to github for free users</li>
+				</ul>
+			</section>
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>27.02.2025 - Release 1.5.0</h3>
 				<ul class="indent-0 ml-5 list-disc">
