@@ -13,6 +13,15 @@
 		</header>
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>07.04.2025 - Release 1.5.2</h3>
+				<ul class="indent-0 ml-5 list-disc">
+					<li>Feature - Global color swatches</li>
+					<li>Feature - Color shadings</li>
+					<li>Feature - Global stylesheet images</li>
+					<li>Feature - Width & height tooltip</li>
+				</ul>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
 				<h3>27.03.2025 - Release 1.5.1</h3>
 				<ul class="indent-0 ml-5 list-disc">
 					<li>Feature - Merchant onboarding (Early Access)</li>
