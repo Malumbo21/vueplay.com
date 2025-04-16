@@ -16,10 +16,46 @@
 					color="{`default`:{`xs`:{`light`:`#0a0a0aff`}}}"
 					style="margin:0px;margin-top:10px;margin-bottom:10px"
 				>Create a new remake of vueplay.com using Theme Arctic with design & SEO improvements.</Text><img
+					src="@/assets/arctic-pro.png"
+					width="100"
+					height="100"
+					style="width:100%;height:250px;border-radius:11px;object-fit:cover"
+				/>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>Redesign main menu of Vue Play Studio</h3><Text
+					fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
+					color="{`default`:{`xs`:{`light`:`#0a0a0aff`}}}"
+					style="margin:0px;margin-top:10px;margin-bottom:10px"
+				>Main menu should get a refreshed look with easier navigation.</Text><img
+					src="@/assets/forest.png"
+					width="100"
+					height="100"
+					style="width:100%;height:250px;border-radius:11px;object-fit:cover"
+				/>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>Stable release of Theme Arctic PRO</h3><Text
+					fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
+					color="{`default`:{`xs`:{`light`:`#0a0a0aff`}}}"
+					style="margin:0px;margin-top:10px;margin-bottom:10px"
+				>Add premium features & components to Theme Arctic Pro, eg. pricing table, blog post, pagination & improved home screen.</Text><img
 					src="@/assets/arctic.png"
 					width="100"
 					height="100"
 					style="width:100%;height:250px;border-radius:11px;object-fit:cover"
+				/>
+			</section>
+			<section class="shadow border mb-6 rounded-lg bg-white p-6">
+				<h3>Vue Play Studio Darkmode</h3><Text
+					fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
+					color="{`default`:{`xs`:{`light`:`#0a0a0aff`}}}"
+					style="margin:0px;margin-top:10px;margin-bottom:10px"
+				>Support darkmode for the builder together with some speed optimizations.</Text><img
+					src="@/assets/forest.png"
+					width="100"
+					height="100"
+					style="width:100%;height:250px;border-radius:11px;object-fit:cover;filter:grayscale(90%)"
 				/>
 			</section>
 		</main>
