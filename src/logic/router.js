@@ -79,6 +79,10 @@ const routes = [
   {
     path: '/release-log',
     component: () => import('@/views/ReleaseLog.vue')
+  },
+  {
+    path: '/roadmap',
+    component: () => import('@/views/Roadmap.vue')
   }
 ]
 const router = createRouter({

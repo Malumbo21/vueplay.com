@@ -16,6 +16,8 @@ new Date().getUTCFullYear()
 			Release log
 		</router-link>
 		-
+		<router-link to="/roadmap">Roadmap</router-link>
+		-
 		<router-link to="/terms-of-service">
 			Terms of Service
 		</router-link>-<router-link to="/privacy-policy">
