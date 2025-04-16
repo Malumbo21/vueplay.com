@@ -11,11 +11,11 @@
 		</header>
 		<main class="p-6 m-auto max-w-xl container">
 			<section class="shadow border mb-6 rounded-lg bg-white p-6">
-				<h3>Theme Arctic</h3><Text
+				<h3>Rebuild vueplay.com</h3><Text
 					fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 					color="{`default`:{`xs`:{`light`:`#0a0a0aff`}}}"
 					style="margin:0px;margin-top:10px;margin-bottom:10px"
-				>Test</Text><img
+				>Create a new remake of vueplay.com using Theme Arctic with design & SEO improvements.</Text><img
 					src="@/assets/arctic.png"
 					width="100"
 					height="100"
